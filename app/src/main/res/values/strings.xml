@@ -1,17 +1,11 @@
 <resources>
-    <string name="app_name">Диеты для быстрого похудения</string>
+    <string name="app_name">Как быстро похудеть</string>
     <string name="check_your_connect">Check your internet</string>
 
-    
-    <!--<string name="admob_banner" translatable="false">ca-app-pub-3940256099942544/6300978111</string>-->
-    <!--<string name="admob_inter" translatable="false">ca-app-pub-3940256099942544/1033173712</string>-->
-    <!--<string name="admob_id" translatable="false">ca-app-pub-3940256099942544~3347511713</string>-->
-    <!--<string name="YM" translatable="false">d61400e7-21ea-4d2e-8cb3-60571eac5b5c</string>-->
+    <string name="admob_banner" translatable="false">ca-app-pub-2555056002292788/2852502933</string>
+    <string name="admob_inter" translatable="false">ca-app-pub-2555056002292788/8296401300</string>
+    <string name="admob_id" translatable="false">ca-app-pub-2555056002292788~8871116379</string>
 
-    <string name="admob_banner" translatable="false">ca-app-pub-3050564412171997/9335773353</string>
-    <string name="admob_inter" translatable="false">ca-app-pub-3050564412171997/8066638302</string>
-    <string name="admob_id" translatable="false">ca-app-pub-3050564412171997~5520366012</string>
-    <string name="YM" translatable="false">ade8caaa-4cf3-4a5b-a010-e02d0f783d97</string>
 
     <string name="title_activity_drawer">DrawerActivity</string>
     <string name="navigation_drawer_open">Open navigation drawer</string>
