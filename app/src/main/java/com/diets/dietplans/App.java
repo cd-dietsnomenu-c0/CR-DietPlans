@@ -1,10 +1,12 @@
-package com.diets.dietplans.AppMetrica;
+package com.diets.dietplans;
 
 import android.app.Application;
 
+import androidx.multidex.MultiDexApplication;
+
 import com.diets.dietplans.R;
 
-public class App extends Application{
+public class App extends MultiDexApplication {
 
     @Override
     public void onCreate() {

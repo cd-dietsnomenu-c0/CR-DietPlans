@@ -2,13 +2,6 @@ package com.diets.dietplans.Fragments;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.support.annotation.NonNull;
-import android.support.annotation.Nullable;
-import android.support.design.widget.FloatingActionButton;
-import android.support.v4.app.Fragment;
-import android.support.v4.app.FragmentManager;
-import android.support.v7.widget.LinearLayoutManager;
-import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -17,8 +10,15 @@ import android.view.animation.AnimationUtils;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-import com.squareup.picasso.Callback;
-import com.squareup.picasso.Picasso;
+import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
+import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentManager;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
+
+import com.bumptech.glide.Glide;
+import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.diets.dietplans.Activities.ActivitySettings;
 import com.diets.dietplans.Config;
 import com.diets.dietplans.POJOS.Global;
@@ -79,23 +79,10 @@ public class FragmentSections extends Fragment {
             itemView.setOnClickListener(this);
             tvItem = itemView.findViewById(R.id.tv_item);
             ivItem = itemView.findViewById(R.id.iv_item);
-
-            animation = AnimationUtils.loadAnimation(getActivity(), R.anim.rotate_loading);
-            ivItem.startAnimation(animation);
         }
 
         public void bind(Section section) {
-            Picasso.with(getActivity()).load(section.getUrlOfImage()).noPlaceholder().into(ivItem, new Callback() {
-                @Override
-                public void onSuccess() {
-                    ivItem.clearAnimation();
-                }
-
-                @Override
-                public void onError() {
-
-                }
-            });
+            Glide.with(getActivity()).load(section.getUrlOfImage()).into(ivItem);
             tvItem.setText(section.getDescription());
         }
 

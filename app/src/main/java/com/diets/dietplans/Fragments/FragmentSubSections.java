@@ -1,12 +1,6 @@
 package com.diets.dietplans.Fragments;
 
 import android.os.Bundle;
-import android.support.annotation.NonNull;
-import android.support.annotation.Nullable;
-import android.support.v4.app.Fragment;
-import android.support.v4.app.FragmentManager;
-import android.support.v7.widget.LinearLayoutManager;
-import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -15,8 +9,14 @@ import android.view.animation.AnimationUtils;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-import com.squareup.picasso.Callback;
-import com.squareup.picasso.Picasso;
+import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
+import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentManager;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
+
+import com.bumptech.glide.Glide;
 import com.diets.dietplans.Config;
 import com.diets.dietplans.POJOS.Section;
 import com.diets.dietplans.POJOS.Subsection;
@@ -67,26 +67,12 @@ public class FragmentSubSections extends Fragment {
 
             tvBodyOfText = itemView.findViewById(R.id.tvSubsections);
             ivBackGroundOfItem = itemView.findViewById(R.id.ivSubsections);
-            animation = AnimationUtils.loadAnimation(getActivity(), R.anim.rotate_loading);
-
-            ivBackGroundOfItem.startAnimation(animation);
-
             itemView.setOnClickListener(this);
         }
 
         public void bind(Subsection subsection) {
             tvBodyOfText.setText(subsection.getDescription());
-            Picasso.with(getActivity()).load(subsection.getUrlOfImage()).noPlaceholder().into(ivBackGroundOfItem, new Callback() {
-                @Override
-                public void onSuccess() {
-                    ivBackGroundOfItem.clearAnimation();
-                }
-
-                @Override
-                public void onError() {
-
-                }
-            });
+            Glide.with(getActivity()).load(subsection.getUrlOfImage()).into(ivBackGroundOfItem);
 
         }
 

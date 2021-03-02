@@ -1,14 +1,7 @@
 package com.diets.dietplans.Fragments;
 
+import android.os.Build;
 import android.os.Bundle;
-import android.support.annotation.NonNull;
-import android.support.annotation.Nullable;
-import android.support.design.widget.CollapsingToolbarLayout;
-import android.support.v4.app.Fragment;
-import android.support.v7.widget.CardView;
-import android.support.v7.widget.LinearLayoutManager;
-import android.support.v7.widget.RecyclerView;
-import android.support.v7.widget.Toolbar;
 import android.text.Html;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -16,7 +9,18 @@ import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-import com.squareup.picasso.Picasso;
+
+import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
+import androidx.appcompat.widget.Toolbar;
+import androidx.cardview.widget.CardView;
+import androidx.fragment.app.Fragment;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
+
+
+import com.bumptech.glide.Glide;
+import com.google.android.material.appbar.CollapsingToolbarLayout;
 import com.diets.dietplans.Config;
 import com.diets.dietplans.POJOS.ItemOfSubsection;
 import com.diets.dietplans.POJOS.Subsection;
@@ -54,8 +58,10 @@ public class FragmentItem extends Fragment {
         Config.INDEX_ADMOB++;
 
         subsection = (Subsection) getArguments().getSerializable(Config.ID_ITEM);
-        Picasso.with(getActivity()).load(subsection.getUrlOfImage()).into(ivCollapsingToolBar);
-        toolbar.setTitle(subsection.getDescription());
+        Glide.with(getActivity()).load(subsection.getUrlOfImage()).into(ivCollapsingToolBar);
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
+            toolbar.setTitle(subsection.getDescription());
+        }
 
 
         recyclerView.setLayoutManager(new LinearLayoutManager(getActivity()));
@@ -84,7 +90,7 @@ public class FragmentItem extends Fragment {
                 cardView.setVisibility(View.GONE);
                 ivItem.setVisibility(View.GONE);
             } else {
-                Picasso.with(getActivity()).load(itemOfSubsection.getUrlOfImage()).into(ivItem);
+                Glide.with(getActivity()).load(itemOfSubsection.getUrlOfImage()).into(ivItem);
             }
             tvImageDescription.setText(Html.fromHtml(itemOfSubsection.getDescriptionOfImage()));
             tvBodyOfMainText.setText(Html.fromHtml(itemOfSubsection.getBodyOfText()));
