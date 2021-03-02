@@ -1,15 +1,16 @@
-package com.wsoteam.dietplans.Activities;
+package com.diets.dietplans.Activities;
 
 import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
-import android.support.annotation.Nullable;
-import android.support.v7.app.AppCompatActivity;
-import android.support.v7.widget.CardView;
 import android.view.View;
 
-import com.wsoteam.dietplans.Config;
-import com.wsoteam.dietplans.R;
+import androidx.annotation.Nullable;
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.cardview.widget.CardView;
+
+import com.diets.dietplans.Config;
+import com.diets.dietplans.R;
 
 public class ActivitySettings extends AppCompatActivity {
     CardView cvRate, cvPrivacy, cvShare;

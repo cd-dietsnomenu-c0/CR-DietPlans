@@ -1,52 +1,66 @@
 {
   "project_info": {
-    "project_number": "734658938032",
-    "firebase_url": "https://dietnew-1ce77.firebaseio.com",
-    "project_id": "dietnew-1ce77",
-    "storage_bucket": "dietnew-1ce77.appspot.com"
+    "project_number": "716753137788",
+    "firebase_url": "https://my-diet-coach.firebaseio.com",
+    "project_id": "my-diet-coach",
+    "storage_bucket": "my-diet-coach.appspot.com"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:734658938032:android:2669a16febd49169",
+        "mobilesdk_app_id": "1:716753137788:android:8c7aacfee5f8e9ae9d99f9",
         "android_client_info": {
-          "package_name": "com.wsoteam.dietplans"
+          "package_name": "com.diets.dietplans"
         }
       },
       "oauth_client": [
         {
-          "client_id": "734658938032-bevg46njt0gdog98mdfnshh9b3eb8j1d.apps.googleusercontent.com",
-          "client_type": 1,
-          "android_info": {
-            "package_name": "com.wsoteam.dietplans",
-            "certificate_hash": "795c1bcbff986e08bd6643d13e8b221dc595c140"
-          }
-        },
-        {
-          "client_id": "734658938032-t9gk50v28uvqff420uungqtt69r9t81t.apps.googleusercontent.com",
+          "client_id": "716753137788-3ilifq3su1ahm3vr2dss0j0ncl6okesl.apps.googleusercontent.com",
           "client_type": 3
         }
       ],
       "api_key": [
         {
-          "current_key": "AIzaSyBy1P1FVWVghFSpfVhl24EvApC-jOfTUx4"
+          "current_key": "AIzaSyCy-R9Kq1CE0haECvC-96NNZ0bZ-0lDBr8"
         }
       ],
       "services": {
-        "analytics_service": {
-          "status": 1
-        },
         "appinvite_service": {
-          "status": 2,
           "other_platform_oauth_client": [
             {
-              "client_id": "734658938032-t9gk50v28uvqff420uungqtt69r9t81t.apps.googleusercontent.com",
+              "client_id": "716753137788-3ilifq3su1ahm3vr2dss0j0ncl6okesl.apps.googleusercontent.com",
               "client_type": 3
             }
           ]
-        },
-        "ads_service": {
-          "status": 2
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:716753137788:android:4079df66781ac7cb",
+        "android_client_info": {
+          "package_name": "com.wsoteam.mydietcoach"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "716753137788-3ilifq3su1ahm3vr2dss0j0ncl6okesl.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCy-R9Kq1CE0haECvC-96NNZ0bZ-0lDBr8"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "716753137788-3ilifq3su1ahm3vr2dss0j0ncl6okesl.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
         }
       }
     }

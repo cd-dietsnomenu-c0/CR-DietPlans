@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">Диеты для быстрого похудения</string>
+    <string name="app_name">Диеты</string>
     <string name="check_your_connect">Check your internet</string>
 
     
@@ -11,7 +11,6 @@
     <string name="admob_banner" translatable="false">ca-app-pub-3050564412171997/9335773353</string>
     <string name="admob_inter" translatable="false">ca-app-pub-3050564412171997/8066638302</string>
     <string name="admob_id" translatable="false">ca-app-pub-3050564412171997~5520366012</string>
-    <string name="YM" translatable="false">ade8caaa-4cf3-4a5b-a010-e02d0f783d97</string>
 
     <string name="title_activity_drawer">DrawerActivity</string>
     <string name="navigation_drawer_open">Open navigation drawer</string>

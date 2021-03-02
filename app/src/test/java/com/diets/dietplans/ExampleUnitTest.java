@@ -1,4 +1,4 @@
-package com.wsoteam.dietplans;
+package com.diets.dietplans;
 
 import org.junit.Test;
 

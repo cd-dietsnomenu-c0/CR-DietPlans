@@ -1,4 +1,4 @@
-package com.wsoteam.dietplans;
+package com.diets.dietplans;
 
 public class Config {
     public static final String ID_SECTIONS_ARGS = "id_sec_args";

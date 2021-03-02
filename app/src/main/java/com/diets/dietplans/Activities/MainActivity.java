@@ -1,4 +1,4 @@
-package com.wsoteam.dietplans.Activities;
+package com.diets.dietplans.Activities;
 
 import android.content.Context;
 import android.content.DialogInterface;
@@ -14,20 +14,16 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Toast;
 
-import com.google.android.gms.ads.AdRequest;
-import com.google.android.gms.ads.AdView;
-import com.google.android.gms.ads.InterstitialAd;
-import com.google.android.gms.ads.MobileAds;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
-import com.wsoteam.dietplans.Config;
-import com.wsoteam.dietplans.Fragments.FragmentSections;
-import com.wsoteam.dietplans.Fragments.FragmentSplash;
-import com.wsoteam.dietplans.POJOS.Global;
-import com.wsoteam.dietplans.R;
+import com.diets.dietplans.Config;
+import com.diets.dietplans.Fragments.FragmentSections;
+import com.diets.dietplans.Fragments.FragmentSplash;
+import com.diets.dietplans.POJOS.Global;
+import com.diets.dietplans.R;
 
 
 public class MainActivity extends AppCompatActivity {
@@ -36,46 +32,16 @@ public class MainActivity extends AppCompatActivity {
     private SharedPreferences countOfRun;
     private int COUNT_OF_RUN = 0, COUNT_OF_BACK_PRESSED = 0;
     private final String TAG_OF_COUNT_RUN = "TAG_OF_COUNT_RUN";
-    private InterstitialAd mInterstitialAd;
-    private static AdView adView;
 
     @Override
     public void onBackPressed() {
-        if (Config.INDEX_ADMOB > 0) {
-            checkPermissionForShowInter();
-        }
         super.onBackPressed();
-        mInterstitialAd = new InterstitialAd(this);
-        mInterstitialAd.setAdUnitId(getResources().getString(R.string.admob_inter));
-        mInterstitialAd.loadAd(new AdRequest.Builder().build());
-
-
     }
-
-    private void checkPermissionForShowInter() {
-        if (mInterstitialAd.isLoaded()) {
-            Config.INDEX_ADMOB = 0;
-            mInterstitialAd.show();
-        }
-    }
-
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-
-
-
-        adView = findViewById(R.id.bannerMainActivity);
-        MobileAds.initialize(this, getResources().getString(R.string.admob_id));
-        AdRequest adRequest = new AdRequest.Builder().build();
-        adView.loadAd(adRequest);
-        adView.setVisibility(View.GONE);
-
-        mInterstitialAd = new InterstitialAd(this);
-        mInterstitialAd.setAdUnitId(getResources().getString(R.string.admob_inter));
-        mInterstitialAd.loadAd(new AdRequest.Builder().build());
 
 
         final FragmentManager fragmentManager = getSupportFragmentManager();
@@ -93,9 +59,6 @@ public class MainActivity extends AppCompatActivity {
                 fragmentManager.beginTransaction().replace(R.id.fragmentContainer, FragmentSections.newInstance(global)).commit();
                 additionOneToSharedPreference();
                 checkFirstRun();
-                adView.setVisibility(View.VISIBLE);
-
-
             }
 
             @Override
