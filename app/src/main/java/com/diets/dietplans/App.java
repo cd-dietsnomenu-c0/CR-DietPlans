@@ -1,11 +1,8 @@
 package com.diets.dietplans;
 
-import android.app.Application;
-
 import androidx.multidex.MultiDexApplication;
 
 import com.amplitude.api.Amplitude;
-import com.diets.dietplans.R;
 
 public class App extends MultiDexApplication {
 
