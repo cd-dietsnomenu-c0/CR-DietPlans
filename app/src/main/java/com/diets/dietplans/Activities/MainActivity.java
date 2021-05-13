@@ -17,21 +17,20 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.FragmentManager;
 
 import com.diets.dietplans.Config;
+import com.diets.dietplans.Fragments.FragmentSections;
+import com.diets.dietplans.Fragments.FragmentSplash;
+import com.diets.dietplans.POJOS.Global;
+import com.diets.dietplans.R;
 import com.diets.dietplans.utils.FBProvider;
 import com.google.android.gms.ads.AdRequest;
 import com.google.android.gms.ads.AdView;
 import com.google.android.gms.ads.InterstitialAd;
-import com.google.android.gms.ads.MobileAds;
 import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
-import com.diets.dietplans.Fragments.FragmentSections;
-import com.diets.dietplans.Fragments.FragmentSplash;
-import com.diets.dietplans.POJOS.Global;
-import com.diets.dietplans.R;
 import com.google.firebase.messaging.FirebaseMessaging;
 
 
