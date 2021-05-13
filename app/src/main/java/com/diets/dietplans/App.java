@@ -12,6 +12,7 @@ import androidx.annotation.NonNull;
 import androidx.multidex.MultiDexApplication;
 
 import com.amplitude.api.Amplitude;
+import com.google.android.gms.ads.MobileAds;
 
 public class App extends MultiDexApplication {
 
@@ -24,6 +25,8 @@ public class App extends MultiDexApplication {
 
         context = this;
         app = this;
+
+        MobileAds.initialize(this);
 
         Amplitude
                 .getInstance()

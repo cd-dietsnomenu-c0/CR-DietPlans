@@ -9,13 +9,19 @@ import android.net.NetworkInfo;
 import android.net.Uri;
 import android.os.Bundle;
 import android.util.Log;
+import android.view.View;
 import android.widget.Toast;
 
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.FragmentManager;
 
+import com.diets.dietplans.Config;
 import com.diets.dietplans.utils.FBProvider;
+import com.google.android.gms.ads.AdRequest;
+import com.google.android.gms.ads.AdView;
+import com.google.android.gms.ads.InterstitialAd;
+import com.google.android.gms.ads.MobileAds;
 import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
@@ -35,10 +41,26 @@ public class MainActivity extends AppCompatActivity {
     private SharedPreferences countOfRun;
     private int COUNT_OF_RUN = 0, COUNT_OF_BACK_PRESSED = 0;
     private final String TAG_OF_COUNT_RUN = "TAG_OF_COUNT_RUN";
+    private InterstitialAd mInterstitialAd;
+    private static AdView adView;
 
     @Override
     public void onBackPressed() {
+        if (Config.INDEX_ADMOB > 2) {
+            checkPermissionForShowInter();
+        }
+        mInterstitialAd = new InterstitialAd(this);
+        mInterstitialAd.setAdUnitId(getResources().getString(R.string.admob_inter));
+        mInterstitialAd.loadAd(new AdRequest.Builder().build());
+
         super.onBackPressed();
+    }
+
+    private void checkPermissionForShowInter() {
+        if (mInterstitialAd.isLoaded()) {
+            Config.INDEX_ADMOB = 0;
+            mInterstitialAd.show();
+        }
     }
 
     @Override
@@ -46,6 +68,16 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         FBProvider.Companion.getFCMToken();
+
+        adView = findViewById(R.id.bannerMainActivity);
+
+        AdRequest adRequest = new AdRequest.Builder().build();
+        adView.loadAd(adRequest);
+        adView.setVisibility(View.GONE);
+
+        mInterstitialAd = new InterstitialAd(this);
+        mInterstitialAd.setAdUnitId(getResources().getString(R.string.admob_inter));
+        mInterstitialAd.loadAd(new AdRequest.Builder().build());
 
         final FragmentManager fragmentManager = getSupportFragmentManager();
         fragmentManager.beginTransaction().add(R.id.fragmentContainer, new FragmentSplash()).commit();
@@ -62,6 +94,7 @@ public class MainActivity extends AppCompatActivity {
                 fragmentManager.beginTransaction().replace(R.id.fragmentContainer, FragmentSections.newInstance(global)).commit();
                 additionOneToSharedPreference();
                 checkFirstRun();
+                adView.setVisibility(View.VISIBLE);
             }
 
             @Override
@@ -106,7 +139,6 @@ public class MainActivity extends AppCompatActivity {
         SharedPreferences.Editor editor = countOfRun.edit();
         editor.putInt(TAG_OF_COUNT_RUN, COUNT_OF_RUN + 1);
         editor.commit();
-
     }
 
     private void checkFirstRun() {
