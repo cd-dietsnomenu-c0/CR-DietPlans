@@ -2,10 +2,10 @@
     <string name="app_name">Диеты</string>
     <string name="check_your_connect">Check your internet</string>
 
-    <string name="admob_key" translatable="false">ca-app-pub-2555056002292788~3750621051</string>
-    <string name="interstitial_id" translatable="false">ca-app-pub-2555056002292788/3064241259</string>
-    <string name="banner_id" translatable="false">ca-app-pub-2555056002292788/9629649606</string>
-    <string name="native_ad" translatable="false">ca-app-pub-2555056002292788/3938339229</string>
+    <string name="admob_key" translatable="false">ca-app-pub-2555056002292788~4905586322</string>
+    <string name="interstitial_id" translatable="false">ca-app-pub-2555056002292788/8461687958</string>
+    <string name="banner_id" translatable="false">ca-app-pub-2555056002292788/8653259642</string>
+    <string name="native_ad" translatable="false">ca-app-pub-2555056002292788/2278040092</string>
 
     <!--Test-->
     <!--<string name="admob_key" translatable="false">ca-app-pub-3940256099942544~3347511713</string>

@@ -15991,7 +15991,7 @@
       "hardLevel": 1,
       "isHasMenu": true,
       "isHasTracker": true,
-      "headImage": "https://i.ibb.co/CWq6yBD/old-man.png",
+      "headImage": "https://i.ibb.co/QFdDmVw/main-small-0.png",
       "isOld": false,
       "reverseDietIndexes": [
         48,
@@ -16010,7 +16010,7 @@
       "hardLevel": 1,
       "isHasMenu": true,
       "isHasTracker": true,
-      "headImage": "https://i.ibb.co/Cwq4tGJ/low-kcal.png",
+      "headImage": "https://i.ibb.co/JpKX5L3/main-small-1.png",
       "isOld": false,
       "reverseDietIndexes": [
         0,
@@ -16048,7 +16048,7 @@
       "hardLevel": 1,
       "isHasMenu": true,
       "isHasTracker": true,
-      "headImage": "https://i.ibb.co/GcJ8p3Q/mono.png",
+      "headImage": "https://i.ibb.co/FHqsmHq/main-small-2.png",
       "isOld": false,
       "reverseDietIndexes": [
         1,
@@ -16084,7 +16084,7 @@
       "hardLevel": 2,
       "isHasMenu": true,
       "isHasTracker": true,
-      "headImage": "https://i.ibb.co/2jfwP5m/extr.png",
+      "headImage": "https://i.ibb.co/3CfL4K6/main-small-3.png",
       "isOld": false,
       "reverseDietIndexes": [
         2,
@@ -16111,7 +16111,7 @@
       "hardLevel": 0,
       "isHasMenu": true,
       "isHasTracker": true,
-      "headImage": "https://i.ibb.co/YfDhXJP/health.png",
+      "headImage": "https://i.ibb.co/qFxQqWz/main-small-4.png",
       "isOld": false,
       "reverseDietIndexes": [
         14
@@ -16125,7 +16125,7 @@
       "hardLevel": 0,
       "isHasMenu": true,
       "isHasTracker": true,
-      "headImage": "https://i.ibb.co/T0Mfv3j/balance.png",
+      "headImage": "https://i.ibb.co/x3gDh91/main-small-5.png",
       "isOld": false,
       "reverseDietIndexes": [
         3,
@@ -16150,7 +16150,7 @@
       "hardLevel": 1,
       "isHasMenu": false,
       "isHasTracker": false,
-      "headImage": "https://i.ibb.co/4RxkHp2/old.png",
+      "headImage": "https://i.ibb.co/WGb8Mkn/main-small-6.png",
       "isOld": true,
       "title": "Old diets",
       "prop": "Old diets are outdated descriptions of diets. There is no diet tracker or detailed nutritional menu inside.",

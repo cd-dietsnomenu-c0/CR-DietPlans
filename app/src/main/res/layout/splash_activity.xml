@@ -40,7 +40,7 @@
         app:layout_constraintBottom_toBottomOf="@+id/lavLetter"
         app:layout_constraintEnd_toStartOf="@+id/lavLetter"
         app:layout_constraintTop_toTopOf="@+id/lavLetter"
-        app:srcCompat="@drawable/ic_slim" />
+        app:srcCompat="@drawable/ic_apple" />
 
 
     <TextView

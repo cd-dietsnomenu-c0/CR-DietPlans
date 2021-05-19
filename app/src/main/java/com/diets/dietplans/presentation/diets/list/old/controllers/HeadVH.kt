@@ -10,7 +10,7 @@ import kotlinx.android.synthetic.main.head_vh.view.*
 
 class HeadVH(inflater: LayoutInflater, viewGroup: ViewGroup, var itemClick: ItemClick) : RecyclerView.ViewHolder(inflater.inflate(R.layout.head_vh, viewGroup, false )) {
     fun bind() {
-        Glide.with(itemView.context).load(R.drawable.head_newdiets).into(itemView.ivBackGround)
+        //Glide.with(itemView.context).load(R.drawable.head_newdiets).into(itemView.ivBackGround)
         itemView.button.setOnClickListener {
             itemClick.newDietsClick()
         }
