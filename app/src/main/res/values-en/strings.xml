@@ -1,0 +1,354 @@
+<resources>
+    <string name="app_name">Diets</string>
+    <string name="check_your_connect">Check your internet</string>
+
+
+
+    <!--Profile-->
+    <string name="url_gdpr" translatable="false">https://www.freeprivacypolicy.com/privacy/view/272200879b5cf29dd1b4fcd0f0299409</string>
+    <string name="accompanying_text">Everything works in real life! Try it too!</string>
+
+    <!--Tracker-->
+    <string name="tracker_share_1">I have successfully passed </string>
+    <string name="tracker_share_2">. The results are amazing! Try it too)</string>
+
+    <string name="bnv_main">Diets</string>
+    <string name="bnv_prem">Premium</string>
+    <string name="bnv_settings">Profile</string>
+
+    <string-array name="images">
+        <item>https://i.ibb.co/bF4N5d6/w0.jpg</item>
+        <item>https://i.ibb.co/5x4RbWd/w1.jpg</item>
+        <item>https://i.ibb.co/sKqH1hs/w2.jpg</item>
+        <item>https://i.ibb.co/spS0Cqm/w3.jpg</item>
+        <item>https://i.ibb.co/dQqVwL8/w4.jpg</item>
+        <item>https://i.ibb.co/7nR5CqH/w5.jpg</item>
+        <item>https://i.ibb.co/Y7q6dQN/w6.jpg</item>
+        <item>https://i.ibb.co/2Fvh7nW/w7.jpg</item>
+        <item>https://i.ibb.co/FxrSC1H/w8.jpg</item>
+        <item>https://i.ibb.co/9G0hP98/w9.jpg</item>
+        <item>https://i.ibb.co/CP9J1rr/w10.jpg</item>
+        <item>https://i.ibb.co/H4b232Q/w11.jpg</item>
+        <item>https://i.ibb.co/W54SCWD/w12.jpg</item>
+        <item>https://i.ibb.co/sCYRV5H/w13.jpg</item>
+        <item>https://i.ibb.co/yypthtq/w14.jpg</item>
+        <item>https://i.ibb.co/4WC5HNG/w15.jpg</item>
+        <item>https://i.ibb.co/xj0TxgC/w16.jpg</item>
+        <item>https://i.ibb.co/5FR7Tx7/w17.jpg</item>
+        <item>https://i.ibb.co/Rb2yZPD/w18.jpg</item>
+        <item>https://i.ibb.co/3MRkywX/w19.jpg</item>
+        <item>https://i.ibb.co/DpDtsHJ/w20.jpg</item>
+        <item>https://i.ibb.co/QQdSwBF/w21.jpg</item>
+        <item>https://i.ibb.co/PhLBfKz/w22.jpg</item>
+        <item>https://i.ibb.co/brZzL9Y/w23.jpg</item>
+        <item>https://i.ibb.co/YR8JTqZ/w24.jpg</item>
+        <item>https://i.ibb.co/m9qzdMv/w25.jpg</item>
+        <item>https://i.ibb.co/fxYFsqT/w26.jpg</item>
+        <item>https://i.ibb.co/Z1bJrLx/w27.jpg</item>
+    </string-array>
+
+    <string-array name="titles_of_calculating_list">
+        <item>Paul Brock\'s method</item>
+        <item>\"Lorenz\'s dream\"</item>
+        <item>BMI Calculator</item>
+        <item>DCC Calculator</item>
+    </string-array>
+
+    <string-array name="descriptions_of_calculating_list">
+        <item>The ideal weight formula was developed in 1871 by the French surgeon and anthropologist Paul Broca.
+             The formula is suitable for people above 155 and below 185 centimeters of average build.</item>
+        <item>There are a fair number of formulas for determining the ideal weight.
+             Calculation algorithms differ in complexity and a set of necessary initial data.
+             Lorenz\'s method is one of the most famous and simplest.
+             To use it, you only need to know your height.
+             The formula is suitable for people above 155 and below 185 centimeters of average build.</item>
+        <item>With the help of body mass index, you can check compliance
+             between your body weight and your height and find out
+             whether you are overweight, or, on the contrary,
+             whether you are underweight.</item>
+        <item>Using the daily calorie intake calculator, you can determine your daily calorie limit, calorie corridor for weight loss, the optimal ratio of daily intake of proteins, fats and carbohydrates</item>
+    </string-array>
+
+    <string name="level_none">Minimum activity</string>
+    <string name="level_easy">Light activity</string>
+    <string name="level_medium">Average activity</string>
+    <string name="level_hard">Increased activity</string>
+    <string name="level_up_hard">High activity</string>
+    <string name="level_super">Ultra high activity</string>
+    <string name="level_up_super">Limiting activity</string>
+    <string name="spk_choise_your_gender">Choose your gender</string>
+    <string name="spk_check_your_age">Check your age</string>
+    <string name="spk_check_your_height">Check entered height</string>
+    <string name="spk_check_weight">Check entered weight</string>
+    <string name="spk_kcal">kcal</string>
+    <string name="description_of_SPK">For comfortable weight loss, in order to avoid breakdowns and harm to health, it is impossible to reduce the calorie intake below 1200, therefore, if your lower limit is below 1200, you need to burn the necessary calories through physical activity.</string>
+    <string name="main_menu">Main menu</string>
+    <string name="together">Together with</string>
+
+
+    <!--Calculating Brok-->
+    <string name="description_brok">
+        P. Broca included in his calculations data on the age category to which the subject belongs,
+         as well as information about the length of his body and constitutional type of constitution.</string>
+    <string name="brok">Paul Brock\'s method</string>
+    <string name="tall">Your height (cm)</string>
+    <string name="girth">Wrist circumference in centimeters</string>
+    <string name="your_age">Your age</string>
+    <string name="sex">Your gender</string>
+    <string name="sex_male">Male</string>
+    <string name="sex_female">Female</string>
+    <string name="calculate_btn">Calculate</string>
+    <string name="fill_all_fields">To calculate, fill in all the fields</string>
+    <string name="check_your_data">Check the entered data</string>
+    <string name="unknown_error">Check the entered data</string>
+
+    <!--Calculating Lorenc-->
+    <string name="lorenc_method">Lorentz method</string>
+    <string name="description_of_lorenc">If your weight is several kilograms from the optimal
+         defined by the formula, but you feel comfortable, no need to worry.</string>
+    <string name="height_lorenc">Your height in centimeters</string>
+    <string name="lorenc_calculate">Calculate</string>
+    <string name="recommended_weight">Your Recommended Weight</string>
+    <string name="ok">Ok</string>
+
+
+    <string name="imt">BMI</string>
+    <string name="description_imt">The body mass index should be used with caution, solely for an approximate assessment - for example, an attempt to evaluate the physique of professional athletes using it may give an incorrect result (a high value of the index in this case is explained by developed muscles)</string>
+    <string name="your_weight_in_kilo">Your weight in kilograms</string>
+    <string name="bnv_calc">Calculations</string>
+    <string name="eat_breakfast">Breakfast</string>
+    <string name="eat_lunch">Dinner</string>
+    <string name="eat_snack_one">Snack</string>
+    <string name="hints">ADVICE</string>
+    <string name="results">RESULTS</string>
+    <string name="reviews">DIETARY REVIEWS</string>
+
+    <!--IMT calculator-->
+    <string-array name="body_types">
+        <item>Severe underweight</item>
+        <item>Underweight</item>
+        <item>Normal weight</item>
+        <item>Overweight (pre-obesity)</item>
+        <item>First degree obesity</item>
+        <item>Second degree obesity</item>
+        <item>Obesity of the third degree</item>
+    </string-array>
+
+    <string-array name="descriptions_bodytypes">
+        <item>Holders of such a BMI indicator can feel on an equal footing with such well-known models as Kate Moss (BMI - 16.1), Naomi Campbell (BMI - 16.5), Gisela Bundchen (BMI - 16), who, by the way, are at risk of being unemployed. in connection with the fight against anorexia and, as a result, with the decline in the popularity of representatives of this disease among celebrities. By the way, a BMI below 17.5 is one of the criteria in the diagnosis of anorexia nervosa, a BMI of about 15 is a sign of starvation.</item>
+        <item>Although people with such a BMI indicator are practically not at risk of diseases arising from obesity, they are more likely to earn other problems. Such as insufficient muscle mass, weak bones, anemia (anemia), inability of the body to absorb certain nutrients, hair loss, menstrual irregularities, and difficulty / inability to conceive.</item>
+        <item>Representatives of the "golden mean", when adipose tissue is neither more nor less, but enough, of course, are in an advantage over everyone else. This weight is not dangerous to health, its adjustments may be needed only for aesthetic purposes. </item>
+        <item>Many are convinced that the word "obesity" simply cannot be applied to them - this is a special and rare case. In fact, based on medical practice, two out of 10 women have this diagnosis. Their body mass index exceeds 30. And even more women have a problem called "overweight".</item>
+        <item>Holders of such a BMI need to lose weight - even a small decrease in BMI will not only allow you to look better, but also feel better. After all, obesity is already a disease. And it\'s associated not only with high body fat, but also with the risk of other diseases such as heart disease, type II diabetes and hypertension. The larger the waist, the higher the risk.</item>
+        <item>The risk of illness increases significantly.</item>
+        <item>The risk of disease is too high. Experts strongly recommend such people to reduce weight to a more acceptable size.</item>
+    </string-array>
+
+
+    <string-array name="eating_names">
+        <item>Breakfast</item>
+        <item>Lunch</item>
+        <item>Dinner</item>
+        <item>Snack</item>
+        <item>Snack</item>
+    </string-array>
+
+    <integer-array name="eats_gradients">
+        <item>@drawable/gradient_breakfast</item>
+        <item>@drawable/gradient_lunch</item>
+        <item>@drawable/gradient_dinner</item>
+        <item>@drawable/gradient_snack_one</item>
+        <item>@drawable/gradient_snack_two</item>
+    </integer-array>
+
+    <integer-array name="eats_icons">
+        <item>@drawable/img_breakfast</item>
+        <item>@drawable/img_lunch</item>
+        <item>@drawable/img_dinner</item>
+        <item>@drawable/img_snack_1</item>
+        <item>@drawable/img_snack_2</item>
+    </integer-array>
+
+    <string-array name="loading_states">
+        <item>loading the diet</item>
+        <item>we expose the days</item>
+        <item>loading the menu</item>
+        <item>launching the tracker</item>
+        <item>finishing setting</item>
+    </string-array>
+
+    <string name="ready">done!</string>
+    <string name="def_name">Enter your name</string>
+
+    <integer-array name="pluses">
+        <item>@drawable/ic_plus_green</item>
+        <item>@drawable/ic_plus_blue</item>
+        <item>@drawable/ic_plus_violet</item>
+        <item>@drawable/ic_plus_dark_red</item>
+        <item>@drawable/ic_plus_light_violet</item>
+    </integer-array>
+
+
+    <string-array name="backgrounds_profile">
+        <item>https://i.ibb.co/7XXfQsg/back1.jpg</item>
+        <item>https://i.ibb.co/DbWgB8P/1.jpg</item>
+        <item>https://i.ibb.co/9GdNZtc/back9.jpg</item>
+        <item>https://i.ibb.co/cLnntc8/back2.jpg</item>
+        <item>https://i.ibb.co/3dBzHVV/back3.jpg</item>
+        <item>https://i.ibb.co/VD2mNxm/back4.jpg</item>
+        <item>https://i.ibb.co/H7r0JC0/back5.jpg</item>
+        <item>https://i.ibb.co/m56Tn00/back6.jpg</item>
+        <item>https://i.ibb.co/B6hx2zW/back7.jpg</item>
+        <item>https://i.ibb.co/g6k1Vcz/back8.jpg</item>
+        <item>https://i.ibb.co/y6fP94B/back10.jpg</item>
+        <item>https://i.ibb.co/4wrkS8z/back11.jpg</item>
+        <item>https://i.ibb.co/BZGyJwG/back12.jpg</item>
+        <item>https://i.ibb.co/CKQPMGm/back13.jpg</item>
+        <item>https://i.ibb.co/GJw2jVW/back14.jpg</item>
+        <item>https://i.ibb.co/D4gWtKp/back15.jpg</item>
+        <item>https://i.ibb.co/fn7fjGS/back16.jpg</item>
+        <item>https://i.ibb.co/fkzcdXb/back17.jpg</item>
+        <item>https://i.ibb.co/JHfq3qy/back18.jpg</item>
+        <item>https://i.ibb.co/C1fLXzK/back19.jpg</item>
+        <item>https://i.ibb.co/7zgbXZc/back20.jpg</item>
+        <item>https://i.ibb.co/ZGNf2CX/back21.jpg</item>
+        <item>https://i.ibb.co/6J5qWQ1/back22.jpg</item>
+    </string-array>
+
+    <string name="dev_email" translatable="false">udovoron@gmail.com</string>
+    <string name="report_title">Found error</string>
+    <string name="report_text">Hello, we found a bug in your application! The fact is that ..</string>
+    <string name="report_wait">Select an application</string>
+    <string name="report_error">No email clients</string>
+    <string name="tracker">Tracker</string>
+    <string name="favorites">Favorites</string>
+    <string name="trophys">Trophies</string>
+    <string name="app_help">Application help</string>
+    <string name="grade_app">Rate app</string>
+    <string name="share_friend">To share with friends</string>
+    <string name="claim">Report a bug</string>
+    <string name="police_prav">Legal information</string>
+    <string name="privacy_police">Privacy Policy</string>
+    <string name="not_make_photo">But we can\'t take a photo.</string>
+    <string name="click_to_change_background">Click to \n change cover</string>
+    <string name="empty_favorite">It\'s empty here for now</string>
+    <string name="click_any_diet">Like any diet and it \n will appear here</string>
+    <string name="dev_page">This section is under construction</string>
+    <string name="dev_page_text">But don\'t be upset! It will become available very soon and we will definitely inform you about it.</string>
+    <string name="ok_dev_page">close</string>
+    <string name="what_is_your_name">What is your name?</string>
+    <string name="your_name">Your name or nickname</string>
+    <string name="cancel_btn">cancel</string>
+    <string name="save_button">save</string>
+    <string name="ok_diets">cancel</string>
+    <string name="sht">pc</string>
+    <string name="count">Amount</string>
+    <string name="menu">Menu</string>
+    <string name="descriptiom">DESCRIPTION</string>
+    <string name="open">OPEN</string>
+    <string name="diet_plans">Meal plans</string>
+    <string name="dukan_diet">Ducan\'s diet</string>
+    <string name="prop_diet_dukan">Ducan\'s diet is divided into 4 stages - attack, alternation, consolidation and stabilization. The alternation phase is divided, in turn, into 3 more types. You need to choose the right one for you. To achieve the maximum result, you must go through all 4 stages in order</string>
+    <string name="start">Start</string>
+    <string name="save_in_to_profile">Saved to profile</string>
+    <string name="cancel_diff">CANCEL</string>
+    <string name="choice_diff">CHOOSE DIFFICULTY</string>
+    <string name="easy_diff">Easy</string>
+    <string name="easy_diff_desc">Two day passes are allowed. Difficulty suitable for beginners</string>
+    <string name="med_diff_desc">Medium</string>
+    <string name="med_diff_desc_prop">One day pass is allowed. Difficulty suitable for experienced</string>
+    <string name="hard_diff">Hard</string>
+    <string name="hard_diff_desc">Skipping is equal to dieting. The reward for the effort will be to maximize the effectiveness of the diet</string>
+    <string name="attten">Attention!</string>
+    <string name="attten_desc">The previously started diet is not over yet. If you start a new one, your old diet will be permanently deleted. \n Are you sure you want to delete your current diet and start a new one?</string>
+    <string name="canc">cancel</string>
+    <string name="star">start</string>
+    <string name="sod">Content</string>
+    <string name="prop">DESCRIPTION</string>
+    <string name="bens">PROS</string>
+    <string name="cons">MINUSES</string>
+    <string name="men">MENU</string>
+    <string name="res">RESULTS</string>
+    <string name="rev">REVIEWS</string>
+    <string name="desc_vh">DESCRIPTION</string>
+    <string name="kg_brok"> kg</string>
+    <string name="your_imt">Your BMI - </string>
+    <string name="fiz_level">Physical activity level</string>
+    <string name="weight_in_kg">Your weight in kilograms</string>
+    <string name="prot_spk">Proteins - </string>
+    <string name="fat_spk">Fats - </string>
+    <string name="carbo_spk">Carbo - </string>
+    <string name="gramm"> g</string>
+    <string name="cancel_spk">cancel</string>
+    <string name="ok_spk">ок</string>
+    <string name="diets_on">Dozens of diets</string>
+    <string name="text_diet_on">For every taste. Choose the conditions that suit you and lose weight comfortably!</string>
+    <string name="menu_on">Detailed menu</string>
+    <string name="text_menu_on">You no longer need to search the Internet. Description of all meals for each day of the diet!</string>
+    <string name="tracker_on">Diet Tracker</string>
+    <string name="tracker_text_on">Lead your diet right in the app! Don\'t forget your meals thanks to alerts</string>
+    <string name="rate_bad">AWFUL</string>
+    <string name="rate_bad_med">BAD</string>
+    <string name="rate_norm">NORMAL</string>
+    <string name="rate_good">GOOD</string>
+    <string name="rate_exec">EXCELLENT</string>
+    <string name="we_are_think">We thought here...</string>
+    <string name="rate_text">We love and appreciate you very much. We love creating a product that helps you. Maybe you could rate our application? On a five-point scale :)</string>
+    <string name="send"> send </string>
+    <string name="never">never</string>
+    <string name="rate_time">later</string>
+    <string name="thank_grade">Thanks for your feedback!</string>
+    <string name="cheat_text">Cheat meal is the day you missed. There are a limited number of such passes (lives). If you lose your last life, the diet is considered a failure.</string>
+    <string name="back_cheat">return</string>
+    <string name="congr_conger">Congratulations!</string>
+    <string name="text_congr">You have successfully completed this diet. It wasn\'t easy, but you did it. Keep it up!</string>
+    <string name="attention">Attention!</string>
+    <string name="atten_text">The current diet is not over yet. If you exit, all progress will be lost. Are you sure you want to log out?</string>
+    <string name="back_atten">return</string>
+    <string name="exit_atten">exit</string>
+    <string name="rab_title">Still a little ...</string>
+    <string name="rab_text">But don\'t be upset!\n It is important not to give up and stubbornly pursue your goal no matter what!\n We are sure that next time you will succeed</string>
+    <string name="rab_end">finish</string>
+    <string name="rab_replay">replay</string>
+    <string name="diary">Diary</string>
+    <string name="details">Details</string>
+    <string name="n">Good job! \n Let\'s continue tomorrow</string>
+    <string name="eat_today">Eat today</string>
+    <string name="day">day</string>
+    <string name="cheatmeal">Cheat meal</string>
+    <string name="shedule">Schedule</string>
+    <string name="atten_not">Attention!</string>
+    <string name="text_atten_not">You have unmarked food</string>
+    <string name="results_calc">Calculation results</string>
+    <string name="desc_calc">Description:</string>
+    <string name="fix_act">Physical activity</string>
+    <string name="results_spk">Results</string>
+    <string name="day_value">Daily requirement</string>
+    <string name="interval">Slimming interval</string>
+    <string name="bgu">PFC</string>
+    <string name="locale">Localization</string>
+    <string name="lang_title">Language</string>
+    <string name="change_lang">Change language</string>
+    <string name="war_cont_text">After changing the language, activated diets will become unavailable</string>
+    <string name="atten_lang">Attention</string>
+    <string name="cancel_lang">Cancel</string>
+    <string name="cont_lang">Continue</string>
+    <string name="adb_path">adb_en.json</string>
+    <string name="splash_lang">Changing the language</string>
+
+    <plurals name="days_plur">
+        <item quantity="one">%1$d day</item>
+        <item quantity="two">%1$d days</item>
+        <item quantity="few">%1$d days</item>
+        <item quantity="many">%1$d days</item>
+        <item quantity="other">%1$d days</item>
+    </plurals>
+
+
+    <string-array name="langs">
+        <item>Default</item>
+        <item>Russian</item>
+        <item>English</item>
+    </string-array>
+
+</resources>

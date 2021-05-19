@@ -11,6 +11,28 @@
         <item name="windowNoTitle">true</item>
     </style>
 
+
+
+    <style name="NewDiets" parent="Theme.AppCompat.Light.DarkActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">#2C2C2C</item>
+        <item name="colorPrimaryDark">#2C2C2C</item>
+        <item name="colorAccent">#2C2C2C</item>
+
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+    </style>
+
+    <style name="Langs" parent="Theme.AppCompat.Light.DarkActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">#2C2C2C</item>
+        <item name="colorPrimaryDark">#FFFFFF</item>
+        <item name="colorAccent">#2C2C2C</item>
+
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+    </style>
+
     <style name="AppTheme.NoActionBarChange">
         <item name="windowActionBar">false</item>
         <item name="windowNoTitle">true</item>
@@ -50,6 +72,27 @@
 
         <!-- Used by MediaRouter -->
         <item name="isLightTheme">true</item>
+    </style>
+
+
+    <style name="AppTheme.BottomItemTextView">
+        <item name="android:textSize">12sp</item>
+    </style>
+
+
+    <style name="Widget.BottomNavigationView" parent="Widget.Design.BottomNavigationView">
+        <item name="fontFamily">@font/roboto_light</item>
+        <item name="android:textSize">9sp</item>
+    </style>
+
+
+    <style name="Theme.AppCompat.Translucent" parent="Theme.AppCompat.NoActionBar">
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:colorBackgroundCacheHint">@null</item>
+        <item name="android:windowIsTranslucent">true</item>
+        <item name="android:windowAnimationStyle">@android:style/Animation</item>
+        <item name="android:statusBarColor">@color/white</item>
     </style>
 
 </resources>

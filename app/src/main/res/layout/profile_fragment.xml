@@ -1,0 +1,330 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/view2"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_marginLeft="24dp"
+                android:layout_marginTop="120dp"
+                android:elevation="5dp"
+                android:innerRadius="0dp"
+                android:shape="ring"
+                android:thicknessRatio="1.9"
+                app:cardCornerRadius="50dp"
+                app:cardElevation="3dp"
+                app:layout_constraintBottom_toTopOf="@+id/cardView2"
+                app:layout_constraintEnd_toEndOf="@+id/cardView2"
+                app:layout_constraintStart_toStartOf="@+id/cardView2">
+
+                <ImageView
+                    android:id="@+id/ivAvatar"
+                    android:layout_width="90dp"
+                    android:layout_height="90dp"
+                    android:layout_gravity="center"
+                    android:layout_margin="5dp"
+                    android:scaleType="centerCrop"
+                    tools:src="@drawable/head_newdiets" />
+
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:elevation="3dp"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/shape_stencil_avatar"
+                    android:id="@+id/ivCircle"/>
+
+            </androidx.cardview.widget.CardView>
+
+            <ImageView
+                android:id="@+id/ivHeadBack"
+                android:layout_width="match_parent"
+                android:layout_height="180dp"
+                android:layout_gravity="top"
+                android:scaleType="centerCrop"
+                tools:src="@drawable/head_newdiets" />
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cvParent"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="top"
+                android:layout_marginTop="160dp"
+                app:cardElevation="2dp"
+                tools:layout_editor_absoluteX="-16dp"
+                tools:layout_editor_absoluteY="159dp">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <TextView
+                        android:id="@+id/tvDate"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Вместе с 20.01.2019"
+                        app:layout_constraintStart_toStartOf="@+id/tvName"
+                        app:layout_constraintTop_toBottomOf="@+id/tvName" />
+
+                    <TextView
+                        android:id="@+id/tvName"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="140dp"
+                        android:layout_marginTop="16dp"
+                        android:drawableRight="@drawable/ic_pencil"
+                        android:drawablePadding="12dp"
+                        android:fontFamily="@font/roboto_medium"
+                        android:text="Вадим Казак"
+                        android:textColor="@color/black"
+                        android:textSize="18sp"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <Button
+                        android:id="@+id/btnFavorites"
+                        android:layout_width="wrap_content"
+                        android:layout_height="40dp"
+                        android:layout_marginTop="48dp"
+                        android:background="@drawable/shape_favorites_button"
+                        android:drawableLeft="@drawable/ic_favorites_button"
+                        android:drawablePadding="8dp"
+                        android:paddingLeft="22dp"
+                        android:paddingRight="30dp"
+                        android:text="@string/favorites"
+                        app:layout_constraintEnd_toStartOf="@+id/btnTrophy"
+                        app:layout_constraintHorizontal_bias="0.5"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/tvName" />
+
+                    <Button
+                        android:id="@+id/btnTrophy"
+                        android:layout_width="wrap_content"
+                        android:layout_height="40dp"
+                        android:background="@drawable/shape_favorites_button"
+                        android:drawableRight="@drawable/ic_treasure"
+                        android:drawablePadding="12dp"
+                        android:paddingLeft="30dp"
+                        android:paddingRight="18dp"
+                        android:text="@string/trophys"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="0.5"
+                        app:layout_constraintStart_toEndOf="@+id/btnFavorites"
+                        app:layout_constraintTop_toTopOf="@+id/btnFavorites" />
+
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/cardView5"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="16dp"
+                        android:layout_marginTop="32dp"
+                        android:layout_marginEnd="16dp"
+                        app:cardCornerRadius="12dp"
+                        app:cardElevation="4dp"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/btnFavorites">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="16dp"
+                                android:layout_marginTop="8dp"
+                                android:text="@string/app_help" />
+
+                            <View
+                                android:id="@+id/divider18"
+                                android:layout_width="match_parent"
+                                android:layout_height="1dp"
+                                android:layout_marginLeft="8dp"
+                                android:layout_marginTop="2dp"
+                                android:layout_marginRight="8dp"
+                                android:background="?android:attr/listDivider" />
+
+                            <Button
+                                android:id="@+id/btnGrade"
+                                android:layout_width="match_parent"
+                                android:gravity="left|center_vertical"
+                                android:layout_height="40dp"
+                                android:layout_marginLeft="16dp"
+                                android:layout_marginRight="16dp"
+                                android:layout_marginTop="12dp"
+                                android:background="?selectableItemBackground"
+                                android:drawableLeft="@drawable/ic_grade_button_profile"
+                                android:drawablePadding="12dp"
+                                android:text="@string/grade_app"
+                                android:textColor="@color/black"
+                                android:textSize="10dp" />
+
+                            <Button
+                                android:id="@+id/btnShare"
+                                android:layout_width="match_parent"
+                                android:gravity="left|center_vertical"
+                                android:background="?selectableItemBackground"
+                                android:layout_marginRight="16dp"
+                                android:layout_height="40dp"
+                                android:layout_marginLeft="16dp"
+                                android:layout_marginTop="2dp"
+                                android:drawableLeft="@drawable/ic_share_profile"
+                                android:drawablePadding="12dp"
+                                android:text="@string/share_friend"
+                                android:textColor="@color/black"
+                                android:textSize="10dp" />
+
+
+                            <Button
+                                android:id="@+id/btnReport"
+                                android:layout_width="match_parent"
+                                android:gravity="left|center_vertical"
+                                android:background="?selectableItemBackground"
+                                android:layout_marginRight="16dp"
+                                android:layout_height="40dp"
+                                android:layout_marginLeft="16dp"
+                                android:layout_marginTop="2dp"
+                                android:layout_marginBottom="8dp"
+                                android:drawableLeft="@drawable/ic_report_profile"
+                                android:drawablePadding="12dp"
+                                android:text="@string/claim"
+                                android:textColor="@color/black"
+                                android:textSize="10dp" />
+                        </LinearLayout>
+                    </androidx.cardview.widget.CardView>
+
+
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/cvPrivacy"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="16dp"
+                        android:layout_marginTop="24dp"
+                        android:layout_marginEnd="16dp"
+                        app:cardCornerRadius="12dp"
+                        app:cardElevation="4dp"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/cardView5">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="16dp"
+                                android:layout_marginTop="8dp"
+                                android:text="@string/police_prav" />
+
+                            <View
+                                android:id="@+id/divider18"
+                                android:layout_width="match_parent"
+                                android:layout_height="1dp"
+                                android:layout_marginLeft="8dp"
+                                android:layout_marginTop="2dp"
+                                android:layout_marginRight="8dp"
+                                android:background="?android:attr/listDivider" />
+
+                            <Button
+                                android:id="@+id/btnPolicy"
+                                android:layout_width="match_parent"
+                                android:layout_height="40dp"
+                                android:layout_marginLeft="16dp"
+                                android:layout_marginTop="12dp"
+                                android:layout_marginRight="16dp"
+                                android:layout_marginBottom="8dp"
+                                android:background="?selectableItemBackground"
+                                android:drawableLeft="@drawable/ic_privacy_police"
+                                android:drawablePadding="12dp"
+                                android:gravity="left|center_vertical"
+                                android:text="@string/privacy_police"
+                                android:textColor="@color/black"
+                                android:textSize="10dp" />
+
+                        </LinearLayout>
+                    </androidx.cardview.widget.CardView>
+
+
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="16dp"
+                        android:layout_marginTop="24dp"
+                        android:layout_marginEnd="16dp"
+                        android:layout_marginBottom="24dp"
+                        app:cardCornerRadius="12dp"
+                        app:cardElevation="4dp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/cvPrivacy">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="16dp"
+                                android:layout_marginTop="8dp"
+                                android:text="@string/locale" />
+
+                            <View
+                                android:id="@+id/divider19"
+                                android:layout_width="match_parent"
+                                android:layout_height="1dp"
+                                android:layout_marginLeft="8dp"
+                                android:layout_marginTop="2dp"
+                                android:layout_marginRight="8dp"
+                                android:background="?android:attr/listDivider" />
+
+                            <Button
+                                android:id="@+id/btnLanguage"
+                                android:layout_width="match_parent"
+                                android:layout_height="40dp"
+                                android:layout_marginLeft="16dp"
+                                android:layout_marginTop="12dp"
+                                android:layout_marginRight="16dp"
+                                android:layout_marginBottom="8dp"
+                                android:background="?selectableItemBackground"
+                                android:drawableLeft="@drawable/ic_lang"
+                                android:drawablePadding="12dp"
+                                android:gravity="left|center_vertical"
+                                android:text="@string/change_lang"
+                                android:textColor="@color/black"
+                                android:textSize="10dp" />
+
+                        </LinearLayout>
+                    </androidx.cardview.widget.CardView>
+
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+            </androidx.cardview.widget.CardView>
+        </FrameLayout>
+    </ScrollView>
+
+    <include layout="@layout/bottom_sheet_backs" />
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

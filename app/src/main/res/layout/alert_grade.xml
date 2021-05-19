@@ -1,0 +1,348 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/flParent">
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardView4"
+        android:layout_width="350dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginStart="32dp"
+        android:layout_marginEnd="32dp"
+        app:cardCornerRadius="12dp"
+        app:cardElevation="3dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/clParent"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+
+            <com.airbnb.lottie.LottieAnimationView
+                android:id="@+id/lottieAnimationView2"
+                android:layout_width="wrap_content"
+                android:layout_height="250dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:lottie_autoPlay="true"
+                app:lottie_speed="0.5"
+                app:lottie_fileName="head_grade.json"
+                app:lottie_loop="true" />
+
+            <com.airbnb.lottie.LottieAnimationView
+                android:id="@+id/lav0"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:elevation="1dp"
+                app:layout_constraintBottom_toBottomOf="@+id/divider13"
+                app:layout_constraintEnd_toStartOf="@+id/divider13"
+                app:layout_constraintStart_toEndOf="@+id/divider12"
+                app:layout_constraintTop_toTopOf="@+id/divider13"
+                app:lottie_autoPlay="true"
+                app:lottie_fileName="emoji0.json"
+                app:lottie_loop="true" />
+
+
+            <TextView
+                android:id="@+id/tvFirst"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:fontFamily="@font/roboto_medium"
+                android:text="@string/rate_bad"
+                android:textSize="11sp"
+                android:visibility="invisible"
+                app:layout_constraintEnd_toEndOf="@+id/lav0"
+                app:layout_constraintStart_toStartOf="@+id/lav0"
+                app:layout_constraintTop_toBottomOf="@+id/divider12" />
+
+            <TextView
+                android:id="@+id/tvSecond"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:fontFamily="@font/roboto_medium"
+                android:text="@string/rate_bad_med"
+                android:textSize="11sp"
+                android:visibility="invisible"
+                app:layout_constraintEnd_toEndOf="@+id/lav1"
+                app:layout_constraintStart_toStartOf="@+id/lav1"
+                app:layout_constraintTop_toBottomOf="@+id/divider13" />
+
+            <TextView
+                android:id="@+id/tvThird"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:fontFamily="@font/roboto_medium"
+                android:text="@string/rate_norm"
+                android:textSize="11sp"
+                android:visibility="invisible"
+                app:layout_constraintEnd_toEndOf="@+id/lav2"
+                app:layout_constraintStart_toStartOf="@+id/lav2"
+                app:layout_constraintTop_toBottomOf="@+id/divider14" />
+
+            <TextView
+                android:id="@+id/tvFirth"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:fontFamily="@font/roboto_medium"
+                android:text="@string/rate_good"
+                android:textSize="11sp"
+                android:visibility="invisible"
+                app:layout_constraintEnd_toEndOf="@+id/lav3"
+                app:layout_constraintStart_toStartOf="@+id/lav3"
+                app:layout_constraintTop_toBottomOf="@+id/divider15" />
+
+            <TextView
+                android:id="@+id/tvFifth"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:fontFamily="@font/roboto_medium"
+                android:text="@string/rate_exec"
+                android:textSize="11sp"
+                android:visibility="invisible"
+                app:layout_constraintEnd_toEndOf="@+id/lav4"
+                app:layout_constraintStart_toStartOf="@+id/lav4"
+                app:layout_constraintTop_toBottomOf="@+id/divider16" />
+
+            <com.airbnb.lottie.LottieAnimationView
+                android:id="@+id/lav1"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:elevation="1dp"
+                app:layout_constraintBottom_toBottomOf="@+id/divider13"
+                app:layout_constraintEnd_toStartOf="@+id/divider14"
+                app:layout_constraintStart_toEndOf="@+id/divider13"
+                app:layout_constraintTop_toTopOf="@+id/divider13"
+                app:layout_constraintVertical_bias="0.482"
+                app:lottie_autoPlay="true"
+                app:lottie_fileName="emoji1.json"
+                app:lottie_loop="true" />
+
+            <com.airbnb.lottie.LottieAnimationView
+                android:id="@+id/lav2"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:elevation="1dp"
+                app:layout_constraintBottom_toBottomOf="@+id/divider15"
+                app:layout_constraintEnd_toStartOf="@+id/divider15"
+                app:layout_constraintStart_toEndOf="@+id/divider14"
+                app:layout_constraintTop_toTopOf="@+id/divider15"
+                app:layout_constraintVertical_bias="0.482"
+                app:lottie_autoPlay="true"
+                app:lottie_fileName="emoji2.json"
+                app:lottie_loop="true" />
+
+            <com.airbnb.lottie.LottieAnimationView
+                android:id="@+id/lav3"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:elevation="1dp"
+                app:layout_constraintBottom_toBottomOf="@+id/divider15"
+                app:layout_constraintEnd_toStartOf="@+id/divider16"
+                app:layout_constraintStart_toEndOf="@+id/divider15"
+                app:layout_constraintTop_toTopOf="@+id/divider15"
+                app:layout_constraintVertical_bias="0.482"
+                app:lottie_autoPlay="true"
+                app:lottie_fileName="emoji3.json"
+                app:lottie_loop="true" />
+
+            <com.airbnb.lottie.LottieAnimationView
+                android:id="@+id/lav4"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:elevation="1dp"
+                app:layout_constraintBottom_toBottomOf="@+id/divider16"
+                app:layout_constraintEnd_toStartOf="@+id/divider17"
+                app:layout_constraintStart_toEndOf="@+id/divider16"
+                app:layout_constraintTop_toTopOf="@+id/divider16"
+                app:lottie_autoPlay="true"
+                app:lottie_fileName="emoji4.json"
+                app:lottie_loop="true" />
+
+            <TextView
+                android:id="@+id/textView16"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:translationY="-20dp"
+                android:fontFamily="@font/roboto"
+                android:text="@string/we_are_think"
+                android:textColor="@color/black"
+                android:textSize="22sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/lottieAnimationView2" />
+
+            <TextView
+                android:id="@+id/textView17"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginEnd="16dp"
+                android:translationY="-10dp"
+                android:fontFamily="@font/roboto"
+                android:gravity="center"
+                android:text="@string/rate_text"
+                android:textColor="@color/black"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView16" />
+
+            <Button
+                android:id="@+id/btnSend"
+                android:layout_width="wrap_content"
+                android:layout_height="35dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginBottom="8dp"
+                android:background="@drawable/shape_grade_send"
+                android:drawableRight="@drawable/ic_email_grade"
+                android:drawablePadding="8dp"
+                android:fontFamily="@font/roboto_medium"
+                android:paddingLeft="16dp"
+                android:paddingRight="16dp"
+                android:text="@string/send"
+                android:textColor="@color/white"
+                android:textSize="10sp"
+                android:visibility="gone"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent" />
+
+            <Button
+                android:id="@+id/btnStop"
+                android:layout_width="wrap_content"
+                android:layout_height="35dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginBottom="8dp"
+                android:background="@drawable/shape_grade_stop"
+                android:fontFamily="@font/roboto_medium"
+                android:paddingLeft="16dp"
+                android:paddingRight="16dp"
+                android:text="@string/never"
+                android:textColor="@color/white"
+                android:textSize="10sp"
+                android:visibility="visible"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/btnLater" />
+
+            <Button
+                android:id="@+id/btnLater"
+                android:layout_width="wrap_content"
+                android:layout_height="36dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="24dp"
+                android:layout_marginBottom="8dp"
+                android:background="@drawable/shape_ok"
+                android:drawableLeft="@drawable/ic_rate_later"
+                android:drawablePadding="8dp"
+                android:fontFamily="@font/roboto_medium"
+                android:paddingLeft="16dp"
+                android:paddingRight="16dp"
+                android:text="@string/rate_time"
+                android:textColor="@color/white"
+                android:textSize="10sp"
+                android:visibility="visible"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tvFirst"
+                app:layout_constraintVertical_bias="1.0" />
+
+            <View
+                android:id="@+id/divider6"
+                android:layout_width="0dp"
+                android:layout_height="1dp"
+                android:layout_marginTop="20dp"
+                android:background="?android:attr/listDivider"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView17" />
+
+            <View
+                android:id="@+id/divider16"
+                android:layout_width="1dp"
+                android:layout_height="45dp"
+                android:layout_marginStart="32dp"
+                android:background="?android:attr/listDivider"
+                app:layout_constraintBottom_toBottomOf="@+id/divider15"
+                app:layout_constraintEnd_toStartOf="@+id/divider17"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toEndOf="@+id/divider15"
+                app:layout_constraintTop_toTopOf="@+id/divider15" />
+
+            <View
+                android:id="@+id/divider14"
+                android:layout_width="1dp"
+                android:layout_height="45dp"
+                android:layout_marginStart="32dp"
+                android:background="?android:attr/listDivider"
+                app:layout_constraintBottom_toBottomOf="@+id/divider13"
+                app:layout_constraintEnd_toStartOf="@+id/divider15"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toEndOf="@+id/divider13"
+                app:layout_constraintTop_toTopOf="@+id/divider13" />
+
+            <View
+                android:id="@+id/divider13"
+                android:layout_width="1dp"
+                android:layout_height="45dp"
+                android:layout_marginStart="32dp"
+                android:background="?android:attr/listDivider"
+                app:layout_constraintBottom_toBottomOf="@+id/divider12"
+                app:layout_constraintEnd_toStartOf="@+id/divider14"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toEndOf="@+id/divider12"
+                app:layout_constraintTop_toTopOf="@+id/divider12" />
+
+            <View
+                android:id="@+id/divider12"
+                android:layout_width="1dp"
+                android:layout_height="45dp"
+                android:layout_marginStart="8dp"
+                android:background="?android:attr/listDivider"
+                app:layout_constraintBottom_toBottomOf="@+id/divider6"
+                app:layout_constraintEnd_toStartOf="@+id/divider13"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/divider6" />
+
+            <View
+                android:id="@+id/divider17"
+                android:layout_width="1dp"
+                android:layout_height="45dp"
+                android:layout_marginStart="32dp"
+                android:layout_marginEnd="8dp"
+                android:background="?android:attr/listDivider"
+                app:layout_constraintBottom_toBottomOf="@+id/divider16"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toEndOf="@+id/divider16"
+                app:layout_constraintTop_toTopOf="@+id/divider16" />
+
+            <View
+                android:id="@+id/divider15"
+                android:layout_width="1dp"
+                android:layout_height="45dp"
+                android:layout_marginStart="32dp"
+                android:background="?android:attr/listDivider"
+                app:layout_constraintBottom_toBottomOf="@+id/divider14"
+                app:layout_constraintEnd_toStartOf="@+id/divider16"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toEndOf="@+id/divider14"
+                app:layout_constraintTop_toTopOf="@+id/divider14" />
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.cardview.widget.CardView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

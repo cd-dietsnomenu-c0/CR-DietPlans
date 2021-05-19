@@ -2,47 +2,361 @@
     <string name="app_name">Диеты</string>
     <string name="check_your_connect">Check your internet</string>
 
+    <string name="admob_key" translatable="false">ca-app-pub-2555056002292788~3750621051</string>
+    <string name="interstitial_id" translatable="false">ca-app-pub-2555056002292788/3064241259</string>
+    <string name="banner_id" translatable="false">ca-app-pub-2555056002292788/9629649606</string>
+    <string name="native_ad" translatable="false">ca-app-pub-2555056002292788/3938339229</string>
 
     <!--Test-->
-    <!--<string name="admob_id" translatable="false">ca-app-pub-3940256099942544~3347511713</string>
-    <string name="admob_inter" translatable="false">ca-app-pub-3940256099942544/1033173712</string>
-    <string name="admob_banner" translatable="false">ca-app-pub-3940256099942544/6300978111</string>-->
+    <!--<string name="admob_key" translatable="false">ca-app-pub-3940256099942544~3347511713</string>
+    <string name="interstitial_id" translatable="false">ca-app-pub-3940256099942544/1033173712</string>
+    <string name="banner_id" translatable="false">ca-app-pub-3940256099942544/6300978111</string>
+    <string name="native_ad" translatable="false">ca-app-pub-3940256099942544/8135179316</string>-->
 
-    <string name="admob_banner" translatable="false">ca-app-pub-2555056002292788/6726010435</string>
-    <string name="admob_inter" translatable="false">ca-app-pub-2555056002292788/6673754138</string>
-    <string name="admob_id" translatable="false">ca-app-pub-2555056002292788~4622305862</string>
-
-    <string name="title_activity_drawer">DrawerActivity</string>
-    <string name="navigation_drawer_open">Open navigation drawer</string>
-    <string name="navigation_drawer_close">Close navigation drawer</string>
-    <string name="nav_header_title">Диеты для быстрого похудения</string>
-    <string name="nav_header_subtitle">android.studio@android.com</string>
-    <string name="nav_header_desc">Navigation header</string>
-    <string name="action_settings">Settings</string>
-
-
-    <!--AlertDialog for gdpr-->
-    <string name="body_gdpr">Продолжая использовать данное приложение Вы принимаете нашу политику конфиденциальности</string>
-    <string name="title_gdpr">Здравствуйте!</string>
-    <string name="open_gdpr">Открыть текст политики конфиденциальности</string>
-    <string name="yes_gdpr">Продолжить использование приложения</string>
+    <!--Profile-->
     <string name="url_gdpr" translatable="false">https://www.freeprivacypolicy.com/privacy/view/272200879b5cf29dd1b4fcd0f0299409</string>
-
-    <!--AlertDialog for grade-->
-    <string name="titleAlertDialog">Привет!</string>
-    <string name="bodyAlertDialog">Оцените наше приложение или оставьте отзыв. Это помогает улучшить продукт. Спасибо!</string>
-    <string name="splash_screen_title">Любовь и магия. Любовные заклинания</string>
-    <string name="laterButtonAlert">Позже</string>
-    <string name="neverButtonAlert">Никогда</string>
-    <string name="evaluateButtonAlert">Оценить</string>
-
-    <!--FAB-->
-    <string name="settings">Настройки</string>
-    <string name="rate_us">Оцените нас</string>
-    <string name="share">Поделиться с друзьями</string>
     <string name="accompanying_text">Все работает в реальной жизни! Попробуй и ты!</string>
 
-    <string name="privacy_policy">Privacy policy</string>
+    <!--Tracker-->
+    <string name="tracker_share_1">Мной была успешно пройдена </string>
+    <string name="tracker_share_2">. Результаты поражают! Попробуй и ты)</string>
 
+    <string name="bnv_main">Диеты</string>
+    <string name="bnv_prem">Премиум</string>
+    <string name="bnv_settings">Профиль</string>
+
+    <string-array name="images">
+        <item>https://i.ibb.co/bF4N5d6/w0.jpg</item>
+        <item>https://i.ibb.co/5x4RbWd/w1.jpg</item>
+        <item>https://i.ibb.co/sKqH1hs/w2.jpg</item>
+        <item>https://i.ibb.co/spS0Cqm/w3.jpg</item>
+        <item>https://i.ibb.co/dQqVwL8/w4.jpg</item>
+        <item>https://i.ibb.co/7nR5CqH/w5.jpg</item>
+        <item>https://i.ibb.co/Y7q6dQN/w6.jpg</item>
+        <item>https://i.ibb.co/2Fvh7nW/w7.jpg</item>
+        <item>https://i.ibb.co/FxrSC1H/w8.jpg</item>
+        <item>https://i.ibb.co/9G0hP98/w9.jpg</item>
+        <item>https://i.ibb.co/CP9J1rr/w10.jpg</item>
+        <item>https://i.ibb.co/H4b232Q/w11.jpg</item>
+        <item>https://i.ibb.co/W54SCWD/w12.jpg</item>
+        <item>https://i.ibb.co/sCYRV5H/w13.jpg</item>
+        <item>https://i.ibb.co/yypthtq/w14.jpg</item>
+        <item>https://i.ibb.co/4WC5HNG/w15.jpg</item>
+        <item>https://i.ibb.co/xj0TxgC/w16.jpg</item>
+        <item>https://i.ibb.co/5FR7Tx7/w17.jpg</item>
+        <item>https://i.ibb.co/Rb2yZPD/w18.jpg</item>
+        <item>https://i.ibb.co/3MRkywX/w19.jpg</item>
+        <item>https://i.ibb.co/DpDtsHJ/w20.jpg</item>
+        <item>https://i.ibb.co/QQdSwBF/w21.jpg</item>
+        <item>https://i.ibb.co/PhLBfKz/w22.jpg</item>
+        <item>https://i.ibb.co/brZzL9Y/w23.jpg</item>
+        <item>https://i.ibb.co/YR8JTqZ/w24.jpg</item>
+        <item>https://i.ibb.co/m9qzdMv/w25.jpg</item>
+        <item>https://i.ibb.co/fxYFsqT/w26.jpg</item>
+        <item>https://i.ibb.co/Z1bJrLx/w27.jpg</item>
+    </string-array>
+
+    <string-array name="titles_of_calculating_list">
+        <item>Метод Поля Брока</item>
+        <item>\"Мечта Лоренца\"</item>
+        <item>Калькулятор ИМТ</item>
+        <item>Калькулятор СПК</item>
+    </string-array>
+
+    <string-array name="descriptions_of_calculating_list">
+        <item>Формула для определения идеального веса была разработана в 1871 году французским хирургом и антропологом Полем Брока.
+            Формула подходит для людей выше 155 и ниже 185 сантиметров среднего телосложения.</item>
+        <item>Существует изрядное количество формул для определения идеального веса.
+            Алгоритмы расчётов отличаются сложностью и набором необходимых исходных данных.
+            Способ Лоренца — один из самых известных и простейших.
+            Чтобы его использовать, достаточно знать только рост.</item>
+        <item>С помощью индекса массы тела вы можете проверить соответствие
+            между массой вашего тела и вашим ростом и узнать,
+            имеется ли у вас избыточный вес, или же, наоборот,
+            не страдаете ли вы недостатком веса.</item>
+        <item>С помощью калькулятора СПК можно определить ваш суточный лимит калорий, коридор калорий для похудения, оптимальное соотношение суточного потребления белков, жиров и углеводов (БЖУ)</item>
+    </string-array>
+
+    <string name="level_none">Минимальная активность</string>
+    <string name="level_easy">Легкая активность</string>
+    <string name="level_medium">Средняя активность</string>
+    <string name="level_hard">Повышенная активность</string>
+    <string name="level_up_hard">Высокая активность</string>
+    <string name="level_super">Сверхвысокая активность</string>
+    <string name="level_up_super">Предельная активность</string>
+    <string name="spk_choise_your_gender">Выберите Ваш пол</string>
+    <string name="spk_check_your_age">Проверьте Ваш возраст</string>
+    <string name="spk_check_your_height">Проверьте введенный рост</string>
+    <string name="spk_check_weight">Проверьте введенный вес</string>
+    <string name="spk_kcal">ккал</string>
+    <string name="description_of_SPK">Для комфортного похудения, для избежания срывов и нанесения вреда здоровью снижать калораж рациона ниже 1200 нельзя, поэтому в случае, если Ваш нижний предел оказался ниже 1200, надо необходимые калории сжигать за счёт физических нагрузок.</string>
+    <string name="main_menu">Главное меню</string>
+    <string name="together">Вместе с</string>
+
+
+    <!--Calculating Brok-->
+    <string name="description_brok">
+        П. Брока включил в свои расчеты данные о возрастной категории, к которой относится исследуемый,
+        а также сведения о длине его тела и конституционном типе сложения.</string>
+    <string name="brok">Метод Поля Брока</string>
+    <string name="tall">Ваш рост (см)</string>
+    <string name="girth">Обхват запястья в сантиметрах</string>
+    <string name="your_age">Ваш возраст</string>
+    <string name="sex">Ваш пол</string>
+    <string name="sex_male">Мужской</string>
+    <string name="sex_female">Женский</string>
+    <string name="calculate_btn">Рассчитать</string>
+    <string name="fill_all_fields">Для расчета заполните все поля</string>
+    <string name="check_your_data">Проверьте введенные данные</string>
+    <string name="unknown_error">Проверьте введенные данные</string>
+
+    <!--Calculating Lorenc-->
+    <string name="lorenc_method">Метод Лоренца</string>
+    <string name="description_of_lorenc">Если ваш вес отличается несколькими килограммами от оптимального,
+        определённого по формуле, но вы чувствуете себя комфортно, не стоит беспокоиться.</string>
+    <string name="height_lorenc">Ваш рост в сантиметрах</string>
+    <string name="lorenc_calculate">Рассчитать</string>
+    <string name="recommended_weight">Ваш рекомендуемый вес</string>
+    <string name="ok">Ok</string>
+
+
+    <string name="imt">ИМТ</string>
+    <string name="description_imt">Индекс массы тела следует применять с осторожностью, исключительно для ориентировочной оценки — например, попытка оценить с его помощью телосложение профессиональных спортсменов может дать неверный результат (высокое значение индекса в этом случае объясняется развитой мускулатурой)</string>
+    <string name="your_weight_in_kilo">Ваш вес в килограммах</string>
+    <string name="bnv_calc">Расчеты</string>
+    <string name="eat_breakfast">Завтрак</string>
+    <string name="eat_lunch">Обед</string>
+    <string name="eat_snack_one">Перекус</string>
+    <string name="hints">СОВЕТЫ</string>
+    <string name="results">РЕЗУЛЬТАТЫ</string>
+    <string name="reviews">ОТЗЫВЫ ДИЕТОЛОГОВ</string>
+
+    <!--IMT calculator-->
+    <string-array name="body_types">
+        <item>Выраженный дефицит массы тела</item>
+        <item>Недостаточная масса тела</item>
+        <item>Нормальный вес</item>
+        <item>Избыточная масса тела (предожирение)</item>
+        <item>Ожирение первой степени</item>
+        <item>Ожирение второй степени</item>
+        <item>Ожирение третьей степени</item>
+    </string-array>
+
+    <string-array name="descriptions_bodytypes">
+        <item>Обладателии такого показателя ИМТ могут чувствовать себя на равных с такими известными моделями, как Кейт Мосс (ИМТ – 16,1), Наоми Кэмпбелл (ИМТ - 16,5), Гизелой Бундхен (ИМТ – 16), рискующими, кстати, остаться без работы в связи с борьбой с анорексией и, как следствие, с падением популярности представителей этой болезни среди знаменитостей. К слову, ИМТ ниже 17,5 – один из критериев в диагностике нервной анорексии, ИМТ около 15 – признак голодания.</item>
+        <item>Хотя людям с таким показателем ИМТ практически не грозят болезни, возникающие вследствие ожирения, зато для них велика вероятность заработать другие проблемы. Такие как недостаточность мышечной массы, слабость костей, малокровие (анемия), невозможность организма усваивать некоторые питательные вещества, потеря волос, менструальные нарушения и трудности/невозможность зачатия.</item>
+        <item>Представители «золотой середины», когда жировой ткани ни много, ни мало, а достаточно, конечно, находятся в преимуществе, по сравнению со всеми остальными. Такой вес не опасен для здоровья, его корректировки, возможно, понадобятся только с эстетической целью. </item>
+        <item>Многие уверены, что слово "ожирение" к ним просто не может быть применимо - это особый и редкий случай. На самом деле, исходя из врачебной практики, диагноз этот имеют две женщины из 10-ти. Их индекс массы тела превышает цифру 30. А проблему под названием «избыточный вес» имеют еще большее количество женщин.</item>
+        <item>Обладателям такого ИМТ необходимо снизить вес – даже небольшое снижение ИМТ позволит не только лучше выглядеть, но и лучше себя чувствовать. Ведь ожирение – это уже заболевание. И связано оно не только с высоким содержанием жира в организме, но и с риском возникновения других болезней, таких как сердечные заболевания, диабет II типа и гипертония. Чем больше обхват талии, тем выше риск.</item>
+        <item>Риск заболеваний значительно повышается.</item>
+        <item>Риск заболеваний слишком высок. Таким людям специалисты настоятельно рекомендуют снизить вес до более приемлемых размеров.</item>
+    </string-array>
+
+
+    <string-array name="eating_names">
+        <item>Завтрак</item>
+        <item>Обед</item>
+        <item>Ужин</item>
+        <item>Перекус</item>
+        <item>Перекус</item>
+    </string-array>
+
+    <integer-array name="eats_gradients">
+        <item>@drawable/gradient_breakfast</item>
+        <item>@drawable/gradient_lunch</item>
+        <item>@drawable/gradient_dinner</item>
+        <item>@drawable/gradient_snack_one</item>
+        <item>@drawable/gradient_snack_two</item>
+    </integer-array>
+
+    <integer-array name="eats_icons">
+        <item>@drawable/img_breakfast</item>
+        <item>@drawable/img_lunch</item>
+        <item>@drawable/img_dinner</item>
+        <item>@drawable/img_snack_1</item>
+        <item>@drawable/img_snack_2</item>
+    </integer-array>
+
+    <string-array name="loading_states">
+        <item>загружаем диету</item>
+        <item>выставляем дни</item>
+        <item>загружаем меню</item>
+        <item>запускаем трекер</item>
+        <item>заканчиваем настройку</item>
+    </string-array>
+
+    <string name="ready">готово!</string>
+    <string name="def_name">Введите ваше имя</string>
+
+    <integer-array name="pluses">
+        <item>@drawable/ic_plus_green</item>
+        <item>@drawable/ic_plus_blue</item>
+        <item>@drawable/ic_plus_violet</item>
+        <item>@drawable/ic_plus_dark_red</item>
+        <item>@drawable/ic_plus_light_violet</item>
+    </integer-array>
+
+
+    <string-array name="backgrounds_profile">
+        <item>https://i.ibb.co/7XXfQsg/back1.jpg</item>
+        <item>https://i.ibb.co/DbWgB8P/1.jpg</item>
+        <item>https://i.ibb.co/9GdNZtc/back9.jpg</item>
+        <item>https://i.ibb.co/cLnntc8/back2.jpg</item>
+        <item>https://i.ibb.co/3dBzHVV/back3.jpg</item>
+        <item>https://i.ibb.co/VD2mNxm/back4.jpg</item>
+        <item>https://i.ibb.co/H7r0JC0/back5.jpg</item>
+        <item>https://i.ibb.co/m56Tn00/back6.jpg</item>
+        <item>https://i.ibb.co/B6hx2zW/back7.jpg</item>
+        <item>https://i.ibb.co/g6k1Vcz/back8.jpg</item>
+        <item>https://i.ibb.co/y6fP94B/back10.jpg</item>
+        <item>https://i.ibb.co/4wrkS8z/back11.jpg</item>
+        <item>https://i.ibb.co/BZGyJwG/back12.jpg</item>
+        <item>https://i.ibb.co/CKQPMGm/back13.jpg</item>
+        <item>https://i.ibb.co/GJw2jVW/back14.jpg</item>
+        <item>https://i.ibb.co/D4gWtKp/back15.jpg</item>
+        <item>https://i.ibb.co/fn7fjGS/back16.jpg</item>
+        <item>https://i.ibb.co/fkzcdXb/back17.jpg</item>
+        <item>https://i.ibb.co/JHfq3qy/back18.jpg</item>
+        <item>https://i.ibb.co/C1fLXzK/back19.jpg</item>
+        <item>https://i.ibb.co/7zgbXZc/back20.jpg</item>
+        <item>https://i.ibb.co/ZGNf2CX/back21.jpg</item>
+        <item>https://i.ibb.co/6J5qWQ1/back22.jpg</item>
+    </string-array>
+
+    <string name="authorise_file_provider" translatable="false">com.jundev.diets.fileprovider</string>
+    <string name="dev_email" translatable="false">udovoron@gmail.com</string>
+    <string name="report_title">Найдена ошибка</string>
+    <string name="report_text">Добрый день, нашли ошибку в вашем приложении ! Дело в том, что ..</string>
+    <string name="report_wait">Выберите приложение</string>
+    <string name="report_error">Нет почтовых клиентов</string>
+    <string name="tracker">Трекер</string>
+    <string name="favorites">Фавориты</string>
+    <string name="trophys">Трофеи</string>
+    <string name="app_help">Помощь приложению</string>
+    <string name="grade_app">Оценить приложение</string>
+    <string name="share_friend">Поделиться с друзьями</string>
+    <string name="claim">Сообщить об ошибке</string>
+    <string name="police_prav">Правовая информация</string>
+    <string name="privacy_police">Политика конфиденциальности</string>
+    <string name="not_make_photo">Но мы же не сможем сделать фото</string>
+    <string name="click_to_change_background">Нажмите для \n смены обложки</string>
+    <string name="empty_favorite">Здесь пока пусто</string>
+    <string name="click_any_diet">Лайкните любую диету и она \n появится здесь</string>
+    <string name="dev_page">Этот раздел в разработке</string>
+    <string name="dev_page_text">Но не стоит расстраиваться! Совсем скоро он станет доступен и мы обязательно об этом сообщим</string>
+    <string name="ok_dev_page">понятно</string>
+    <string name="what_is_your_name">Как вас зовут?</string>
+    <string name="your_name">Ваше имя или никнейм</string>
+    <string name="cancel_btn">отмена</string>
+    <string name="save_button">сохранить</string>
+    <string name="ok_diets">понятно</string>
+    <string name="sht">шт</string>
+    <string name="count">Количество</string>
+    <string name="menu">Меню</string>
+    <string name="descriptiom">ОПИСАНИЕ</string>
+    <string name="open">ОТКРЫТЬ</string>
+    <string name="diet_plans">Планы питания</string>
+    <string name="dukan_diet">Диета Дюкана</string>
+    <string name="prop_diet_dukan">Диета Дюкана делится на 4 этапа - атака, чередование, закрепление и стабилизация. Фаза чередования делится в свою очередь еще 3 типа. Выбрать нужно подходящий именно вам. Для достижения максимального результата необходимо проходить все 4 этапа по-порядку</string>
+    <string name="start">Начать</string>
+    <string name="save_in_to_profile">Сохранено в профиль</string>
+    <string name="cancel_diff">ОТМЕНА</string>
+    <string name="choice_diff">ВЫБЕРИТЕ СЛОЖНОСТЬ</string>
+    <string name="easy_diff">Легкая</string>
+    <string name="easy_diff_desc">Допускается два дневных пропуска. Сложность подходит для начинающих</string>
+    <string name="med_diff_desc">Средняя</string>
+    <string name="med_diff_desc_prop">Допускается один дневной пропуск. Сложность подходит для опытных</string>
+    <string name="hard_diff">Тяжелая</string>
+    <string name="hard_diff_desc">Пропуск равен провалу диеты. Наградой за усилия будет максимальная эффективность диеты</string>
+    <string name="attten">Внимание!</string>
+    <string name="attten_desc">Ранее начатая диета еще не закончена. В случае начала новой, ваша старая диета будет удалена без возможности восстановления. \n Вы уверены, что хотите удалить текущую диету и начать новую?</string>
+    <string name="canc">отменить</string>
+    <string name="star">начать</string>
+    <string name="sod">Содержание</string>
+    <string name="prop">ОПИСАНИЕ</string>
+    <string name="bens">ПЛЮСЫ</string>
+    <string name="cons">МИНУСЫ</string>
+    <string name="men">МЕНЮ</string>
+    <string name="res">РЕЗУЛЬТАТЫ</string>
+    <string name="rev">ОТЗЫВЫ</string>
+    <string name="desc_vh">ОПИСАНИЕ</string>
+    <string name="kg_brok"> кг</string>
+    <string name="your_imt">Ваш ИМТ - </string>
+    <string name="fiz_level">Уровень физических нагрузок</string>
+    <string name="weight_in_kg">Ваш вес в килограммах</string>
+    <string name="prot_spk">Белки - </string>
+    <string name="fat_spk">Жиры - </string>
+    <string name="carbo_spk">Углеводы - </string>
+    <string name="gramm"> г</string>
+    <string name="cancel_spk">отмена</string>
+    <string name="ok_spk">ок</string>
+    <string name="diets_on">Десятки диет</string>
+    <string name="text_diet_on">На любой вкус. Выбирайте подходящие для вас условия и худейте комфортно!</string>
+    <string name="menu_on">Подробное меню</string>
+    <string name="text_menu_on">Больше не нужно искать в интернете. Описание всех приемов пищи на каждый день диеты!</string>
+    <string name="tracker_on">Трекер диеты</string>
+    <string name="tracker_text_on">Веди диету прямо в приложении! Не забывай про приемы пищи благодаря оповещениям</string>
+    <string name="rate_bad">УЖАСНО</string>
+    <string name="rate_bad_med">ПЛОХО</string>
+    <string name="rate_norm">ТЕРПИМО</string>
+    <string name="rate_good">ХОРОШО</string>
+    <string name="rate_exec">ОТЛИЧНО</string>
+    <string name="we_are_think">Мы тут подумали...</string>
+    <string name="rate_text">Мы очень любим и ценим вас. Нам очень нравится создавать продукт, который помогает вам. Может быть вы могли бы оценить наше приложение? По пятибалльной шкале :)</string>
+    <string name="send">отправить</string>
+    <string name="never">никогда</string>
+    <string name="rate_time">позже</string>
+    <string name="thank_grade">Спасибо за ваш отзыв!</string>
+    <string name="cheat_text">Читмил - день, который вы пропустили. Таких пропусков (жизней) ограниченное число. Если вы теряете последнюю жизнь - диета считается проваленной</string>
+    <string name="back_cheat">назад</string>
+    <string name="congr_conger">Поздравляем!</string>
+    <string name="text_congr">Вы успешно завершили эту диету. Это было непросто, но вы справились. Так держать!</string>
+    <string name="attention">Внимание!</string>
+    <string name="atten_text">Текущая диета еще не закончена. В случае выхода - весь прогресс будет потерян. Вы уверены, что хотите выйти?</string>
+    <string name="back_atten">вернуться</string>
+    <string name="exit_atten">выйти</string>
+    <string name="rab_title">Еще бы чуть-чуть...</string>
+    <string name="rab_text">Но не стоит расстраиваться!\nВажно не опускать руки и упорно идти к своей цели несмотря ни на что!\n Мы уверены - в следующий раз у вас все получиться</string>
+    <string name="rab_end">завершить</string>
+    <string name="rab_replay">заново</string>
+    <string name="diary">Дневник</string>
+    <string name="details">Детали</string>
+    <string name="n">Хорошая работа! \n Продолжим завтра</string>
+    <string name="eat_today">Съесть сегодня</string>
+    <string name="day">день</string>
+    <string name="cheatmeal">Читмил</string>
+    <string name="shedule">Расписание</string>
+    <string name="atten_not">Внимание!</string>
+    <string name="text_atten_not">У вас есть неотмеченная еда</string>
+    <string name="results_calc">Итоги расчета</string>
+    <string name="desc_calc">Описание:</string>
+    <string name="fix_act">Физическая активность</string>
+    <string name="results_spk">Результаты</string>
+    <string name="day_value">Суточная потребность</string>
+    <string name="interval">Интервал для похудения</string>
+    <string name="bgu">БЖУ</string>
+    <string name="locale">Локализация</string>
+    <string name="lang_title">Язык</string>
+    <string name="change_lang">Сменить язык</string>
+    <string name="war_cont_text">После изменения языка, активированные диеты станут недоступны</string>
+    <string name="atten_lang">Внимание</string>
+    <string name="cancel_lang">Отмена</string>
+    <string name="cont_lang">Продолжить</string>
+    <string name="adb_path">adb.json</string>
+    <string name="splash_lang">Меняем язык</string>
+
+    <plurals name="days_plur">
+        <item quantity="one">%1$d день</item>
+        <item quantity="two">%1$d дня</item>
+        <item quantity="few">%1$d дня</item>
+        <item quantity="many">%1$d дней</item>
+        <item quantity="other">%1$d дней</item>
+    </plurals>
+
+    <string-array name="langs">
+        <item>Системный</item>
+        <item>Русский</item>
+        <item>Английский</item>
+    </string-array>
 
 </resources>

@@ -4,6 +4,15 @@
         <item name="windowActionBar">false</item>
         <item name="windowNoTitle">true</item>
         <item name="android:statusBarColor">@android:color/transparent</item>
+        <item name="android:windowTranslucentStatus">true</item>
+        <item name="android:windowTranslucentNavigation">false</item>
+    </style>
+
+
+    <style name="MainActivityTheme" parent="AppTheme.NoActionBar">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+        <item name="android:statusBarColor">#FC1A1919</item>
     </style>
 
     <style name="ChangeTheme" parent="Platform.ThemeOverlay.AppCompat.Light">
@@ -42,5 +51,22 @@
 
         <!-- Used by MediaRouter -->
         <item name="isLightTheme">true</item>
+
+
+    </style>
+
+    <style name="Theme.AppCompat.Translucent" parent="Theme.AppCompat.NoActionBar">
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:colorBackgroundCacheHint">@null</item>
+        <item name="android:windowIsTranslucent">true</item>
+        <item name="android:windowAnimationStyle">@android:style/Animation</item>
+        <item name="android:statusBarColor">@color/white</item>
+    </style>
+
+    <style name="EditTextTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+        <item name="colorControlNormal">#7C7C7C</item>
+        <item name="colorControlActivated">#7C7C7C</item>
+        <item name="colorControlHighlight">#7C7C7C</item>
     </style>
 </resources>

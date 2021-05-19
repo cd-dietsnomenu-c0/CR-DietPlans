@@ -1,0 +1,246 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="50dp">
+
+    <ImageView
+        android:id="@+id/ivFirstDay"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/shape_circle"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/ivSecondDay"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tvFirstDay"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/roboto_bold"
+        android:text="1"
+        android:textColor="@color/day_tracker"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="@+id/ivFirstDay"
+        app:layout_constraintEnd_toEndOf="@+id/ivFirstDay"
+        app:layout_constraintStart_toStartOf="@+id/ivFirstDay"
+        app:layout_constraintTop_toTopOf="@+id/ivFirstDay" />
+
+    <com.airbnb.lottie.LottieAnimationView
+        android:id="@+id/lavFirstDay"
+        android:layout_width="36dp"
+        android:layout_height="36dp"
+        app:layout_constraintBottom_toBottomOf="@+id/ivFirstDay"
+        app:layout_constraintEnd_toEndOf="@+id/ivFirstDay"
+        app:layout_constraintStart_toStartOf="@+id/ivFirstDay"
+        app:layout_constraintTop_toTopOf="@+id/ivFirstDay"
+        app:lottie_fileName="day_check.json" />
+
+    <ImageView
+        android:id="@+id/ivSecondDay"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/shape_circle"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/ivThirdDay"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/ivFirstDay"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tvSecondDay"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/roboto_bold"
+        android:text="2"
+        android:textColor="@color/day_tracker"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="@+id/ivSecondDay"
+        app:layout_constraintEnd_toEndOf="@+id/ivSecondDay"
+        app:layout_constraintStart_toStartOf="@+id/ivSecondDay"
+        app:layout_constraintTop_toTopOf="@+id/ivSecondDay" />
+
+    <com.airbnb.lottie.LottieAnimationView
+        android:id="@+id/lavSecondDay"
+        android:layout_width="36dp"
+        android:layout_height="36dp"
+        app:layout_constraintBottom_toBottomOf="@+id/ivSecondDay"
+        app:layout_constraintEnd_toEndOf="@+id/ivSecondDay"
+        app:layout_constraintStart_toStartOf="@+id/ivSecondDay"
+        app:layout_constraintTop_toTopOf="@+id/ivSecondDay"
+        app:lottie_fileName="day_check.json" />
+
+    <ImageView
+        android:id="@+id/ivThirdDay"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/shape_circle"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/ivFourthDay"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/ivSecondDay"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tvThirdDay"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/roboto_bold"
+        android:text="3"
+        android:textColor="@color/day_tracker"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="@+id/ivThirdDay"
+        app:layout_constraintEnd_toEndOf="@+id/ivThirdDay"
+        app:layout_constraintStart_toStartOf="@+id/ivThirdDay"
+        app:layout_constraintTop_toTopOf="@+id/ivThirdDay" />
+
+    <com.airbnb.lottie.LottieAnimationView
+        android:id="@+id/lavThirdDay"
+        android:layout_width="36dp"
+        android:layout_height="36dp"
+        app:layout_constraintBottom_toBottomOf="@+id/ivThirdDay"
+        app:layout_constraintEnd_toEndOf="@+id/ivThirdDay"
+        app:layout_constraintStart_toStartOf="@+id/ivThirdDay"
+        app:layout_constraintTop_toTopOf="@+id/ivThirdDay"
+        app:lottie_fileName="day_check.json" />
+
+    <ImageView
+        android:id="@+id/ivFourthDay"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/shape_circle"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/ivFifthDay"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/ivThirdDay"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tvFourthDay"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/roboto_bold"
+        android:text="4"
+        android:textColor="@color/day_tracker"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="@+id/ivFourthDay"
+        app:layout_constraintEnd_toEndOf="@+id/ivFourthDay"
+        app:layout_constraintStart_toStartOf="@+id/ivFourthDay"
+        app:layout_constraintTop_toTopOf="@+id/ivFourthDay" />
+
+    <com.airbnb.lottie.LottieAnimationView
+        android:id="@+id/lavFourthDay"
+        android:layout_width="36dp"
+        android:layout_height="36dp"
+        app:layout_constraintBottom_toBottomOf="@+id/ivFourthDay"
+        app:layout_constraintEnd_toEndOf="@+id/ivFourthDay"
+        app:layout_constraintStart_toStartOf="@+id/ivFourthDay"
+        app:layout_constraintTop_toTopOf="@+id/ivFourthDay"
+        app:lottie_fileName="day_check.json" />
+
+    <ImageView
+        android:id="@+id/ivFifthDay"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/shape_circle"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/ivSixthDay"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/ivFourthDay"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tvFifthDay"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/roboto_bold"
+        android:text="5"
+        android:textColor="@color/day_tracker"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="@+id/ivFifthDay"
+        app:layout_constraintEnd_toEndOf="@+id/ivFifthDay"
+        app:layout_constraintStart_toStartOf="@+id/ivFifthDay"
+        app:layout_constraintTop_toTopOf="@+id/ivFifthDay" />
+
+    <com.airbnb.lottie.LottieAnimationView
+        android:id="@+id/lavFifthDay"
+        android:layout_width="36dp"
+        android:layout_height="36dp"
+        app:layout_constraintBottom_toBottomOf="@+id/ivFifthDay"
+        app:layout_constraintEnd_toEndOf="@+id/ivFifthDay"
+        app:layout_constraintStart_toStartOf="@+id/ivFifthDay"
+        app:layout_constraintTop_toTopOf="@+id/ivFifthDay"
+        app:lottie_fileName="day_check.json" />
+
+    <ImageView
+        android:id="@+id/ivSixthDay"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/shape_circle"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/ivSeventhDay"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/ivFifthDay"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tvSixthDay"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/roboto_bold"
+        android:text="6"
+        android:textColor="@color/day_tracker"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="@+id/ivSixthDay"
+        app:layout_constraintEnd_toEndOf="@+id/ivSixthDay"
+        app:layout_constraintStart_toStartOf="@+id/ivSixthDay"
+        app:layout_constraintTop_toTopOf="@+id/ivSixthDay" />
+
+    <com.airbnb.lottie.LottieAnimationView
+        android:id="@+id/lavSixthDay"
+        android:layout_width="36dp"
+        android:layout_height="36dp"
+        app:layout_constraintBottom_toBottomOf="@+id/ivSixthDay"
+        app:layout_constraintEnd_toEndOf="@+id/ivSixthDay"
+        app:layout_constraintStart_toStartOf="@+id/ivSixthDay"
+        app:layout_constraintTop_toTopOf="@+id/ivSixthDay"
+        app:lottie_fileName="day_check.json" />
+
+    <ImageView
+        android:id="@+id/ivSeventhDay"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/shape_circle"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/ivSixthDay"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tvSeventhDay"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/roboto_bold"
+        android:text="7"
+        android:textColor="@color/day_tracker"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="@+id/ivSeventhDay"
+        app:layout_constraintEnd_toEndOf="@+id/ivSeventhDay"
+        app:layout_constraintStart_toStartOf="@+id/ivSeventhDay"
+        app:layout_constraintTop_toTopOf="@+id/ivSeventhDay" />
+
+    <com.airbnb.lottie.LottieAnimationView
+        android:id="@+id/lavSeventhDay"
+        android:layout_width="36dp"
+        android:layout_height="36dp"
+        app:layout_constraintBottom_toBottomOf="@+id/ivSeventhDay"
+        app:layout_constraintEnd_toEndOf="@+id/ivSeventhDay"
+        app:layout_constraintStart_toStartOf="@+id/ivSeventhDay"
+        app:layout_constraintTop_toTopOf="@+id/ivSeventhDay"
+        app:lottie_fileName="day_check.json" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

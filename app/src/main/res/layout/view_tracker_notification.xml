@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_marginRight="4dp"
+    android:layout_marginLeft="4dp"
+    android:orientation="horizontal" android:layout_width="match_parent"
+    android:layout_height="64dp"
+    android:background="@drawable/shape_notification_background">
+
+    <ImageView
+        android:layout_width="44dp"
+        android:layout_height="44dp"
+        android:id="@+id/ivMain"
+        android:src="@drawable/calendar"
+        android:layout_gravity="left|center_vertical"
+        android:layout_marginLeft="16dp"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/tvTitle"
+        android:text="@string/atten_not"
+        android:fontFamily="@font/roboto_medium"
+        android:textColor="#FF5722"
+        android:layout_marginLeft="74dp"
+        android:textSize="14sp"
+        android:layout_marginTop="12dp"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/text_atten_not"
+        android:fontFamily="@font/roboto_medium"
+        android:textColor="@color/black"
+        android:textSize="12sp"
+        android:layout_marginLeft="74dp"
+        android:layout_marginRight="16dp"
+        android:layout_marginTop="30dp"/>
+
+</FrameLayout>

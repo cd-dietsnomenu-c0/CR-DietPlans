@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+  <item
+      android:id="@+id/bnv_tracker"
+      android:icon="@drawable/bnv_tracker"
+      android:title="@string/tracker" />
+
+  <item
+      android:id="@+id/bnv_main"
+      android:icon="@drawable/bnv_main"
+      android:title="@string/bnv_main" />
+
+  <!--<item
+      android:id="@+id/bnv_calclators"
+      android:icon="@drawable/bnv_calulators"
+      android:title="@string/bnv_calc"/>-->
+
+  <!--<item
+      android:id="@+id/bnv_premium"
+      android:icon="@drawable/bnv_prem"
+      android:title="@string/bnv_prem"/>-->
+
+  <item
+      android:id="@+id/bnv_settings"
+      android:icon="@drawable/bnv_profile"
+      android:title="@string/bnv_settings"/>
+
+</menu>

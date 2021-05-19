@@ -1,0 +1,305 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingTop="25dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/textView13"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginLeft="16dp"
+                android:layout_marginTop="16dp"
+                android:fontFamily="@font/roboto_medium"
+                android:text="@string/diary"
+                android:textColor="@color/tracker_text_medium"
+                android:textSize="20sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/tvTrackerTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginLeft="16dp"
+                android:layout_marginTop="16dp"
+                android:fontFamily="@font/roboto_medium"
+                android:textColor="@color/tracker_text_medium"
+                android:textSize="16sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView13" />
+
+            <TextView
+                android:id="@+id/tvDetails"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="16dp"
+                android:layout_marginRight="16dp"
+                android:drawableRight="@drawable/ic_tracker_right_arrow"
+                android:drawablePadding="12dp"
+                android:fontFamily="@font/roboto"
+                android:paddingLeft="30dp"
+                android:paddingTop="10dp"
+                android:paddingBottom="10dp"
+                android:text="@string/details"
+                android:textColor="@color/tracker_text"
+                android:textSize="12sp"
+                app:layout_constraintBottom_toBottomOf="@+id/tvTrackerTitle"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/tvTrackerTitle" />
+
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cvMainCard"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginLeft="16dp"
+                android:layout_marginTop="12dp"
+                android:layout_marginEnd="16dp"
+                android:layout_marginRight="16dp"
+                android:layout_marginBottom="8dp"
+                app:cardElevation="5dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tvTrackerTitle">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <TextView
+                        android:id="@+id/tvCompleteMenu"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="8dp"
+                        android:layout_marginLeft="8dp"
+                        android:drawableLeft="@drawable/ic_clock"
+                        android:drawablePadding="4dp"
+                        android:fontFamily="@font/roboto_medium"
+                        android:gravity="center"
+                        android:text="@string/n"
+                        android:textSize="12sp"
+                        android:visibility="gone"
+                        app:layout_constraintBottom_toBottomOf="@+id/divider8"
+                        app:layout_constraintEnd_toEndOf="@+id/tvTitleMenu"
+                        app:layout_constraintHorizontal_bias="0.0"
+                        app:layout_constraintStart_toEndOf="@+id/divider8"
+                        app:layout_constraintTop_toTopOf="@+id/divider8" />
+
+                    <com.airbnb.lottie.LottieAnimationView
+                        android:id="@+id/lavCompleteDay"
+                        android:layout_width="0dp"
+                        android:layout_height="0dp"
+                        android:visibility="invisible"
+                        app:layout_constraintBottom_toBottomOf="@+id/cpbDay"
+                        app:layout_constraintEnd_toEndOf="@+id/cpbDay"
+                        app:layout_constraintStart_toStartOf="@+id/cpbDay"
+                        app:layout_constraintTop_toTopOf="@+id/cpbDay"
+                        app:lottie_fileName="tracker_day_complete.json" />
+
+                    <TextView
+                        android:id="@+id/tvTitleMenu"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="16dp"
+                        android:layout_marginLeft="16dp"
+                        android:fontFamily="@font/roboto_medium"
+                        android:text="@string/eat_today"
+                        android:textColor="#868799"
+                        android:textSize="14sp"
+                        app:layout_constraintStart_toEndOf="@+id/divider8"
+                        app:layout_constraintTop_toTopOf="@+id/divider8" />
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/rvMenu"
+                        android:layout_width="0dp"
+                        android:layout_height="0dp"
+                        android:layout_marginTop="4dp"
+                        android:layout_marginBottom="4dp"
+                        app:layout_constraintBottom_toBottomOf="@+id/divider8"
+                        app:layout_constraintEnd_toEndOf="@+id/tvTitleMenu"
+                        app:layout_constraintStart_toStartOf="@+id/tvTitleMenu"
+                        app:layout_constraintTop_toBottomOf="@+id/tvTitleMenu">
+
+                    </androidx.recyclerview.widget.RecyclerView>
+
+                    <TextView
+                        android:id="@+id/tvLabelDay"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/day"
+                        android:textColor="#9193a2"
+                        android:textSize="12sp"
+                        android:translationY="-8dp"
+                        app:layout_constraintEnd_toEndOf="@+id/tvBigDay"
+                        app:layout_constraintStart_toStartOf="@+id/tvBigDay"
+                        app:layout_constraintTop_toBottomOf="@+id/tvBigDay" />
+
+                    <TextView
+                        android:id="@+id/tvBigDay"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/roboto_bold"
+                        android:text="3"
+                        android:textColor="#667fe4"
+                        android:textSize="60sp"
+                        app:layout_constraintBottom_toBottomOf="@+id/cpbDay"
+                        app:layout_constraintEnd_toEndOf="@+id/cpbDay"
+                        app:layout_constraintStart_toStartOf="@+id/cpbDay"
+                        app:layout_constraintTop_toTopOf="@+id/cpbDay"
+                        app:layout_constraintVertical_bias="0.39" />
+
+                    <View
+                        android:id="@+id/divider7"
+                        android:layout_width="1dp"
+                        android:layout_height="57dp"
+                        android:layout_marginStart="16dp"
+                        android:layout_marginLeft="16dp"
+                        android:layout_marginTop="12dp"
+                        android:layout_marginBottom="12dp"
+                        android:background="#f9b8cc"
+                        app:layout_constraintBottom_toBottomOf="@+id/cpbDay"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/divider8" />
+
+                    <View
+                        android:id="@+id/divider8"
+                        android:layout_width="1dp"
+                        android:layout_height="57dp"
+                        android:layout_marginStart="16dp"
+                        android:layout_marginLeft="16dp"
+                        android:layout_marginTop="12dp"
+                        android:background="#c2cefe"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="@+id/cpbDay" />
+
+                    <ProgressBar
+                        android:id="@+id/cpbDay"
+                        style="?android:attr/progressBarStyleHorizontal"
+                        android:layout_width="150dp"
+                        android:layout_height="150dp"
+                        android:layout_marginEnd="8dp"
+                        android:layout_marginRight="8dp"
+                        android:layout_marginBottom="32dp"
+                        android:background="@drawable/circle_progress_background"
+                        android:indeterminate="false"
+                        android:indeterminateOnly="false"
+                        android:progress="70"
+                        android:progressDrawable="@drawable/circle_progress_drawable"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintVertical_bias="0.0" />
+
+
+                    <TextView
+                        android:id="@+id/tvTitleLives"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="16dp"
+                        android:layout_marginLeft="16dp"
+                        android:drawableRight="@drawable/ic_info"
+                        android:drawablePadding="8dp"
+                        android:fontFamily="@font/roboto_medium"
+                        android:text="@string/cheatmeal"
+                        android:textColor="#868799"
+                        android:textSize="14sp"
+                        app:layout_constraintStart_toEndOf="@+id/divider7"
+                        app:layout_constraintTop_toTopOf="@+id/divider7" />
+
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/rvLives"
+                        android:layout_width="0dp"
+                        android:layout_height="0dp"
+                        android:layout_marginTop="4dp"
+                        android:layout_marginBottom="4dp"
+                        app:layout_constraintBottom_toBottomOf="@+id/divider7"
+                        app:layout_constraintEnd_toEndOf="@+id/rvMenu"
+                        app:layout_constraintStart_toStartOf="@+id/tvTitleLives"
+                        app:layout_constraintTop_toBottomOf="@+id/tvTitleLives" />
+
+                    <View
+                        android:id="@+id/divider9"
+                        android:layout_width="0dp"
+                        android:layout_height="1dp"
+                        android:layout_marginStart="16dp"
+                        android:layout_marginLeft="16dp"
+                        android:layout_marginEnd="16dp"
+                        android:layout_marginRight="16dp"
+                        android:background="#e4eafa"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/cpbDay" />
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/rvDays"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:layout_marginBottom="8dp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/textView15" />
+
+                    <TextView
+                        android:id="@+id/textView15"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:drawableLeft="@drawable/ic_days_calendar"
+                        android:drawablePadding="8dp"
+                        android:fontFamily="@font/roboto_medium"
+                        android:text="@string/shedule"
+                        android:textColor="@color/tracker_text_medium"
+                        app:layout_constraintStart_toStartOf="@+id/divider9"
+                        app:layout_constraintTop_toBottomOf="@+id/divider9" />
+
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+            </androidx.cardview.widget.CardView>
+
+            <ImageView
+                android:id="@+id/ivExit"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="4dp"
+                android:layout_marginRight="4dp"
+                android:padding="12dp"
+                android:tint="#F4749F"
+                app:layout_constraintBottom_toBottomOf="@+id/textView13"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/textView13"
+                app:srcCompat="@drawable/ic_logout" />
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rvEats"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+
+    </LinearLayout>
+
+</androidx.core.widget.NestedScrollView>
