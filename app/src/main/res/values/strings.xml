@@ -4,13 +4,13 @@
 
 
     <!--Test-->
-    <string name="admob_id" translatable="false">ca-app-pub-3940256099942544~3347511713</string>
+    <!--<string name="admob_id" translatable="false">ca-app-pub-3940256099942544~3347511713</string>
     <string name="admob_inter" translatable="false">ca-app-pub-3940256099942544/1033173712</string>
-    <string name="admob_banner" translatable="false">ca-app-pub-3940256099942544/6300978111</string>
+    <string name="admob_banner" translatable="false">ca-app-pub-3940256099942544/6300978111</string>-->
 
-    <!--<string name="admob_banner" translatable="false">ca-app-pub-2555056002292788/6726010435</string>
+    <string name="admob_banner" translatable="false">ca-app-pub-2555056002292788/6726010435</string>
     <string name="admob_inter" translatable="false">ca-app-pub-2555056002292788/6673754138</string>
-    <string name="admob_id" translatable="false">ca-app-pub-2555056002292788~4622305862</string>-->
+    <string name="admob_id" translatable="false">ca-app-pub-2555056002292788~4622305862</string>
 
     <string name="title_activity_drawer">DrawerActivity</string>
     <string name="navigation_drawer_open">Open navigation drawer</string>
