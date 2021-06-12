@@ -42,7 +42,7 @@ class SplashActivity : AppCompatActivity(R.layout.splash_activity) {
     lateinit var alpha: Animation
     lateinit var alphaText: Animation
     var goCounter = 0
-    var maxGoCounter = 4
+    var maxGoCounter = 3
     var openFrom = ""
     var isFirstTime = false
 
@@ -69,7 +69,7 @@ class SplashActivity : AppCompatActivity(R.layout.splash_activity) {
             openFromPush()
         }
         PreferenceProvider.setLastEnter(Calendar.getInstance().timeInMillis)
-        bindTest()
+        //bindTest()
         ScheduleSetter.setAlarm(this)
         loadAnimations()
         playAnim()
@@ -114,7 +114,7 @@ class SplashActivity : AppCompatActivity(R.layout.splash_activity) {
 
 
     private fun bindTest() {
-        val firebaseRemoteConfig: FirebaseRemoteConfig = FirebaseRemoteConfig.getInstance()
+       /* val firebaseRemoteConfig: FirebaseRemoteConfig = FirebaseRemoteConfig.getInstance()
         firebaseRemoteConfig.setDefaults(R.xml.default_config)
 
         firebaseRemoteConfig.fetch(3600).addOnCompleteListener { task ->
@@ -125,7 +125,7 @@ class SplashActivity : AppCompatActivity(R.layout.splash_activity) {
                 Amplitude.getInstance().logEvent("crash_ab")
             }
             setABTestConfig(firebaseRemoteConfig.getString(ABConfig.REQUEST_STRING))
-        }
+        }*/
     }
 
     private fun setABTestConfig(version: String) {

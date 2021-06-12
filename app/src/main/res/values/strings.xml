@@ -10,10 +10,16 @@
     <string name="native_ad" translatable="false">ca-app-pub-2555056002292788/2278040092</string>-->
 
     <!--natala-->
-    <string name="admob_key" translatable="false">ca-app-pub-1216402602177352~6900677350</string>
+    <!--<string name="admob_key" translatable="false">ca-app-pub-1216402602177352~6900677350</string>
     <string name="interstitial_id" translatable="false">ca-app-pub-1216402602177352/5273623110</string>
     <string name="banner_id" translatable="false">ca-app-pub-1216402602177352/1163273124</string>
-    <string name="native_ad" translatable="false">ca-app-pub-1216402602177352/4274514014</string>
+    <string name="native_ad" translatable="false">ca-app-pub-1216402602177352/4274514014</string>-->
+
+    <!--lolkekdorouticho@gmail.com-->
+    <string name="admob_key" translatable="false">ca-app-pub-8870587331891822~7104130408</string>
+    <string name="interstitial_id" translatable="false">ca-app-pub-8870587331891822/7131711257</string>
+    <string name="banner_id" translatable="false">ca-app-pub-8870587331891822/2283597308</string>
+    <string name="native_ad" translatable="false">ca-app-pub-8870587331891822/4526617264</string>
 
     <!--Test-->
     <!--<string name="admob_key" translatable="false">ca-app-pub-3940256099942544~3347511713</string>
