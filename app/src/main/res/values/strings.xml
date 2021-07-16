@@ -16,6 +16,7 @@
     <string name="native_ad" translatable="false">ca-app-pub-1216402602177352/4274514014</string>-->
 
     <!--lolkekdorouticho@gmail.com-->
+    <!--Current-->
     <string name="admob_key" translatable="false">ca-app-pub-8870587331891822~7104130408</string>
     <string name="interstitial_id" translatable="false">ca-app-pub-8870587331891822/7131711257</string>
     <string name="banner_id" translatable="false">ca-app-pub-8870587331891822/2283597308</string>

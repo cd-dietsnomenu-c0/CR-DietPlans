@@ -74,4 +74,9 @@ object PreferenceProvider {
     var isShowLangWarning: Boolean
         get() = getInstance()?.getBoolean(LANG_WARNING_TAG, false)!!
         set(value) = editor { it?.putBoolean(LANG_WARNING_TAG, value) }!!
+
+    private const val AD_PERCENT_TAG = "AD_PERCENT_TAG"
+    var frequencyPercent: Int
+        get() = getInstance()?.getInt(AD_PERCENT_TAG, 0)!!
+        set(value) = editor { it?.putInt(AD_PERCENT_TAG, value) }!!
 }

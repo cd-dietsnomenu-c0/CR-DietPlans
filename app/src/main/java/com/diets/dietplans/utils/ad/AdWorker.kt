@@ -8,7 +8,9 @@ import com.google.android.gms.ads.InterstitialAd
 import com.google.android.gms.ads.formats.UnifiedNativeAd
 import com.diets.dietplans.Config
 import com.diets.dietplans.R
+import com.diets.dietplans.utils.PreferenceProvider
 import com.diets.dietplans.utils.analytics.Ampl
+import kotlin.random.Random
 
 object AdWorker {
     private const val MAX_REQUEST_AD = 3
@@ -22,6 +24,9 @@ object AdWorker {
     var nativeSpeaker: NativeSpeaker? = null
     var isNeedShowNow = false
 
+    init {
+        FrequencyManager.runSetup()
+    }
 
     fun init(context: Context) {
         inter = InterstitialAd(context)
@@ -47,7 +52,7 @@ object AdWorker {
 
             override fun onAdLoaded() {
                 super.onAdLoaded()
-                if (isNeedShowNow){
+                if (isNeedShowNow && needShow()) {
                     isNeedShowNow = false
                     inter?.show()
                     Ampl.showAd()
@@ -108,26 +113,32 @@ object AdWorker {
     }
 
     fun showInter() {
-        if (Counter.getInstance().getCounter() % MAX_REQUEST_AD == 0) {
-            if (inter?.isLoaded == true) {
-                inter?.show()
-                Ampl.showAd()
+        if (needShow()) {
+            if (Counter.getInstance().getCounter() % MAX_REQUEST_AD == 0) {
+                if (inter?.isLoaded == true) {
+                    inter?.show()
+                    Ampl.showAd()
+                    Counter.getInstance().adToCounter()
+                } else if (isFailedLoad) {
+                    counterFailed = 0
+                    isFailedLoad = false
+                    reload()
+                }
+            } else {
                 Counter.getInstance().adToCounter()
-            } else if (isFailedLoad) {
-                counterFailed = 0
-                isFailedLoad = false
-                reload()
             }
-        } else {
-            Counter.getInstance().adToCounter()
         }
     }
 
-    fun getShow(){
-        if (inter?.isLoaded == true){
+    fun getShow() {
+        if (inter?.isLoaded == true && needShow()) {
             inter?.show()
-        }else{
+        } else {
             isNeedShowNow = true
         }
+    }
+
+    private fun needShow(): Boolean {
+        return Random.nextInt(100) <= PreferenceProvider.frequencyPercent
     }
 }
