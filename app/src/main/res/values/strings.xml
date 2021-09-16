@@ -3,6 +3,13 @@
     <string name="check_your_connect">Check your internet</string>
 
 
+    <!--wadimKazak new-->
+    <string name="admob_key" translatable="false">ca-app-pub-2555056002292788~2986883819</string>
+    <string name="interstitial_id" translatable="false">ca-app-pub-2555056002292788/5309794824</string>
+    <string name="banner_id" translatable="false">ca-app-pub-2555056002292788/3641489932</string>
+    <string name="native_ad" translatable="false">ca-app-pub-2555056002292788/2624115251</string>
+
+
     <!--wadimKazak-->
     <!--<string name="admob_key" translatable="false">ca-app-pub-2555056002292788~4905586322</string>
     <string name="interstitial_id" translatable="false">ca-app-pub-2555056002292788/8461687958</string>
@@ -17,10 +24,10 @@
 
     <!--lolkekdorouticho@gmail.com-->
     <!--Current-->
-    <string name="admob_key" translatable="false">ca-app-pub-8870587331891822~7104130408</string>
+    <!--<string name="admob_key" translatable="false">ca-app-pub-8870587331891822~7104130408</string>
     <string name="interstitial_id" translatable="false">ca-app-pub-8870587331891822/7131711257</string>
     <string name="banner_id" translatable="false">ca-app-pub-8870587331891822/2283597308</string>
-    <string name="native_ad" translatable="false">ca-app-pub-8870587331891822/4526617264</string>
+    <string name="native_ad" translatable="false">ca-app-pub-8870587331891822/4526617264</string>-->
 
     <!--Test-->
     <!--<string name="admob_key" translatable="false">ca-app-pub-3940256099942544~3347511713</string>
