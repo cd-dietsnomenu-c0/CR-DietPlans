@@ -5,10 +5,10 @@
 
     <!--wadimKazak new-->
     <!--work-->
-    <!--<string name="admob_key" translatable="false">ca-app-pub-2555056002292788~2986883819</string>
+    <string name="admob_key" translatable="false">ca-app-pub-2555056002292788~2986883819</string>
     <string name="interstitial_id" translatable="false">ca-app-pub-2555056002292788/5309794824</string>
     <string name="banner_id" translatable="false">ca-app-pub-2555056002292788/3641489932</string>
-    <string name="native_ad" translatable="false">ca-app-pub-2555056002292788/2624115251</string>-->
+    <string name="native_ad" translatable="false">ca-app-pub-2555056002292788/2624115251</string>
 
 
     <!--wadimKazak-->
@@ -31,10 +31,10 @@
     <string name="native_ad" translatable="false">ca-app-pub-8870587331891822/4526617264</string>-->
 
     <!--Test-->
-    <string name="admob_key" translatable="false">ca-app-pub-3940256099942544~3347511713</string>
+    <!--<string name="admob_key" translatable="false">ca-app-pub-3940256099942544~3347511713</string>
     <string name="interstitial_id" translatable="false">ca-app-pub-3940256099942544/1033173712</string>
     <string name="banner_id" translatable="false">ca-app-pub-3940256099942544/6300978111</string>
-    <string name="native_ad" translatable="false">ca-app-pub-3940256099942544/8135179316</string>
+    <string name="native_ad" translatable="false">ca-app-pub-3940256099942544/8135179316</string>-->
 
     <string name="react_channel_id" translatable="false">com.diets.dietplans</string>
     <string name="eat_channel_id" translatable="false">com.diets.dietplans.eat</string>
