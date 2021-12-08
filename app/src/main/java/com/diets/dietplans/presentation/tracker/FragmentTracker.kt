@@ -27,6 +27,7 @@ import com.diets.dietplans.presentation.tracker.controller.eats.IEat
 import com.diets.dietplans.presentation.tracker.controller.lives.LiveAdapter
 import com.diets.dietplans.presentation.tracker.controller.menu.IMenu
 import com.diets.dietplans.presentation.tracker.controller.menu.MenuAdapter
+import com.diets.dietplans.utils.ad.ActionAd
 import kotlinx.android.synthetic.main.fragment_tracker.*
 import java.util.*
 
@@ -200,6 +201,7 @@ class FragmentTracker : Fragment(R.layout.fragment_tracker) {
             override fun checkEat(type: Int) {
                 DBHolder.checkEat(type)
                 refreshEats(type)
+                ActionAd.action()
             }
         })
         rvEats.adapter = eatsAdapter

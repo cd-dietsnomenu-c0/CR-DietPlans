@@ -10,6 +10,7 @@ import com.diets.dietplans.Config
 import com.diets.dietplans.R
 import com.diets.dietplans.utils.PreferenceProvider
 import com.diets.dietplans.utils.analytics.Ampl
+import com.diets.dietplans.utils.analytics.FBAnalytic
 import kotlin.random.Random
 
 object AdWorker {
@@ -146,5 +147,19 @@ object AdWorker {
 
     private fun needShow(): Boolean {
         return Random.nextInt(100) <= PreferenceProvider.frequencyPercent
+    }
+
+    fun showInterWithoutCounter() {
+        if (!PreferenceProvider.isHasPremium && needShow()) {
+            if (inter?.isLoaded == true) {
+                FBAnalytic.adShow()
+                inter?.show()
+                Ampl.showAd()
+            } else if (isFailedLoad) {
+                counterFailed = 0
+                isFailedLoad = false
+                reload()
+            }
+        }
     }
 }
