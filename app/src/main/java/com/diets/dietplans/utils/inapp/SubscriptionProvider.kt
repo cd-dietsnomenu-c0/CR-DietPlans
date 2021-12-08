@@ -75,6 +75,7 @@ object SubscriptionProvider : PurchasesUpdatedListener, BillingClientStateListen
 
 
     fun choiceSubNew(activity: Activity, subId: String, callback: InAppCallback) {
+        Ampl.attemptBilling()
         inAppCallback = callback
         val params = SkuDetailsParams.newBuilder().setSkusList(arrayListOf(subId))
                 .setType(BillingClient.SkuType.SUBS).build()
@@ -83,6 +84,7 @@ object SubscriptionProvider : PurchasesUpdatedListener, BillingClientStateListen
                 BillingClient.BillingResponseCode.OK -> {
                     Ampl.succeesBilling()
                     if (skuDetailsList.orEmpty().isNotEmpty()) {
+                        Ampl.succeesBillingAndNotEmpty()
                         skuDetailsList!!.forEach {
                             skuDetails[TRACKER_TAG] = it
                             val perchaseParams = BillingFlowParams.newBuilder().setSkuDetails(it)

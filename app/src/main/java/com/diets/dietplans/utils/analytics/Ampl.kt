@@ -263,7 +263,15 @@ class Ampl {
         }
 
         fun succeesBilling() {
-            Amplitude.getInstance().logEvent("succees_billing")
+            Amplitude.getInstance().logEvent("success_billing")
+        }
+
+        fun succeesBillingAndNotEmpty() {
+            Amplitude.getInstance().logEvent("success_billing_and_not_empty")
+        }
+
+        fun attemptBilling() {
+            Amplitude.getInstance().logEvent("attempt_billing")
         }
 
         fun errorBilling(code : Int) {
