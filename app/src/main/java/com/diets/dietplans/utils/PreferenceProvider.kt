@@ -121,4 +121,9 @@ object PreferenceProvider {
     var actionNumber: Int
         get() = getInstance()?.getInt(ACTION_AD_COUNTER_TAG, 0)!!
         set(value) = editor { it?.putInt(ACTION_AD_COUNTER_TAG, value) }!!
+
+    private const val PREM_IMG_TAG = "PREM_IMG_TAG"
+    var premVer: String
+        get() = getInstance()?.getString(PREM_IMG_TAG, ABConfig.PREM_OLD)!!
+        set(value) = editor { it?.putString(PREM_IMG_TAG, value) }!!
 }

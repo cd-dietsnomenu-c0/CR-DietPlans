@@ -3,5 +3,7 @@
     <entry>
         <key>prem</key>
         <value>need</value>
+        <key>prem_ver</key>
+        <value>old</value>
     </entry>
 </defaultsMap>

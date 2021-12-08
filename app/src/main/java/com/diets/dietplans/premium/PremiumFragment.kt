@@ -8,6 +8,7 @@ import androidx.fragment.app.Fragment
 import com.diets.dietplans.R
 import com.diets.dietplans.SplashActivity
 import com.diets.dietplans.premium.dialogs.ThankDialog
+import com.diets.dietplans.utils.ABConfig
 import com.diets.dietplans.utils.PreferenceProvider
 import com.diets.dietplans.utils.analytics.Ampl
 import com.diets.dietplans.utils.analytics.FBAnalytic
@@ -37,6 +38,7 @@ class PremiumFragment : Fragment(R.layout.premium_fragment), ThankDialog.Callbac
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+        Ampl.showPremScreen()
         AppCompatDelegate.setCompatVectorFromResourcesEnabled(true)
         if (activity is PremiumHostActivity){
             where = Ampl.make_purchase_start
@@ -85,6 +87,12 @@ class PremiumFragment : Fragment(R.layout.premium_fragment), ThankDialog.Callbac
         prepareDialog()
 
 
+        if (PreferenceProvider.premVer == ABConfig.PREM_GIFT){
+            lavPremImg.pauseAnimation()
+            lavPremImg.setAnimation("gift_prem.json")
+            lavPremImg.speed = 0.8f
+            lavPremImg.playAnimation()
+        }
     }
 
     fun handlInApp() {

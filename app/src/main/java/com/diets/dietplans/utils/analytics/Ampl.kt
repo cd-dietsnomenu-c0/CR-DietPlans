@@ -60,14 +60,15 @@ class Ampl {
 
         val set_ver = "set_ver"
         val AB = "AB_PREM_NEED"
+        val PREM_VER = "PREM_VER"
 
 
         fun setVersion() {
             Amplitude.getInstance().logEvent(set_ver)
         }
 
-        fun setABVersion(version : String){
-            var identify = Identify().setOnce(AB, version)
+        fun setABVersion(version : String, premVer : String){
+            var identify = Identify().setOnce(AB, version).setOnce(PREM_VER, premVer)
             Amplitude.getInstance().identify(identify)
         }
 

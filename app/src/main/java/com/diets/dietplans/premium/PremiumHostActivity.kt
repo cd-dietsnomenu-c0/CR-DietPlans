@@ -17,7 +17,7 @@ class PremiumHostActivity : AppCompatActivity(R.layout.premium_host_activity) {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
-        Ampl.showPremScreen()
+
         from = intent.getIntExtra(TAG_OPEN_FROM_PROFILE, -1)
         PreferenceProvider.isSawPremium = true
 

@@ -15,4 +15,8 @@ object ABConfig {
     const val GRADE_DOGE = "doge"
     const val GRADE_ASTRO = "astro"
     const val GRADE_BOX = "box"
+
+    const val PREM_VER = "prem_ver"
+    const val PREM_OLD = "old"
+    const val PREM_GIFT = "gift"
 }

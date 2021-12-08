@@ -127,19 +127,24 @@ class SplashActivity : AppCompatActivity(R.layout.splash_activity) {
                 Amplitude.getInstance().logEvent("crash_ab")
             }
             setABTestConfig(
-                    firebaseRemoteConfig.getString(ABConfig.PREM_TAG)
+                    firebaseRemoteConfig.getString(ABConfig.PREM_TAG), firebaseRemoteConfig.getString(ABConfig.PREM_VER)
             )
         }
     }
 
-    private fun setABTestConfig(version: String) {
+    private fun setABTestConfig(version: String, premVer : String) {
         var defaultVer = ABConfig.PREM_NEED
+        var defaultPremVer = ABConfig.PREM_OLD
         if (version != null && version != "") {
             defaultVer = version
         }
+        if (premVer != null && premVer != "") {
+            defaultPremVer = premVer
+        }
         Log.e("LOL", defaultVer)
         PreferenceProvider.isNeedPrem = defaultVer
-        Ampl.setABVersion(version)
+        PreferenceProvider.premVer= defaultPremVer
+        Ampl.setABVersion(defaultVer, defaultPremVer)
         Ampl.setVersion()
         post()
     }
