@@ -59,7 +59,7 @@ class Ampl {
         val send_claim = "send_claim"
 
         val set_ver = "set_ver"
-        val AB = "AB"
+        val AB = "AB_PREM_NEED"
 
 
         fun setVersion() {
@@ -86,6 +86,10 @@ class Ampl {
 
         fun openTrophy() {
             Amplitude.getInstance().logEvent(open_trophy)
+        }
+
+        fun showEatNotif() {
+            Amplitude.getInstance().logEvent("show_eat_notif")
         }
 
         fun openFavorites() {

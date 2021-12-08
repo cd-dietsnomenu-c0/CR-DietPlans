@@ -30,6 +30,7 @@ import com.diets.dietplans.utils.PreferenceProvider
 import com.diets.dietplans.utils.inapp.SubscriptionProvider
 import com.google.firebase.messaging.FirebaseMessaging
 import com.google.firebase.remoteconfig.FirebaseRemoteConfig
+import com.google.firebase.remoteconfig.FirebaseRemoteConfigSettings
 import com.squareup.moshi.Moshi
 import io.reactivex.Single
 import io.reactivex.android.schedulers.AndroidSchedulers
@@ -44,14 +45,14 @@ class SplashActivity : AppCompatActivity(R.layout.splash_activity) {
     lateinit var alpha: Animation
     lateinit var alphaText: Animation
     var goCounter = 0
-    var maxGoCounter = 3
+    var maxGoCounter = 4
     var openFrom = ""
     var isFirstTime = false
 
     fun post() {
         goCounter += 1
         if (goCounter >= maxGoCounter) {
-            var intent = if (isFirstTime) {
+            var intent = if (isFirstTime && PreferenceProvider.isNeedPrem == ABConfig.PREM_NEED) {
                 Intent(this, PremiumHostActivity::class.java)
             } else {
                 Intent(this, MainActivity::class.java).putExtra(Config.PUSH_TAG, openFrom)
@@ -65,13 +66,12 @@ class SplashActivity : AppCompatActivity(R.layout.splash_activity) {
         super.onCreate(savedInstanceState)
         bindLocale()
         bindFCM()
+        bindTest()
         if (intent.extras != null && intent.extras!!.getString(Config.PUSH_TAG) != null && intent.extras!!.getString(Config.PUSH_TAG) == Config.OPEN_FROM_PUSH) {
             openFrom = Config.OPEN_FROM_PUSH
             openFromPush()
         }
         PreferenceProvider.setLastEnter(Calendar.getInstance().timeInMillis)
-        //bindTest()
-        ScheduleSetter.setAlarm(this)
         loadAnimations()
         playAnim()
         loadData()
@@ -100,7 +100,7 @@ class SplashActivity : AppCompatActivity(R.layout.splash_activity) {
                 FirebaseMessaging.getInstance().subscribeToTopic(Config.NEWS_RU).addOnSuccessListener { }
             }
         }
-
+        FirebaseMessaging.getInstance().subscribeToTopic(Config.EAT_TOPIC).addOnSuccessListener { }
         getFCMToken()
     }
 
@@ -116,23 +116,29 @@ class SplashActivity : AppCompatActivity(R.layout.splash_activity) {
 
 
     private fun bindTest() {
-       /* val firebaseRemoteConfig: FirebaseRemoteConfig = FirebaseRemoteConfig.getInstance()
-        firebaseRemoteConfig.setDefaults(R.xml.default_config)
-
-        firebaseRemoteConfig.fetch(3600).addOnCompleteListener { task ->
+        val firebaseRemoteConfig: FirebaseRemoteConfig = FirebaseRemoteConfig.getInstance()
+        var config = FirebaseRemoteConfigSettings.Builder().setMinimumFetchIntervalInSeconds(3600).build()
+        firebaseRemoteConfig.setConfigSettingsAsync(config)
+        firebaseRemoteConfig.setDefaultsAsync(R.xml.default_config)
+        firebaseRemoteConfig.fetchAndActivate().addOnCompleteListener { task ->
             if (task.isSuccessful) {
-                firebaseRemoteConfig.activateFetched()
                 Amplitude.getInstance().logEvent("norm_ab")
             } else {
                 Amplitude.getInstance().logEvent("crash_ab")
             }
-            setABTestConfig(firebaseRemoteConfig.getString(ABConfig.REQUEST_STRING))
-        }*/
+            setABTestConfig(
+                    firebaseRemoteConfig.getString(ABConfig.PREM_TAG)
+            )
+        }
     }
 
     private fun setABTestConfig(version: String) {
-        Log.e("LOL", version)
-        PreferenceProvider.setVersion(version)
+        var defaultVer = ABConfig.PREM_NEED
+        if (version != null && version != "") {
+            defaultVer = version
+        }
+        Log.e("LOL", defaultVer)
+        PreferenceProvider.isNeedPrem = defaultVer
         Ampl.setABVersion(version)
         Ampl.setVersion()
         post()

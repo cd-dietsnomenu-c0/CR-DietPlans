@@ -353,6 +353,8 @@
         <item>English</item>
     </string-array>
 
+    <string name="notif_attention">WARNING</string>
+    <string name="notif_attention_eat">Food must be noted</string>
     <string name="remove_ads_white">Remove ads</string>
     <string name="white_month">1 month</string>
     <string name="description_month">Monthly subscription prolonged automatically for %s</string>
