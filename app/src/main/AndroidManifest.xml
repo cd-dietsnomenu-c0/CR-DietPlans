@@ -64,6 +64,10 @@
         </activity>
 
         <activity
+            android:name=".premium.PremiumHostActivity"
+            android:theme="@style/AppTheme.NoActionBar"/>
+
+        <activity
             android:name="com.diets.dietplans.presentation.onboarding.OnboardActivity"
             android:theme="@style/AppTheme.NoActionBar" />
 

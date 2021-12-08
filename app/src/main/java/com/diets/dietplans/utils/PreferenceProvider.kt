@@ -79,4 +79,41 @@ object PreferenceProvider {
     var frequencyPercent: Int
         get() = getInstance()?.getInt(AD_PERCENT_TAG, 0)!!
         set(value) = editor { it?.putInt(AD_PERCENT_TAG, value) }!!
+
+    private const val IS_SAW_PREMIUM = "IS_SAW_PREMIUM"
+    var isSawPremium: Boolean
+        get() = getInstance()?.getBoolean(IS_SAW_PREMIUM, false)!!
+        set(value) = editor { it?.putBoolean(IS_SAW_PREMIUM, value) }!!
+
+    private const val MONTH_PRICE_VALUE_TAG = "MONTH_PRICE_VALUE_TAG"
+    private const val EMPTY_VALUE_MONTH = 0.99F
+    var monthPriceValue: Float
+        get() = getInstance()?.getFloat(MONTH_PRICE_VALUE_TAG, EMPTY_VALUE_MONTH)!!
+        set(value) = editor { it?.putFloat(MONTH_PRICE_VALUE_TAG, value) }!!
+
+
+    private const val YEAR_PRICE_VALUE_TAG = "YEAR_PRICE_VALUE_TAG"
+    private const val EMPTY_VALUE_YEAR = 4.99F
+    var yearPriceValue: Float
+        get() = getInstance()?.getFloat(YEAR_PRICE_VALUE_TAG, EMPTY_VALUE_YEAR)!!
+        set(value) = editor { it?.putFloat(YEAR_PRICE_VALUE_TAG, value) }!!
+
+
+    private const val MONTH_PRICE_UNIT_TAG = "MONTH_PRICE_UNIT_TAG"
+    private const val EMPTY_UNIT = "USD"
+    var premiumUnit: String
+        get() = getInstance()?.getString(MONTH_PRICE_UNIT_TAG, EMPTY_UNIT)!!
+        set(value) = editor { it?.putString(MONTH_PRICE_UNIT_TAG, value) }!!
+
+
+    private const val IS_HAS_PREMIUM_TAG = "IS_HAS_PREMIUM_TAG"
+    var isHasPremium: Boolean
+        get() = getInstance()?.getBoolean(IS_HAS_PREMIUM_TAG, false)!!
+        set(value) = editor { it?.putBoolean(IS_HAS_PREMIUM_TAG, value) }!!
+
+    private const val PREM_VER_TAG = "PREM_VER_TAG"
+    var isNeedPrem: String
+        get() = getInstance()?.getString(PREM_VER_TAG, "")!!
+        set(value) = editor { it?.putString(PREM_VER_TAG, value) }!!
+
 }

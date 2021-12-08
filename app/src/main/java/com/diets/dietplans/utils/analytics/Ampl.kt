@@ -231,5 +231,45 @@ class Ampl {
             Amplitude.getInstance().logEvent(use_calculator, eventProperties)
         }
 
+        fun showPremScreen() {
+            Amplitude.getInstance().logEvent("show_prem_screen")
+        }
+
+
+        val make_purchase = "make_trial"
+
+        val make_purchase_where = "where"
+        val which_twice = "which_twice"
+
+        val twice_month = "month"
+        val twice_year = "year"
+
+        val make_purchase_inside = "inside"
+        val make_purchase_start = "start"
+
+        fun makePurchaseTwice(where : String, which : String) {
+            val eventProperties = JSONObject()
+            try {
+                eventProperties.put(make_purchase_where, where)
+                eventProperties.put(which_twice, which)
+            } catch (exception: JSONException) {
+                exception.printStackTrace()
+            }
+            Amplitude.getInstance().logEvent(make_purchase, eventProperties)
+        }
+
+        fun succeesBilling() {
+            Amplitude.getInstance().logEvent("succees_billing")
+        }
+
+        fun errorBilling(code : Int) {
+            val eventProperties = JSONObject()
+            try {
+                eventProperties.put("code", code.toString())
+            } catch (exception: JSONException) {
+                exception.printStackTrace()
+            }
+            Amplitude.getInstance().logEvent("error_billing", eventProperties)
+        }
     }
 }

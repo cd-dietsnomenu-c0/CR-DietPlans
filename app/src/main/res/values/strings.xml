@@ -4,10 +4,11 @@
 
 
     <!--wadimKazak new-->
-    <string name="admob_key" translatable="false">ca-app-pub-2555056002292788~2986883819</string>
+    <!--work-->
+    <!--<string name="admob_key" translatable="false">ca-app-pub-2555056002292788~2986883819</string>
     <string name="interstitial_id" translatable="false">ca-app-pub-2555056002292788/5309794824</string>
     <string name="banner_id" translatable="false">ca-app-pub-2555056002292788/3641489932</string>
-    <string name="native_ad" translatable="false">ca-app-pub-2555056002292788/2624115251</string>
+    <string name="native_ad" translatable="false">ca-app-pub-2555056002292788/2624115251</string>-->
 
 
     <!--wadimKazak-->
@@ -30,10 +31,10 @@
     <string name="native_ad" translatable="false">ca-app-pub-8870587331891822/4526617264</string>-->
 
     <!--Test-->
-    <!--<string name="admob_key" translatable="false">ca-app-pub-3940256099942544~3347511713</string>
+    <string name="admob_key" translatable="false">ca-app-pub-3940256099942544~3347511713</string>
     <string name="interstitial_id" translatable="false">ca-app-pub-3940256099942544/1033173712</string>
     <string name="banner_id" translatable="false">ca-app-pub-3940256099942544/6300978111</string>
-    <string name="native_ad" translatable="false">ca-app-pub-3940256099942544/8135179316</string>-->
+    <string name="native_ad" translatable="false">ca-app-pub-3940256099942544/8135179316</string>
 
     <!--Profile-->
     <string name="url_gdpr" translatable="false">https://www.freeprivacypolicy.com/privacy/view/272200879b5cf29dd1b4fcd0f0299409</string>
@@ -98,6 +99,9 @@
             не страдаете ли вы недостатком веса.</item>
         <item>С помощью калькулятора СПК можно определить ваш суточный лимит калорий, коридор калорий для похудения, оптимальное соотношение суточного потребления белков, жиров и углеводов (БЖУ)</item>
     </string-array>
+    <string name="text_post_prem">Вы приобрели премиум подписку и теперь у вас отключена реклама. Мы в неоплатном долгу перед вами за поддержку приложения!</string>
+    <string name="continue_prem">продолжить</string>
+
 
     <string name="level_none">Минимальная активность</string>
     <string name="level_easy">Легкая активность</string>
@@ -366,6 +370,17 @@
     <string name="cont_lang">Продолжить</string>
     <string name="adb_path">adb.json</string>
     <string name="splash_lang">Меняем язык</string>
+    <string name="remove_ads_white">Убрать рекламу</string>
+    <string name="white_month">1 месяц</string>
+    <string name="description_month">Ежемесячная подписка продлевается автоматически за %s</string>
+    <string name="white_year">1 год</string>
+    <string name="description_year">Годовая подписка продлевается автоматически за %s</string>
+    <string name="try_7_days_for_free_new">Попробуйте 7 дней бесплатно</string>
+    <string name="month_terms">Бесплатный пробный период - 7 дней. Далее %s в месяц. Вы можете управлять своими подписками на панели управления в Google Play</string>
+    <string name="new_terms_month">Повторяющийся биллинг. Отмена в любое время. Оплата будет списана со счета Google Pay при подтверждении покупки. Подписка автоматически продлевается, если автопродление не отключено не менее чем за 24 часа до окончания текущего периода. Плата за продление подписки будет списана со счета в течение 24 часов до окончания текущего периода с указанием стоимости продления. Подписками может управлять пользователь, а автопродление может быть отключено путем перехода к настройкам аккаунта пользователя после покупки. Любая неиспользованная часть бесплатного пробного периода, если он предлагается, будет аннулирована, когда пользователь приобретет подписку на эту публикацию, если это применимо. Продолжительность подписки: 1 МЕСЯЦ Цена: Бесплатно в течение 7 дней, затем %s /месяц после бесплатной пробной версии. Продолжительность подписки: 1 ГОД Цена: Бесплатно в течение 7 дней, затем %s /год после бесплатной пробной версии.</string>
+    <string name="year_terms">Бесплатный пробный период - 7 дней. Далее %s в год. Вы можете управлять своими подписками на панели управления в Google Play</string>
+    <string name="remove_ads_white_text">Нам не нравится реклама, но без нее мы не можем поддерживать и развивать приложение. Покупка подписки - ваша неоценимая помощь и самое малое, что мы можем сделать для вас взамен - отключить рекламу</string>
+
 
     <plurals name="days_plur">
         <item quantity="one">%1$d день</item>

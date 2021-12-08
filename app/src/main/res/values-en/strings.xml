@@ -122,6 +122,8 @@
     <string name="hints">ADVICE</string>
     <string name="results">RESULTS</string>
     <string name="reviews">DIETARY REVIEWS</string>
+    <string name="text_post_prem">You have purchased a premium subscription and now you have disabled ads. We\'re deeply indebted to you for app support!</string>
+    <string name="continue_prem">continue</string>
 
     <!--IMT calculator-->
     <string-array name="body_types">
@@ -350,5 +352,17 @@
         <item>Russian</item>
         <item>English</item>
     </string-array>
+
+    <string name="remove_ads_white">Remove ads</string>
+    <string name="white_month">1 month</string>
+    <string name="description_month">Monthly subscription prolonged automatically for %s</string>
+    <string name="white_year">1 year</string>
+    <string name="description_year">Annual subscription prolonged automatically for %s</string>
+    <string name="try_7_days_for_free_new">Try 7 days for free</string>
+    <string name="month_terms">7 days trial period. Next %s per month. You can manage your subscriptions in the dashboard on Google Play</string>
+    <string name="year_terms">7 days trial period. Then %s per year. You can manage your subscriptions in the dashboard on Google Play</string>
+    <string name="remove_ads_white_text">We don\'t like ads, but without them we cannot maintain and support the app. Buying a subscription is your invaluable help and the least we can do for you in return is disable ads</string>
+    <string name="new_terms_month">Recurring billing. Cancellation at any time. Payment will be deducted from your Google Pay account when you confirm the purchase. Subscription will automatically renew unless auto-renewal is disabled at least 24 hours before the end of the current period. Subscription renewal fee will be deducted from the account within 24 hours before the end of the current period with the renewal cost. Subscriptions can be managed by the user, and auto-renewal can be disabled by going to the user account settings after purchase. Any unused portion of the free trial period, if offered, will be canceled when the user purchases a subscription for that publication, if applicable. Subscription Duration: 1 MONTH Price: Free for 7 days, then %s /month after free trial. Subscription Duration: 1 YEAR Price: Free for 7 days, then %s /year after the free trial.</string>
+
 
 </resources>

@@ -62,21 +62,23 @@ object AdWorker {
     }
 
     private fun loadNative(context: Context) {
-        adLoader = AdLoader
-                .Builder(context, context.getString(R.string.native_ad))
-                .forUnifiedNativeAd { nativeAD ->
-                    bufferAdsList.add(nativeAD)
-                    if (!adLoader!!.isLoading) {
-                        endLoading()
-                    }
-                }.withAdListener(object : AdListener() {
-                    override fun onAdFailedToLoad(p0: Int) {
+        if (!PreferenceProvider.isHasPremium) {
+            adLoader = AdLoader
+                    .Builder(context, context.getString(R.string.native_ad))
+                    .forUnifiedNativeAd { nativeAD ->
+                        bufferAdsList.add(nativeAD)
                         if (!adLoader!!.isLoading) {
                             endLoading()
                         }
-                    }
-                }).build()
-        adLoader?.loadAds(AdRequest.Builder().build(), Config.NATIVE_ITEMS_MAX)
+                    }.withAdListener(object : AdListener() {
+                        override fun onAdFailedToLoad(p0: Int) {
+                            if (!adLoader!!.isLoading) {
+                                endLoading()
+                            }
+                        }
+                    }).build()
+            adLoader?.loadAds(AdRequest.Builder().build(), Config.NATIVE_ITEMS_MAX)
+        }
     }
 
     private fun endLoading() {
@@ -88,10 +90,12 @@ object AdWorker {
     }
 
     fun observeOnNativeList(nativeSpeaker: NativeSpeaker) {
-        if (adsList.size > 0) {
-            nativeSpeaker.loadFin(adsList)
-        } else {
-            this.nativeSpeaker = nativeSpeaker
+        if (!PreferenceProvider.isHasPremium) {
+            if (adsList.size > 0) {
+                nativeSpeaker.loadFin(adsList)
+            } else {
+                this.nativeSpeaker = nativeSpeaker
+            }
         }
     }
 
@@ -113,7 +117,7 @@ object AdWorker {
     }
 
     fun showInter() {
-        if (needShow()) {
+        if (needShow() && !PreferenceProvider.isHasPremium) {
             if (Counter.getInstance().getCounter() % MAX_REQUEST_AD == 0) {
                 if (inter?.isLoaded == true) {
                     inter?.show()
@@ -131,10 +135,12 @@ object AdWorker {
     }
 
     fun getShow() {
-        if (inter?.isLoaded == true && needShow()) {
-            inter?.show()
-        } else {
-            isNeedShowNow = true
+        if (!PreferenceProvider.isHasPremium) {
+            if (inter?.isLoaded == true && needShow()) {
+                inter?.show()
+            } else {
+                isNeedShowNow = true
+            }
         }
     }
 

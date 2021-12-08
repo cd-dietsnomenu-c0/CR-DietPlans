@@ -20,6 +20,7 @@ import com.bumptech.glide.Glide
 import com.google.android.material.bottomsheet.BottomSheetBehavior
 import com.diets.dietplans.Config
 import com.diets.dietplans.R
+import com.diets.dietplans.premium.PremiumHostActivity
 import com.diets.dietplans.utils.analytics.Ampl
 import com.diets.dietplans.presentation.profile.controllers.BacksAdapter
 import com.diets.dietplans.presentation.profile.controllers.IBacks
@@ -67,9 +68,18 @@ class ProfileFragment : Fragment(R.layout.profile_fragment), LanguageWarningDial
                 bsBehavior.state = BottomSheetBehavior.STATE_COLLAPSED
             }
         })
+
+        if (PreferenceProvider.isHasPremium){
+            btnPremium.visibility = View.GONE
+        }
     }
 
     private fun setClickListeners() {
+
+        btnPremium.setOnClickListener {
+            startActivity(PremiumHostActivity.getIntentProfile(requireActivity()))
+        }
+
         btnFavorites.setOnClickListener {
             Ampl.openFavorites()
             startActivity(Intent(activity, FavoritesActivity::class.java))

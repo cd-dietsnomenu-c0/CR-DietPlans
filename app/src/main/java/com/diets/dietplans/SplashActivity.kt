@@ -22,10 +22,12 @@ import com.diets.dietplans.common.FBWork.Companion.getFCMToken
 import com.diets.dietplans.common.GlobalHolder
 import com.diets.dietplans.common.db.entities.DietPlanEntity
 import com.diets.dietplans.common.notifications.ScheduleSetter
+import com.diets.dietplans.premium.PremiumHostActivity
 import com.diets.dietplans.presentation.onboarding.OnboardActivity
 import com.diets.dietplans.utils.ABConfig
 import com.diets.dietplans.utils.LangChoicer
 import com.diets.dietplans.utils.PreferenceProvider
+import com.diets.dietplans.utils.inapp.SubscriptionProvider
 import com.google.firebase.messaging.FirebaseMessaging
 import com.google.firebase.remoteconfig.FirebaseRemoteConfig
 import com.squareup.moshi.Moshi
@@ -49,11 +51,10 @@ class SplashActivity : AppCompatActivity(R.layout.splash_activity) {
     fun post() {
         goCounter += 1
         if (goCounter >= maxGoCounter) {
-            var intent = Intent()
-            if (PreferenceProvider.getVersion() != ABConfig.C && isFirstTime) {
-                intent = Intent(this, OnboardActivity::class.java).putExtra(Config.PUSH_TAG, openFrom)
+            var intent = if (isFirstTime) {
+                Intent(this, PremiumHostActivity::class.java)
             } else {
-                intent = Intent(this, MainActivity::class.java).putExtra(Config.PUSH_TAG, openFrom)
+                Intent(this, MainActivity::class.java).putExtra(Config.PUSH_TAG, openFrom)
             }
             startActivity(intent)
             finish()
@@ -75,6 +76,7 @@ class SplashActivity : AppCompatActivity(R.layout.splash_activity) {
         playAnim()
         loadData()
         setFirstTime()
+        SubscriptionProvider.startGettingPrice()
     }
 
     private fun bindFCM() {
