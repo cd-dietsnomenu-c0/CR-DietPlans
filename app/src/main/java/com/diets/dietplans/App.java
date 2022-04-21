@@ -7,6 +7,7 @@ import android.content.Context;
 import android.graphics.Color;
 import android.media.AudioAttributes;
 import android.net.Uri;
+import android.util.Log;
 
 import androidx.annotation.NonNull;
 import androidx.multidex.MultiDexApplication;
@@ -14,9 +15,10 @@ import androidx.room.Room;
 
 import com.amplitude.api.Amplitude;
 import com.diets.dietplans.utils.inapp.SubscriptionProvider;
-import com.google.android.gms.ads.MobileAds;
 import com.diets.dietplans.common.db.DietDatabase;
 import com.diets.dietplans.common.db.migrations.Migrations;
+import com.yandex.mobile.ads.common.InitializationListener;
+import com.yandex.mobile.ads.common.MobileAds;
 
 public class App extends MultiDexApplication {
 
@@ -40,6 +42,13 @@ public class App extends MultiDexApplication {
                 .addMigrations(Migrations.INSTANCE.getMigration_1_2())
                 .allowMainThreadQueries()
                 .build();
+
+        MobileAds.initialize(this, new InitializationListener() {
+            @Override
+            public void onInitializationCompleted() {
+                Log.d("LOL", "SDK initialized");
+            }
+        });
     }
 
     @SuppressLint("NewApi")

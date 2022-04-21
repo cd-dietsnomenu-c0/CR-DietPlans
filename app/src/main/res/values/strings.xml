@@ -4,7 +4,7 @@
 
 
     <string name="yad_app_key" translatable="false">1637421</string>
-    <string name="interstitial_id" translatable="false">R-M-DEMO-interstitial</string>
+    <string name="interstitial_id" translatable="false">R-M-1637421-1</string>
     <!--<string name="banner_id" translatable="false">ca-app-pub-2555056002292788/3641489932</string>
     <string name="native_ad" translatable="false">ca-app-pub-2555056002292788/2624115251</string>-->
 

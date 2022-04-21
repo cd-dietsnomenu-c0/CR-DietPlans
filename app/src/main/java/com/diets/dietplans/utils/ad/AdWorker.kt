@@ -1,17 +1,16 @@
 package com.diets.dietplans.utils.ad
 
 import android.content.Context
-import com.google.android.gms.ads.AdListener
-import com.google.android.gms.ads.AdLoader
-import com.google.android.gms.ads.AdRequest
-import com.google.android.gms.ads.InterstitialAd
-import com.google.android.gms.ads.formats.UnifiedNativeAd
-import com.diets.dietplans.Config
 import com.diets.dietplans.R
 import com.diets.dietplans.utils.PreferenceProvider
 import com.diets.dietplans.utils.analytics.Ampl
 import com.diets.dietplans.utils.analytics.FBAnalytic
-import kotlin.random.Random
+import com.yandex.mobile.ads.common.AdRequest
+import com.yandex.mobile.ads.common.AdRequestError
+import com.yandex.mobile.ads.common.ImpressionData
+import com.yandex.mobile.ads.interstitial.InterstitialAd
+import com.yandex.mobile.ads.interstitial.InterstitialAdEventListener
+import java.util.*
 
 object AdWorker {
     private const val MAX_REQUEST_AD = 3
@@ -19,9 +18,10 @@ object AdWorker {
     private const val MAX_QUERY = 3
     private var counterFailed = 0
     var isFailedLoad = false
-    /*var adsList: ArrayList<UnifiedNativeAd> = arrayListOf()
-    var bufferAdsList: ArrayList<UnifiedNativeAd> = arrayListOf()*/
-    var adLoader: AdLoader? = null
+
+    //var adsList: ArrayList<UnifiedNativeAd> = arrayListOf()
+    //var bufferAdsList: ArrayList<UnifiedNativeAd> = arrayListOf()
+    //var adLoader: AdLoader? = null
     var nativeSpeaker: NativeSpeaker? = null
     var isNeedShowNow = false
 
@@ -31,12 +31,12 @@ object AdWorker {
 
     fun init(context: Context) {
         inter = InterstitialAd(context)
-        inter?.adUnitId = context.getString(R.string.interstitial_id)
+        inter?.setAdUnitId(context.getString(R.string.interstitial_id))
         inter?.loadAd(AdRequest.Builder().build())
         //loadNative(context)
-        inter?.adListener = object : AdListener() {
+        inter?.setInterstitialAdEventListener(object : InterstitialAdEventListener {
 
-            override fun onAdFailedToLoad(p0: Int) {
+            override fun onAdFailedToLoad(p0: AdRequestError) {
                 Ampl.failedOneLoads()
                 counterFailed++
                 if (counterFailed <= MAX_QUERY) {
@@ -47,19 +47,34 @@ object AdWorker {
                 }
             }
 
-            override fun onAdClosed() {
+            override fun onAdShown() {
+            }
+
+            override fun onAdDismissed() {
                 inter?.loadAd(AdRequest.Builder().build())
             }
 
+            override fun onAdClicked() {
+            }
+
+            override fun onLeftApplication() {
+            }
+
+            override fun onReturnedToApplication() {
+            }
+
+            override fun onImpression(p0: ImpressionData?) {
+            }
+
+
             override fun onAdLoaded() {
-                super.onAdLoaded()
                 if (isNeedShowNow && needShow()) {
                     isNeedShowNow = false
                     inter?.show()
                     Ampl.showAd()
                 }
             }
-        }
+        })
     }
 
     /*private fun loadNative(context: Context) {
@@ -83,21 +98,21 @@ object AdWorker {
     }*/
 
     private fun endLoading() {
-        if (bufferAdsList.size > 0) {
+        /*if (bufferAdsList.size > 0) {
             adsList = bufferAdsList
             bufferAdsList = arrayListOf()
             nativeSpeaker?.loadFin(adsList)
-        }
+        }*/
     }
 
     fun observeOnNativeList(nativeSpeaker: NativeSpeaker) {
-        if (!PreferenceProvider.isHasPremium) {
+        /*if (!PreferenceProvider.isHasPremium) {
             if (adsList.size > 0) {
                 nativeSpeaker.loadFin(adsList)
             } else {
                 this.nativeSpeaker = nativeSpeaker
             }
-        }
+        }*/
     }
 
     fun refreshNativeAd(context: Context) {
@@ -146,7 +161,7 @@ object AdWorker {
     }
 
     private fun needShow(): Boolean {
-        return Random.nextInt(100) <= PreferenceProvider.frequencyPercent
+        return Random().nextInt() <= PreferenceProvider.frequencyPercent
     }
 
     fun showInterWithoutCounter() {
