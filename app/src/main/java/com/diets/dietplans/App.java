@@ -28,7 +28,7 @@ public class App extends MultiDexApplication {
     public void onCreate() {
         super.onCreate();
 
-        MobileAds.initialize(this);
+        //MobileAds.initialize(this);
         SubscriptionProvider.INSTANCE.init(this);
         Amplitude.getInstance().initialize(this, "e4f1319fda538c72f5981502e0962abb").
                 enableForegroundTracking(this);

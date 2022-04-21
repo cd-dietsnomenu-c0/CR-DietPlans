@@ -3,14 +3,13 @@ package com.diets.dietplans.presentation.profile.favorites.controllers
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
-import com.google.android.gms.ads.formats.UnifiedNativeAd
 import com.diets.dietplans.Config
 import com.diets.dietplans.model.interactive.Diet
 import com.diets.dietplans.presentation.diets.list.ItemClick
 import com.diets.dietplans.presentation.diets.list.modern.controllers.InteractiveVH
 import com.diets.dietplans.presentation.diets.list.modern.controllers.NativeVH
 
-class FavoritesAdapter(val allDiets: MutableList<Diet>, var itemClick: ItemClick, var nativeList : ArrayList<UnifiedNativeAd>) : RecyclerView.Adapter<RecyclerView.ViewHolder>() {
+class FavoritesAdapter(val allDiets: MutableList<Diet>, var itemClick: ItemClick, var nativeList : ArrayList<String>) : RecyclerView.Adapter<RecyclerView.ViewHolder>() {
     val ITEM_TYPE = 0
     val AD_TYPE = 1
     var counter = 0
@@ -51,7 +50,7 @@ class FavoritesAdapter(val allDiets: MutableList<Diet>, var itemClick: ItemClick
         when(getItemViewType(position)){
             ITEM_TYPE ->(holder as InteractiveVH).bind(allDiets[getRealPosition(position)].title,
                     allDiets[getRealPosition(position)].mainImage, allDiets[getRealPosition(position)].isNew, allDiets[getRealPosition(position)].shortIntroduction, allDiets[getRealPosition(position)].days.size, "Фавориты", allDiets[getRealPosition(position)].kcal)
-            AD_TYPE ->(holder as NativeVH).bind(nativeList[getAdPosition()])
+            //AD_TYPE ->(holder as NativeVH).bind(nativeList[getAdPosition()])
         }
     }
 
@@ -63,10 +62,10 @@ class FavoritesAdapter(val allDiets: MutableList<Diet>, var itemClick: ItemClick
         }
     }
 
-    fun insertAds(listAds: ArrayList<UnifiedNativeAd>) {
+    /*fun insertAds(listAds: ArrayList<UnifiedNativeAd>) {
         nativeList = listAds
         notifyDataSetChanged()
-    }
+    }*/
 
     private fun getAdPosition() : Int{
         var position = 0

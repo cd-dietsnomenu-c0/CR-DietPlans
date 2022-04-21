@@ -5,7 +5,6 @@ import android.os.Bundle
 import android.view.View
 import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.LinearLayoutManager
-import com.google.android.gms.ads.formats.UnifiedNativeAd
 import com.diets.dietplans.Config
 import com.diets.dietplans.model.Global
 import com.diets.dietplans.model.interactive.AllDiets
@@ -51,11 +50,11 @@ class FragmentTypes : Fragment(R.layout.fr_types) {
         })
         rvTypes.layoutManager = LinearLayoutManager(view.context)
         rvTypes.adapter = adapter
-        AdWorker.observeOnNativeList(object : NativeSpeaker {
+        /*AdWorker.observeOnNativeList(object : NativeSpeaker {
             override fun loadFin(nativeList: ArrayList<UnifiedNativeAd>) {
                 adapter.insertAds(nativeList)
             }
-        })
+        })*/
 
 
     }

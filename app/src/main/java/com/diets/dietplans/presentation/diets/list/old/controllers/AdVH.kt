@@ -7,14 +7,13 @@ import android.widget.Button
 import android.widget.ImageView
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
-import com.google.android.gms.ads.formats.UnifiedNativeAd
 import com.diets.dietplans.R
 import kotlinx.android.synthetic.main.vh_native.view.*
 
 class AdVH(layoutInflater: LayoutInflater, viewGroup: ViewGroup)
     : RecyclerView.ViewHolder(layoutInflater.inflate(R.layout.vh_native_main, viewGroup, false)) {
 
-    init {
+   /* init {
         itemView.ad_view.mediaView = itemView.ad_media
         itemView.ad_view.headlineView = itemView.ad_headline
         itemView.ad_view.bodyView = itemView.ad_body
@@ -40,5 +39,5 @@ class AdVH(layoutInflater: LayoutInflater, viewGroup: ViewGroup)
             itemView.ad_view.iconView.visibility = View.VISIBLE
         }
         itemView.ad_view.setNativeAd(nativeAd)
-    }
+    }*/
 }

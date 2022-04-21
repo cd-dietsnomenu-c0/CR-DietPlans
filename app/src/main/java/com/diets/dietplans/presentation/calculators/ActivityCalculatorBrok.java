@@ -13,12 +13,10 @@ import androidx.annotation.Nullable;
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 
-import com.google.android.gms.ads.AdRequest;
-import com.google.android.gms.ads.AdView;
-import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.diets.dietplans.R;
 import com.diets.dietplans.utils.ad.AdWorker;
 import com.diets.dietplans.utils.analytics.Ampl;
+import com.google.android.material.floatingactionbutton.FloatingActionButton;
 
 
 public class ActivityCalculatorBrok extends AppCompatActivity {
@@ -26,7 +24,7 @@ public class ActivityCalculatorBrok extends AppCompatActivity {
     private RadioButton rbFemale, rbMale;
     private Button btnCalculate;
     private ImageView ivBack;
-    private AdView ban;
+    //private AdView ban;
     int growth, girth, age, femaleDownFlag = 14, femaleUpFlag = 18, maleDownFlag = 17, maleUpFlag = 20, minNumber = 0;
     double idealWeight;
     boolean ast = false, normo = false, hyper = false;
@@ -44,8 +42,8 @@ public class ActivityCalculatorBrok extends AppCompatActivity {
         AdWorker.INSTANCE.checkLoad();
         setContentView(R.layout.activity_calculator_brok);
         Ampl.Companion.openCalcualtor("brok");
-        ban = findViewById(R.id.appodealBannerView);
-        ban.loadAd(new AdRequest.Builder().build());
+        //ban = findViewById(R.id.appodealBannerView);
+        //ban.loadAd(new AdRequest.Builder().build());
         edtBrokGrowth = findViewById(R.id.edtBrokGrowth);
         edtBrokGirth = findViewById(R.id.edtBrokGirth);
         edtBrokAge = findViewById(R.id.edtBrokAge);

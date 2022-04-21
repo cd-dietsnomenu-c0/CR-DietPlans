@@ -4,7 +4,6 @@ import android.content.Intent
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.LinearLayoutManager
-import com.google.android.gms.ads.formats.UnifiedNativeAd
 import com.diets.dietplans.Config
 import com.diets.dietplans.model.interactive.AllDiets
 import com.diets.dietplans.R
@@ -44,11 +43,11 @@ class NewDietsListActivity : AppCompatActivity(R.layout.new_diets_list_activity)
             }
         }, arrayListOf(), typeName!!, isHasHead)
         rvListDiets.adapter = adapter
-        AdWorker.observeOnNativeList(object : NativeSpeaker{
+        /*AdWorker.observeOnNativeList(object : NativeSpeaker{
             override fun loadFin(nativeList: ArrayList<UnifiedNativeAd>) {
                 adapter.insertAds(nativeList)
             }
-        })
+        })*/
 
         ivBack.setOnClickListener {
             onBackPressed()

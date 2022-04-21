@@ -9,22 +9,19 @@ import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
-
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 
-import com.google.android.gms.ads.AdRequest;
-import com.google.android.gms.ads.AdView;
-import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.diets.dietplans.R;
 import com.diets.dietplans.utils.ad.AdWorker;
 import com.diets.dietplans.utils.analytics.Ampl;
+import com.google.android.material.floatingactionbutton.FloatingActionButton;
 
 import java.util.ArrayList;
 
 public class ActivityCalculatorIMT extends AppCompatActivity {
-    private AdView ban;
+    //private AdView ban;
     private Button btnCalculate;
     private EditText edtHeight, edtWeight;
     private double weight, height;
@@ -43,8 +40,8 @@ public class ActivityCalculatorIMT extends AppCompatActivity {
         AdWorker.INSTANCE.checkLoad();
         setContentView(R.layout.activity_calculator_imt);
         Ampl.Companion.openCalcualtor("imt");
-        ban = findViewById(R.id.appodealBannerView);
-        ban.loadAd(new AdRequest.Builder().build());
+        //ban = findViewById(R.id.appodealBannerView);
+        //ban.loadAd(new AdRequest.Builder().build());
         btnCalculate = findViewById(R.id.btnIMTCalculate);
         edtHeight = findViewById(R.id.edtIMTHeight);
         edtWeight = findViewById(R.id.edtIMTWeight);

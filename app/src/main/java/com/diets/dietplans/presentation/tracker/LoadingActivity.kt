@@ -11,7 +11,6 @@ import android.widget.Button
 import android.widget.ImageView
 import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
-import com.google.android.gms.ads.formats.UnifiedNativeAd
 import com.diets.dietplans.MainActivity
 import com.diets.dietplans.R
 import com.diets.dietplans.utils.ad.AdWorker
@@ -28,13 +27,13 @@ class LoadingActivity : AppCompatActivity(R.layout.loading_activity) {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         Ampl.startLoading()
-        AdWorker.observeOnNativeList(object : NativeSpeaker{
+        /*AdWorker.observeOnNativeList(object : NativeSpeaker{
             override fun loadFin(nativeList: ArrayList<UnifiedNativeAd>) {
                 if (nativeList.size > 0) {
                     loadNative(nativeList[0])
                 }
             }
-        })
+        })*/
         animationHide = AnimationUtils.loadAnimation(this, R.anim.anim_hide_loading)
         lavLoading.loop(false)
         lavLoadingComplete.loop(false)
@@ -93,7 +92,7 @@ class LoadingActivity : AppCompatActivity(R.layout.loading_activity) {
         })
     }
 
-    private fun loadNative(nativeAd: UnifiedNativeAd) {
+    /*private fun loadNative(nativeAd: UnifiedNativeAd) {
         ad_view.mediaView = ad_media
         ad_view.headlineView = ad_headline
         ad_view.bodyView = ad_body
@@ -111,7 +110,7 @@ class LoadingActivity : AppCompatActivity(R.layout.loading_activity) {
         }
         ad_view.setNativeAd(nativeAd)
         flAdContainer.visibility = View.VISIBLE
-    }
+    }*/
 
 
     private fun startCountDown() {

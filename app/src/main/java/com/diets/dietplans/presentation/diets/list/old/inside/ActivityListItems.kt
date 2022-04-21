@@ -4,7 +4,6 @@ import android.content.Intent
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.LinearLayoutManager
-import com.google.android.gms.ads.formats.UnifiedNativeAd
 import com.diets.dietplans.Config
 import com.diets.dietplans.model.Section
 import com.diets.dietplans.model.Subsection
@@ -45,11 +44,11 @@ class ActivityListItems : AppCompatActivity(R.layout.activity_list_items) {
             }
         }, arrayListOf())
         rvSubSections.adapter = adapter
-        AdWorker.observeOnNativeList(object : NativeSpeaker{
+        /*AdWorker.observeOnNativeList(object : NativeSpeaker{
             override fun loadFin(nativeList: ArrayList<UnifiedNativeAd>) {
                 adapter.insertAds(nativeList)
             }
-        })
+        })*/
 
         ivBack.setOnClickListener {
             onBackPressed()

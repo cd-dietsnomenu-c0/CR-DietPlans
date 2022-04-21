@@ -8,7 +8,6 @@ import android.view.animation.Animation
 import android.view.animation.AnimationUtils
 import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.RecyclerView
-import com.google.android.gms.ads.formats.UnifiedNativeAd
 import com.diets.dietplans.App
 import com.diets.dietplans.Config
 import com.diets.dietplans.model.interactive.*
@@ -66,11 +65,11 @@ class DietAct : AppCompatActivity(R.layout.diet_act) {
             }
         }, arrayListOf())
         rvDiet.adapter = adapter
-        AdWorker.observeOnNativeList(object : NativeSpeaker {
+        /*AdWorker.observeOnNativeList(object : NativeSpeaker {
             override fun loadFin(nativeList: ArrayList<UnifiedNativeAd>) {
                 adapter.insertAds(nativeList)
             }
-        })
+        })*/
         if (isNeedShowConnect) {
             rvDiet.addOnScrollListener(object : RecyclerView.OnScrollListener() {
                 override fun onScrolled(recyclerView: RecyclerView, dx: Int, dy: Int) {

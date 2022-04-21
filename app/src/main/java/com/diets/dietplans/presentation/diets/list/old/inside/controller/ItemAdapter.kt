@@ -3,7 +3,6 @@ package com.diets.dietplans.presentation.diets.list.old.inside.controller
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
-import com.google.android.gms.ads.formats.UnifiedNativeAd
 import com.diets.dietplans.Config
 import com.diets.dietplans.model.Subsection
 import com.diets.dietplans.presentation.diets.list.modern.controllers.NativeVH
@@ -12,7 +11,7 @@ import com.diets.dietplans.presentation.diets.list.ItemClick
 class ItemAdapter(val list: ArrayList<Subsection>,
                   var drawables: Array<String>,
                   var itemClick: ItemClick,
-                  var nativeList : ArrayList<UnifiedNativeAd>)
+                  var nativeList : ArrayList<String>)
     : RecyclerView.Adapter<RecyclerView.ViewHolder>() {
 
     val ITEM_TYPE = 0
@@ -62,14 +61,14 @@ class ItemAdapter(val list: ArrayList<Subsection>,
     override fun onBindViewHolder(holder: RecyclerView.ViewHolder, position: Int) {
         when(getItemViewType(position)){
             ITEM_TYPE ->(holder as ItemVH).bind(list[getRealPosition(position)], drawables[list[getRealPosition(position)].urlOfImage.toInt()])
-            AD_TYPE ->(holder as NativeVH).bind(nativeList[getAdPosition()])
+            //AD_TYPE ->(holder as NativeVH).bind(nativeList[getAdPosition()])
         }
     }
 
-    fun insertAds(listAds: ArrayList<UnifiedNativeAd>) {
+    /*fun insertAds(listAds: ArrayList<UnifiedNativeAd>) {
         nativeList = listAds
         notifyDataSetChanged()
-    }
+    }*/
 
     private fun getAdPosition() : Int{
         var position = 0

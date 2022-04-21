@@ -6,20 +6,14 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
-
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.google.android.gms.ads.formats.UnifiedNativeAd;
 import com.diets.dietplans.R;
-import com.diets.dietplans.utils.ad.AdWorker;
-import com.diets.dietplans.utils.ad.NativeSpeaker;
 import com.diets.dietplans.presentation.calculators.controllers.CalculatingAdapter;
-
-import org.jetbrains.annotations.NotNull;
 
 import java.util.ArrayList;
 
@@ -50,12 +44,12 @@ public class FragmentCalculators extends Fragment {
         adapter = new CalculatingAdapter(listOfTitles, listOfDescriptions, gradients, new ArrayList<>(),
                 position -> startCalculator(position));
         rvListOfCalculating.setAdapter(adapter);
-        AdWorker.INSTANCE.observeOnNativeList(new NativeSpeaker() {
+        /*AdWorker.INSTANCE.observeOnNativeList(new NativeSpeaker() {
             @Override
             public void loadFin(@NotNull ArrayList<UnifiedNativeAd> nativeList) {
                 adapter.insertAds(nativeList);
             }
-        });
+        });*/
     }
 
     public void startCalculator(Integer position) {

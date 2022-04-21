@@ -3,11 +3,10 @@ package com.diets.dietplans.presentation.diets.list.modern.article.controller
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
-import com.google.android.gms.ads.formats.UnifiedNativeAd
 import com.diets.dietplans.model.interactive.Diet
 
 class DietAdapter(var diet : Diet, val iContents: IContents,
-                  var nativeList : ArrayList<UnifiedNativeAd>) : RecyclerView.Adapter<RecyclerView.ViewHolder>()  {
+                  var nativeList : ArrayList<String>) : RecyclerView.Adapter<RecyclerView.ViewHolder>()  {
 
     val HEAD_TYPE = 0
     val CONTENTS_TYPE = 1
@@ -58,14 +57,14 @@ class DietAdapter(var diet : Diet, val iContents: IContents,
             MENU_TYPE -> (holder as MenuVH).bind(diet.menuTitle, diet.menuText, diet.days, diet.hintText)
             RESULTS_TYPE -> (holder as ResultsVH).bind(diet.resultText)
             REVIEW_TYPE -> (holder as ReviewVH).bind(diet.review)
-            AD_TYPE -> (holder as ADVH).bind(nativeList[0])
+            //AD_TYPE -> (holder as ADVH).bind(nativeList[0])
         }
     }
 
-    fun insertAds(listAds: ArrayList<UnifiedNativeAd>) {
+    /*fun insertAds(listAds: ArrayList<UnifiedNativeAd>) {
         nativeList = listAds
         notifyDataSetChanged()
-    }
+    }*/
 
     override fun getItemViewType(position: Int): Int {
         return if (nativeList.isEmpty()) {

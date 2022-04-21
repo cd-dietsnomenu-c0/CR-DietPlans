@@ -4,13 +4,12 @@ import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import androidx.recyclerview.widget.RecyclerView.Adapter
-import com.google.android.gms.ads.formats.UnifiedNativeAd
 import com.diets.dietplans.model.Section
 import com.diets.dietplans.presentation.diets.list.ItemClick
 import java.util.ArrayList
 
 class SectionAdapter(var sectionList: ArrayList<Section>, var leftDrawables: Array<String>, var itemClick: ItemClick,
-                     var nativeList : ArrayList<UnifiedNativeAd>) : Adapter<RecyclerView.ViewHolder>() {
+                     var nativeList : ArrayList<String>) : Adapter<RecyclerView.ViewHolder>() {
     val HEAD_TYPE = 0
     val BODY_TYPE = 1
     val AD_TYPE = 2
@@ -45,7 +44,7 @@ class SectionAdapter(var sectionList: ArrayList<Section>, var leftDrawables: Arr
         when(getItemViewType(position)){
              HEAD_TYPE -> (holder as HeadVH).bind()
              BODY_TYPE -> (holder as SectionVH).bind(sectionList[getNumber(position)], leftDrawables[sectionList[getNumber(position)].urlOfImage.toInt()])
-             AD_TYPE -> (holder as AdVH).bind(nativeList[getAdNumber()])
+             //AD_TYPE -> (holder as AdVH).bind(nativeList[getAdNumber()])
         }
     }
 
@@ -81,8 +80,8 @@ class SectionAdapter(var sectionList: ArrayList<Section>, var leftDrawables: Arr
         }
     }
 
-    fun insertAds(listAds: ArrayList<UnifiedNativeAd>) {
+    /*fun insertAds(listAds: ArrayList<UnifiedNativeAd>) {
         nativeList = listAds
         notifyDataSetChanged()
-    }
+    }*/
 }

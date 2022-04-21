@@ -150,9 +150,9 @@
             android:name="preloaded_fonts"
             android:resource="@array/preloaded_fonts" />
 
-        <meta-data
+        <!--<meta-data
             android:name="com.google.android.gms.ads.APPLICATION_ID"
-            android:value="@string/admob_key" />
+            android:value="@string/admob_key" />-->
 
 
         <meta-data
