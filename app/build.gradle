@@ -6,11 +6,11 @@ apply plugin: 'kotlin-kapt'
 
 
 android {
-    compileSdkVersion 30
+    compileSdkVersion 31
     defaultConfig {
         applicationId "com.diets.dietplans"
         minSdkVersion 21
-        targetSdkVersion 30
+        targetSdkVersion 31
         versionCode 12
         versionName "1.4.6"
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
@@ -50,7 +50,6 @@ dependencies {
     implementation 'com.android.installreferrer:installreferrer:1.0'
     implementation 'androidx.palette:palette:1.0.0'
     implementation 'com.google.android.material:material:1.0.0'
-    
 
     implementation 'com.google.firebase:firebase-crashlytics:17.2.1'
     testImplementation 'junit:junit:4.12'
@@ -90,6 +89,9 @@ dependencies {
     implementation 'com.github.tizisdeepan:dots:1.0.1'
 
     implementation "com.android.billingclient:billing:4.0.0"
+
+    implementation 'com.yandex.android:mobileads:5.0.0'
+    implementation 'com.yandex.android:mobmetricalib:4.1.1'
 }
 
 apply plugin: 'com.google.gms.google-services'

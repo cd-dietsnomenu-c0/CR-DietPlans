@@ -3,12 +3,18 @@
     <string name="check_your_connect">Check your internet</string>
 
 
+    <string name="yad_app_key" translatable="false">1637421</string>
+    <string name="interstitial_id" translatable="false">R-M-DEMO-interstitial</string>
+    <!--<string name="banner_id" translatable="false">ca-app-pub-2555056002292788/3641489932</string>
+    <string name="native_ad" translatable="false">ca-app-pub-2555056002292788/2624115251</string>-->
+
+
     <!--wadimKazak new-->
     <!--work-->
-    <string name="admob_key" translatable="false">ca-app-pub-2555056002292788~2986883819</string>
+    <!--<string name="admob_key" translatable="false">ca-app-pub-2555056002292788~2986883819</string>
     <string name="interstitial_id" translatable="false">ca-app-pub-2555056002292788/5309794824</string>
     <string name="banner_id" translatable="false">ca-app-pub-2555056002292788/3641489932</string>
-    <string name="native_ad" translatable="false">ca-app-pub-2555056002292788/2624115251</string>
+    <string name="native_ad" translatable="false">ca-app-pub-2555056002292788/2624115251</string>-->
 
 
     <!--wadimKazak-->

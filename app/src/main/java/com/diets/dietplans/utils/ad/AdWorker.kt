@@ -19,8 +19,8 @@ object AdWorker {
     private const val MAX_QUERY = 3
     private var counterFailed = 0
     var isFailedLoad = false
-    var adsList: ArrayList<UnifiedNativeAd> = arrayListOf()
-    var bufferAdsList: ArrayList<UnifiedNativeAd> = arrayListOf()
+    /*var adsList: ArrayList<UnifiedNativeAd> = arrayListOf()
+    var bufferAdsList: ArrayList<UnifiedNativeAd> = arrayListOf()*/
     var adLoader: AdLoader? = null
     var nativeSpeaker: NativeSpeaker? = null
     var isNeedShowNow = false
@@ -33,7 +33,7 @@ object AdWorker {
         inter = InterstitialAd(context)
         inter?.adUnitId = context.getString(R.string.interstitial_id)
         inter?.loadAd(AdRequest.Builder().build())
-        loadNative(context)
+        //loadNative(context)
         inter?.adListener = object : AdListener() {
 
             override fun onAdFailedToLoad(p0: Int) {
@@ -62,7 +62,7 @@ object AdWorker {
         }
     }
 
-    private fun loadNative(context: Context) {
+    /*private fun loadNative(context: Context) {
         if (!PreferenceProvider.isHasPremium) {
             adLoader = AdLoader
                     .Builder(context, context.getString(R.string.native_ad))
@@ -80,7 +80,7 @@ object AdWorker {
                     }).build()
             adLoader?.loadAds(AdRequest.Builder().build(), Config.NATIVE_ITEMS_MAX)
         }
-    }
+    }*/
 
     private fun endLoading() {
         if (bufferAdsList.size > 0) {
@@ -101,8 +101,8 @@ object AdWorker {
     }
 
     fun refreshNativeAd(context: Context) {
-        nativeSpeaker = null
-        loadNative(context)
+        /*nativeSpeaker = null
+        loadNative(context)*/
     }
 
     private fun reload() {
