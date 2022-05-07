@@ -127,15 +127,7 @@
         <receiver android:name="com.diets.dietplans.common.notifications.TrackerAlarmReceiver"/>
         <receiver android:name="com.diets.dietplans.common.notifications.ReactAlarmReceiver"/>
 
-        <receiver android:name="com.diets.dietplans.common.notifications.BootReceiver"
-            android:exported="true"
-            android:enabled="true">
-            <intent-filter>
-                <action android:name="android.intent.action.BOOT_COMPLETED" />
 
-                <category android:name="android.intent.category.HOME" />
-            </intent-filter>
-        </receiver>
 
         <service
             android:name="com.diets.dietplans.common.notifications.BootNotificationService"

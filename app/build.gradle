@@ -1,8 +1,9 @@
 apply plugin: 'com.android.application'
 apply plugin: 'kotlin-android'
 apply plugin: 'kotlin-android-extensions'
-apply plugin: 'io.fabric'
 apply plugin: 'kotlin-kapt'
+apply plugin: 'com.google.firebase.crashlytics'
+
 
 
 android {
@@ -11,8 +12,8 @@ android {
         applicationId "com.diets.dietplans"
         minSdkVersion 21
         targetSdkVersion 31
-        versionCode 13
-        versionName "1.4.7"
+        versionCode 14
+        versionName "1.4.8"
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
         multiDexEnabled true
     }
@@ -81,6 +82,8 @@ dependencies {
     implementation 'com.google.firebase:firebase-messaging'
     implementation 'com.google.firebase:firebase-core'
     implementation 'com.google.firebase:firebase-config'
+    implementation 'com.google.firebase:firebase-crashlytics'
+
 
     implementation 'androidx.room:room-runtime:2.2.3'
     kapt "androidx.room:room-compiler:2.2.3"

@@ -5,7 +5,7 @@
     android:layout_height="wrap_content"
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
-    <com.google.android.gms.ads.formats.UnifiedNativeAdView
+   <!-- <com.google.android.gms.ads.formats.UnifiedNativeAdView
         android:id="@+id/ad_view"
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
@@ -97,5 +97,5 @@
         </androidx.constraintlayout.widget.ConstraintLayout>
 
 
-    </com.google.android.gms.ads.formats.UnifiedNativeAdView>
+    </com.google.android.gms.ads.formats.UnifiedNativeAdView>-->
 </FrameLayout>
