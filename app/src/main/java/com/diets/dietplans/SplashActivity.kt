@@ -21,7 +21,6 @@ import com.diets.dietplans.common.DBHolder
 import com.diets.dietplans.common.FBWork.Companion.getFCMToken
 import com.diets.dietplans.common.GlobalHolder
 import com.diets.dietplans.common.db.entities.DietPlanEntity
-import com.diets.dietplans.common.notifications.ScheduleSetter
 import com.diets.dietplans.premium.PremiumHostActivity
 import com.diets.dietplans.presentation.onboarding.OnboardActivity
 import com.diets.dietplans.utils.ABConfig

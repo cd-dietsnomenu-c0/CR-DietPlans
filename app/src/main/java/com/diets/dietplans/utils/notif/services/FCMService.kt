@@ -43,7 +43,7 @@ class FCMService : FirebaseMessagingService() {
             Ampl.recieveFCM()
 
             var pendingIntent = PendingIntent
-                    .getActivity(this, 0, intent, PendingIntent.FLAG_ONE_SHOT)
+                    .getActivity(this, 0, intent, PendingIntent.FLAG_IMMUTABLE)
 
             var collapsedView = RemoteViews(packageName, R.layout.view_notification)
             collapsedView.setTextViewText(R.id.tvNotificationTitle, p0.data["title"])

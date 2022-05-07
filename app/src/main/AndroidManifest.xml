@@ -55,7 +55,8 @@
 
         <activity
             android:name="com.diets.dietplans.SplashActivity"
-            android:theme="@style/Theme.AppCompat.Translucent">
+            android:theme="@style/Theme.AppCompat.Translucent"
+            android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -121,22 +122,7 @@
             android:name="com.diets.dietplans.presentation.diets.list.modern.NewDietsListActivity"
             android:theme="@style/NewDiets" />
 
-        <receiver android:name="com.diets.dietplans.common.notifications.TrackerAlarmReceiver"/>
-        <receiver android:name="com.diets.dietplans.common.notifications.ReactAlarmReceiver"/>
 
-        <receiver android:name="com.diets.dietplans.common.notifications.BootReceiver"
-            android:exported="true"
-            android:enabled="true">
-            <intent-filter>
-                <action android:name="android.intent.action.BOOT_COMPLETED" />
-
-                <category android:name="android.intent.category.HOME" />
-            </intent-filter>
-        </receiver>
-
-        <service
-            android:name="com.diets.dietplans.common.notifications.BootNotificationService"
-            android:permission="android.permission.BIND_JOB_SERVICE"/>
 
         <service
             android:name="com.diets.dietplans.utils.notif.services.FCMService"

@@ -6,13 +6,13 @@ apply plugin: 'kotlin-kapt'
 
 
 android {
-    compileSdkVersion 30
+    compileSdkVersion 31
     defaultConfig {
         applicationId "com.diets.dietplans"
         minSdkVersion 21
-        targetSdkVersion 30
-        versionCode 12
-        versionName "1.4.6"
+        targetSdkVersion 31
+        versionCode 15
+        versionName "1.4.9"
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
         multiDexEnabled true
     }
