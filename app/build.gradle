@@ -12,8 +12,8 @@ android {
         applicationId "com.diets.dietplans"
         minSdkVersion 21
         targetSdkVersion 31
-        versionCode 14
-        versionName "1.4.8"
+        versionCode 16
+        versionName "1.5.0"
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
         multiDexEnabled true
     }
