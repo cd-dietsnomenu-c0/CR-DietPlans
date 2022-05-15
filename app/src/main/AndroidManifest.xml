@@ -124,15 +124,6 @@
             android:name="com.diets.dietplans.presentation.diets.list.modern.NewDietsListActivity"
             android:theme="@style/NewDiets" />
 
-        <receiver android:name="com.diets.dietplans.common.notifications.TrackerAlarmReceiver"/>
-        <receiver android:name="com.diets.dietplans.common.notifications.ReactAlarmReceiver"/>
-
-
-
-        <service
-            android:name="com.diets.dietplans.common.notifications.BootNotificationService"
-            android:permission="android.permission.BIND_JOB_SERVICE"/>
-
         <service
             android:name="com.diets.dietplans.utils.notif.services.FCMService"
             android:exported="false">
