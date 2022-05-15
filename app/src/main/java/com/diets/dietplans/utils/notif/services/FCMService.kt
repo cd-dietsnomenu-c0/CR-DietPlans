@@ -91,7 +91,7 @@ class FCMService : FirebaseMessagingService() {
 
 
             var pendingIntent = PendingIntent
-                    .getActivity(this, 0, intent, PendingIntent.FLAG_ONE_SHOT)
+                    .getActivity(this, 0, intent, PendingIntent.FLAG_IMMUTABLE)
 
             var collapsedView = RemoteViews(packageName, R.layout.view_eat_notification)
 
