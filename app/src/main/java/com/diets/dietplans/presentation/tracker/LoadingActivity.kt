@@ -4,20 +4,22 @@ import android.animation.Animator
 import android.content.Intent
 import android.os.Bundle
 import android.os.CountDownTimer
+import android.util.Log
 import android.view.View
 import android.view.animation.Animation
 import android.view.animation.AnimationUtils
-import android.widget.Button
-import android.widget.ImageView
-import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
 import com.diets.dietplans.MainActivity
 import com.diets.dietplans.R
 import com.diets.dietplans.utils.ad.AdWorker
 import com.diets.dietplans.utils.ad.NativeSpeaker
 import com.diets.dietplans.utils.analytics.Ampl
+import com.yandex.mobile.ads.nativeads.NativeAd
+import com.yandex.mobile.ads.nativeads.NativeAdViewBinder
 import kotlinx.android.synthetic.main.load_ad_include.*
 import kotlinx.android.synthetic.main.loading_activity.*
+import kotlinx.android.synthetic.main.loading_activity.flAdContainer
+import java.util.*
 
 class LoadingActivity : AppCompatActivity(R.layout.loading_activity) {
 
@@ -27,13 +29,13 @@ class LoadingActivity : AppCompatActivity(R.layout.loading_activity) {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         Ampl.startLoading()
-        /*AdWorker.observeOnNativeList(object : NativeSpeaker{
-            override fun loadFin(nativeList: ArrayList<UnifiedNativeAd>) {
+        AdWorker.observeOnNativeList(object : NativeSpeaker {
+            override fun loadFin(nativeList: ArrayList<NativeAd>) {
                 if (nativeList.size > 0) {
                     loadNative(nativeList[0])
                 }
             }
-        })*/
+        })
         animationHide = AnimationUtils.loadAnimation(this, R.anim.anim_hide_loading)
         lavLoading.loop(false)
         lavLoadingComplete.loop(false)
@@ -92,25 +94,25 @@ class LoadingActivity : AppCompatActivity(R.layout.loading_activity) {
         })
     }
 
-    /*private fun loadNative(nativeAd: UnifiedNativeAd) {
-        ad_view.mediaView = ad_media
-        ad_view.headlineView = ad_headline
-        ad_view.bodyView = ad_body
-        ad_view.callToActionView = ad_call_to_action
-        ad_view.iconView = ad_icon
-        (ad_view.headlineView as TextView).text = nativeAd.headline
-        (ad_view.bodyView as TextView).text = nativeAd.body
-        (ad_view.callToActionView as Button).text = nativeAd.callToAction
-        val icon = nativeAd.icon
-        if (icon == null) {
-            ad_view.iconView.visibility = View.INVISIBLE
-        } else {
-            (ad_view.iconView as ImageView).setImageDrawable(icon.drawable)
-            ad_view.iconView.visibility = View.VISIBLE
+    private fun loadNative(nativeAd: NativeAd) {
+        Log.e("LOL", "loadNative")
+        var nativeAdViewBinder = NativeAdViewBinder
+                .Builder(ad_view)
+                .setCallToActionView(ad_call_to_action)
+                .setIconView(ad_icon)
+                .setMediaView(ad_media)
+                .setTitleView(ad_headline)
+                .setSponsoredView(ad_body)
+                .setWarningView(ad_warning)
+                .build()
+
+        try {
+            nativeAd.bindNativeAd(nativeAdViewBinder)
+            flAdContainer.visibility = View.VISIBLE
+        } catch (ex: Exception) {
+            Ampl.errorNative(ex.toString())
         }
-        ad_view.setNativeAd(nativeAd)
-        flAdContainer.visibility = View.VISIBLE
-    }*/
+    }
 
 
     private fun startCountDown() {

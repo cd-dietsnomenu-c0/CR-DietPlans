@@ -5,11 +5,13 @@ import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import androidx.recyclerview.widget.RecyclerView.Adapter
 import com.diets.dietplans.model.Section
+import com.diets.dietplans.presentation.diets.controller.ADVH
 import com.diets.dietplans.presentation.diets.list.ItemClick
+import com.yandex.mobile.ads.nativeads.NativeAd
 import java.util.ArrayList
 
 class SectionAdapter(var sectionList: ArrayList<Section>, var leftDrawables: Array<String>, var itemClick: ItemClick,
-                     var nativeList : ArrayList<String>) : Adapter<RecyclerView.ViewHolder>() {
+                     var nativeList : ArrayList<NativeAd>) : Adapter<RecyclerView.ViewHolder>() {
     val HEAD_TYPE = 0
     val BODY_TYPE = 1
     val AD_TYPE = 2
@@ -19,7 +21,7 @@ class SectionAdapter(var sectionList: ArrayList<Section>, var leftDrawables: Arr
         val inflater = LayoutInflater.from(parent.context)
         return when(viewType){
             HEAD_TYPE -> HeadVH(inflater, parent, itemClick)
-            AD_TYPE -> AdVH(inflater, parent)
+            AD_TYPE -> ADVH(inflater, parent)
             else -> SectionVH(inflater, parent, object : ItemClick {
                 override fun click(position: Int) {
                     itemClick.click(getNumber(position))
@@ -44,7 +46,7 @@ class SectionAdapter(var sectionList: ArrayList<Section>, var leftDrawables: Arr
         when(getItemViewType(position)){
              HEAD_TYPE -> (holder as HeadVH).bind()
              BODY_TYPE -> (holder as SectionVH).bind(sectionList[getNumber(position)], leftDrawables[sectionList[getNumber(position)].urlOfImage.toInt()])
-             //AD_TYPE -> (holder as AdVH).bind(nativeList[getAdNumber()])
+             AD_TYPE -> (holder as ADVH).bind(nativeList[getAdNumber()])
         }
     }
 
@@ -80,8 +82,8 @@ class SectionAdapter(var sectionList: ArrayList<Section>, var leftDrawables: Arr
         }
     }
 
-    /*fun insertAds(listAds: ArrayList<UnifiedNativeAd>) {
+    fun insertAds(listAds: ArrayList<NativeAd>) {
         nativeList = listAds
         notifyDataSetChanged()
-    }*/
+    }
 }

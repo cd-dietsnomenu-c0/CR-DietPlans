@@ -5,13 +5,16 @@ import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.diets.dietplans.Config
 import com.diets.dietplans.model.Subsection
+import com.diets.dietplans.presentation.diets.controller.ADVH
 import com.diets.dietplans.presentation.diets.list.modern.controllers.NativeVH
 import com.diets.dietplans.presentation.diets.list.ItemClick
+import com.yandex.mobile.ads.nativeads.NativeAd
+import java.util.*
 
 class ItemAdapter(val list: ArrayList<Subsection>,
                   var drawables: Array<String>,
                   var itemClick: ItemClick,
-                  var nativeList : ArrayList<String>)
+                  var nativeList : ArrayList<NativeAd>)
     : RecyclerView.Adapter<RecyclerView.ViewHolder>() {
 
     val ITEM_TYPE = 0
@@ -29,7 +32,7 @@ class ItemAdapter(val list: ArrayList<Subsection>,
                 override fun newDietsClick() {
                 }
             })
-            AD_TYPE -> NativeVH(inflater, parent)
+            AD_TYPE -> ADVH(inflater, parent)
             else -> ItemVH(inflater, parent, itemClick)
         }
     }
@@ -61,14 +64,14 @@ class ItemAdapter(val list: ArrayList<Subsection>,
     override fun onBindViewHolder(holder: RecyclerView.ViewHolder, position: Int) {
         when(getItemViewType(position)){
             ITEM_TYPE ->(holder as ItemVH).bind(list[getRealPosition(position)], drawables[list[getRealPosition(position)].urlOfImage.toInt()])
-            //AD_TYPE ->(holder as NativeVH).bind(nativeList[getAdPosition()])
+            AD_TYPE ->(holder as ADVH).bind(nativeList[getAdPosition()])
         }
     }
 
-    /*fun insertAds(listAds: ArrayList<UnifiedNativeAd>) {
+    fun insertAds(listAds: ArrayList<NativeAd>) {
         nativeList = listAds
         notifyDataSetChanged()
-    }*/
+    }
 
     private fun getAdPosition() : Int{
         var position = 0

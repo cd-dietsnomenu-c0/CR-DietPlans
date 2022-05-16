@@ -284,5 +284,16 @@ class Ampl {
             }
             Amplitude.getInstance().logEvent("error_billing", eventProperties)
         }
+
+
+        fun errorNative(error : String) {
+            val eventProperties = JSONObject()
+            try {
+                eventProperties.put("error", error)
+            } catch (exception: JSONException) {
+                exception.printStackTrace()
+            }
+            Amplitude.getInstance().logEvent("error_native", eventProperties)
+        }
     }
 }

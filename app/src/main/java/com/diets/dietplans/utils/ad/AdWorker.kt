@@ -1,6 +1,8 @@
 package com.diets.dietplans.utils.ad
 
 import android.content.Context
+import com.diets.dietplans.App
+import com.diets.dietplans.Config
 import com.diets.dietplans.R
 import com.diets.dietplans.utils.PreferenceProvider
 import com.diets.dietplans.utils.analytics.Ampl
@@ -10,6 +12,10 @@ import com.yandex.mobile.ads.common.AdRequestError
 import com.yandex.mobile.ads.common.ImpressionData
 import com.yandex.mobile.ads.interstitial.InterstitialAd
 import com.yandex.mobile.ads.interstitial.InterstitialAdEventListener
+import com.yandex.mobile.ads.nativeads.NativeAd
+import com.yandex.mobile.ads.nativeads.NativeAdRequestConfiguration
+import com.yandex.mobile.ads.nativeads.NativeBulkAdLoadListener
+import com.yandex.mobile.ads.nativeads.NativeBulkAdLoader
 import java.util.*
 
 object AdWorker {
@@ -19,9 +25,12 @@ object AdWorker {
     private var counterFailed = 0
     var isFailedLoad = false
 
-    //var adsList: ArrayList<UnifiedNativeAd> = arrayListOf()
-    //var bufferAdsList: ArrayList<UnifiedNativeAd> = arrayListOf()
-    //var adLoader: AdLoader? = null
+    private val MAX_REQUEST_NATIVE_AD = 3
+    private var nativeAdRequestCounter = 0
+
+    var adsList: ArrayList<NativeAd> = arrayListOf()
+    var bufferAdsList: ArrayList<NativeAd> = arrayListOf()
+    var adLoader: NativeBulkAdLoader? = null
     var nativeSpeaker: NativeSpeaker? = null
     var isNeedShowNow = false
 
@@ -33,7 +42,7 @@ object AdWorker {
         inter = InterstitialAd(context)
         inter?.setAdUnitId(context.getString(R.string.interstitial_id))
         inter?.loadAd(AdRequest.Builder().build())
-        //loadNative(context)
+        loadNative()
         inter?.setInterstitialAdEventListener(object : InterstitialAdEventListener {
 
             override fun onAdFailedToLoad(p0: AdRequestError) {
@@ -77,42 +86,55 @@ object AdWorker {
         })
     }
 
-    /*private fun loadNative(context: Context) {
+    private fun loadNative() {
         if (!PreferenceProvider.isHasPremium) {
-            adLoader = AdLoader
-                    .Builder(context, context.getString(R.string.native_ad))
-                    .forUnifiedNativeAd { nativeAD ->
-                        bufferAdsList.add(nativeAD)
-                        if (!adLoader!!.isLoading) {
+            adLoader = NativeBulkAdLoader(App.getContext())
+            adLoader!!.setNativeBulkAdLoadListener(object : NativeBulkAdLoadListener {
+                override fun onAdsLoaded(p0: MutableList<NativeAd>) {
+                    if (p0.size > 0){
+                        bufferAdsList = ArrayList(p0)
+                        endLoading()
+                    }else{
+                        nativeAdRequestCounter ++
+                        if (nativeAdRequestCounter > MAX_REQUEST_NATIVE_AD){
                             endLoading()
+                        }else{
+                            loadNative()
                         }
-                    }.withAdListener(object : AdListener() {
-                        override fun onAdFailedToLoad(p0: Int) {
-                            if (!adLoader!!.isLoading) {
-                                endLoading()
-                            }
-                        }
-                    }).build()
-            adLoader?.loadAds(AdRequest.Builder().build(), Config.NATIVE_ITEMS_MAX)
+                    }
+                }
+
+                override fun onAdsFailedToLoad(p0: AdRequestError) {
+                    nativeAdRequestCounter ++
+                    if (nativeAdRequestCounter > MAX_REQUEST_NATIVE_AD){
+                        endLoading()
+                    }else{
+                        loadNative()
+                    }
+                }
+            })
+
+            var config = NativeAdRequestConfiguration.Builder(App.getContext().getString(R.string.native_id)).build()
+            adLoader!!.loadAds(config, Config.NATIVE_ITEMS_MAX)
         }
-    }*/
+    }
 
     private fun endLoading() {
-        /*if (bufferAdsList.size > 0) {
+        if (bufferAdsList.size > 0) {
             adsList = bufferAdsList
             bufferAdsList = arrayListOf()
             nativeSpeaker?.loadFin(adsList)
-        }*/
+        }
     }
 
     fun observeOnNativeList(nativeSpeaker: NativeSpeaker) {
-        /*if (!PreferenceProvider.isHasPremium) {
+        if (!PreferenceProvider.isHasPremium) {
             if (adsList.size > 0) {
                 nativeSpeaker.loadFin(adsList)
             } else {
                 this.nativeSpeaker = nativeSpeaker
             }
-        }*/
+        }
     }
 
     fun refreshNativeAd(context: Context) {

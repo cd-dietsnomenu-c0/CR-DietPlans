@@ -13,7 +13,9 @@ import com.diets.dietplans.utils.analytics.Ampl
 import com.diets.dietplans.presentation.diets.list.ItemClick
 import com.diets.dietplans.presentation.diets.list.modern.article.DietAct
 import com.diets.dietplans.presentation.diets.list.modern.controllers.InteractiveAdapter
+import com.yandex.mobile.ads.nativeads.NativeAd
 import kotlinx.android.synthetic.main.new_diets_list_activity.*
+import java.util.*
 
 class NewDietsListActivity : AppCompatActivity(R.layout.new_diets_list_activity) {
 
@@ -43,11 +45,11 @@ class NewDietsListActivity : AppCompatActivity(R.layout.new_diets_list_activity)
             }
         }, arrayListOf(), typeName!!, isHasHead)
         rvListDiets.adapter = adapter
-        /*AdWorker.observeOnNativeList(object : NativeSpeaker{
-            override fun loadFin(nativeList: ArrayList<UnifiedNativeAd>) {
+        AdWorker.observeOnNativeList(object : NativeSpeaker{
+            override fun loadFin(nativeList: ArrayList<NativeAd>) {
                 adapter.insertAds(nativeList)
             }
-        })*/
+        })
 
         ivBack.setOnClickListener {
             onBackPressed()

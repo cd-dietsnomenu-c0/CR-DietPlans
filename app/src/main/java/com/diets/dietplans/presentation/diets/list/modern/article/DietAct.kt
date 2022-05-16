@@ -25,6 +25,7 @@ import com.diets.dietplans.presentation.diets.list.modern.article.controller.ICo
 import com.diets.dietplans.presentation.diets.list.modern.article.controller.managers.LayoutManagerTopScroll
 import com.diets.dietplans.presentation.diets.list.modern.article.toasts.AddToast
 import com.diets.dietplans.presentation.tracker.LoadingActivity
+import com.yandex.mobile.ads.nativeads.NativeAd
 import kotlinx.android.synthetic.main.diet_act.*
 import java.util.*
 
@@ -65,11 +66,11 @@ class DietAct : AppCompatActivity(R.layout.diet_act) {
             }
         }, arrayListOf())
         rvDiet.adapter = adapter
-        /*AdWorker.observeOnNativeList(object : NativeSpeaker {
-            override fun loadFin(nativeList: ArrayList<UnifiedNativeAd>) {
+        AdWorker.observeOnNativeList(object : NativeSpeaker {
+            override fun loadFin(nativeList: ArrayList<NativeAd>) {
                 adapter.insertAds(nativeList)
             }
-        })*/
+        })
         if (isNeedShowConnect) {
             rvDiet.addOnScrollListener(object : RecyclerView.OnScrollListener() {
                 override fun onScrolled(recyclerView: RecyclerView, dx: Int, dy: Int) {

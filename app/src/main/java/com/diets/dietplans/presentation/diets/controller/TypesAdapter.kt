@@ -5,9 +5,11 @@ import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.diets.dietplans.Config
 import com.diets.dietplans.presentation.diets.IClick
+import com.yandex.mobile.ads.nativeads.NativeAd
+import java.util.*
 
 class TypesAdapter(val listSchemas: List<com.diets.dietplans.model.schema.Schema>,
-                   var nativeList : ArrayList<String>,
+                   var nativeList : ArrayList<NativeAd>,
                    val iClick: IClick) : RecyclerView.Adapter<RecyclerView.ViewHolder>() {
 
     val BODY_TYPE = 0
@@ -50,14 +52,14 @@ class TypesAdapter(val listSchemas: List<com.diets.dietplans.model.schema.Schema
     override fun onBindViewHolder(holder: RecyclerView.ViewHolder, position: Int) {
         when(getItemViewType(position)){
             BODY_TYPE -> (holder as TypesVH).bind(listSchemas[getRealPosition(position)])
-            /*AD_TYPE -> (holder as ADVH).bind(nativeList[getAdPosition()])*/
+            AD_TYPE -> (holder as ADVH).bind(nativeList[getAdPosition()])
         }
     }
 
-    /*fun insertAds(listAds: ArrayList<UnifiedNativeAd>) {
+    fun insertAds(listAds: ArrayList<NativeAd>) {
         nativeList = listAds
         notifyDataSetChanged()
-    }*/
+    }
 
     private fun getAdPosition() : Int{
         var position = 0
