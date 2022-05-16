@@ -95,7 +95,6 @@ class LoadingActivity : AppCompatActivity(R.layout.loading_activity) {
     }
 
     private fun loadNative(nativeAd: NativeAd) {
-        Log.e("LOL", "loadNative")
         var nativeAdViewBinder = NativeAdViewBinder
                 .Builder(ad_view)
                 .setCallToActionView(ad_call_to_action)

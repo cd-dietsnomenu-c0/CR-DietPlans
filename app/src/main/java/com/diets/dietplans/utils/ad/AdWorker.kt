@@ -42,7 +42,7 @@ object AdWorker {
         inter = InterstitialAd(context)
         inter?.setAdUnitId(context.getString(R.string.interstitial_id))
         inter?.loadAd(AdRequest.Builder().build())
-        loadNative()
+        //loadNative()
         inter?.setInterstitialAdEventListener(object : InterstitialAdEventListener {
 
             override fun onAdFailedToLoad(p0: AdRequestError) {
@@ -139,7 +139,7 @@ object AdWorker {
 
     fun refreshNativeAd(context: Context) {
         /*nativeSpeaker = null
-        loadNative(context)*/
+        loadNative()*/
     }
 
     private fun reload() {

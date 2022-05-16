@@ -9,7 +9,7 @@ import com.yandex.mobile.ads.nativeads.NativeAd
 import java.util.*
 
 class TypesAdapter(val listSchemas: List<com.diets.dietplans.model.schema.Schema>,
-                   var nativeList : ArrayList<NativeAd>,
+                   var nativeList: ArrayList<NativeAd>,
                    val iClick: IClick) : RecyclerView.Adapter<RecyclerView.ViewHolder>() {
 
     val BODY_TYPE = 0
@@ -18,8 +18,8 @@ class TypesAdapter(val listSchemas: List<com.diets.dietplans.model.schema.Schema
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): RecyclerView.ViewHolder {
         val li = LayoutInflater.from(parent.context)
-        return when(viewType){
-            BODY_TYPE -> TypesVH(li, parent, object : IClick{
+        return when (viewType) {
+            BODY_TYPE -> TypesVH(li, parent, object : IClick {
                 override fun clickOpen(position: Int) {
                     iClick.clickOpen(getRealPosition(position))
                 }
@@ -34,23 +34,23 @@ class TypesAdapter(val listSchemas: List<com.diets.dietplans.model.schema.Schema
     }
 
     override fun getItemCount(): Int {
-        return if(nativeList.isNotEmpty()){
+        return if (nativeList.isNotEmpty()) {
             listSchemas.size + listSchemas.size / (Config.WHICH_AD_NEW_DIETS - 1)
-        }else{
+        } else {
             return listSchemas.size
         }
     }
 
     private fun getRealPosition(position: Int): Int {
-        return if (nativeList.isEmpty()){
+        return if (nativeList.isEmpty()) {
             position
-        }else{
+        } else {
             position - position / Config.WHICH_AD_NEW_DIETS
         }
     }
 
     override fun onBindViewHolder(holder: RecyclerView.ViewHolder, position: Int) {
-        when(getItemViewType(position)){
+        when (getItemViewType(position)) {
             BODY_TYPE -> (holder as TypesVH).bind(listSchemas[getRealPosition(position)])
             AD_TYPE -> (holder as ADVH).bind(nativeList[getAdPosition()])
         }
@@ -61,12 +61,12 @@ class TypesAdapter(val listSchemas: List<com.diets.dietplans.model.schema.Schema
         notifyDataSetChanged()
     }
 
-    private fun getAdPosition() : Int{
+    private fun getAdPosition(): Int {
         var position = 0
-        if (counter > nativeList.size - 1){
+        if (counter > nativeList.size - 1) {
             position = 0
             counter = 1
-        }else{
+        } else {
             position = counter
             counter++
         }

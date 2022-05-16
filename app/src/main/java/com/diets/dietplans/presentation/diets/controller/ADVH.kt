@@ -14,13 +14,10 @@ import kotlinx.android.synthetic.main.vh_ad_types.view.*
 class ADVH(layoutInflater: LayoutInflater, viewGroup: ViewGroup)
     : RecyclerView.ViewHolder(layoutInflater.inflate(R.layout.vh_ad_types, viewGroup, false)) {
 
+    private var nativeAdViewBinder: NativeAdViewBinder? = null
 
-    fun bind(unifiedNativeAd: NativeAd) {
-        bindAdView(unifiedNativeAd)
-    }
-
-    private fun bindAdView(nativeAd: NativeAd){
-        var nativeAdViewBinder = NativeAdViewBinder
+    init {
+        nativeAdViewBinder = NativeAdViewBinder
                 .Builder(itemView.ad_view)
                 .setCallToActionView(itemView.ad_call_to_action)
                 .setIconView(itemView.ad_icon)
@@ -29,11 +26,17 @@ class ADVH(layoutInflater: LayoutInflater, viewGroup: ViewGroup)
                 .setSponsoredView(itemView.ad_body)
                 .setWarningView(itemView.ad_warning)
                 .build()
+    }
 
-        try{
-            nativeAd.bindNativeAd(nativeAdViewBinder)
-            itemView.flAdContainer.visibility = View.VISIBLE
-        }catch (ex : Exception){
+    fun bind(unifiedNativeAd: NativeAd) {
+        bindAdView(unifiedNativeAd)
+    }
+
+    private fun bindAdView(nativeAd: NativeAd) {
+        try {
+            nativeAd.bindNativeAd(nativeAdViewBinder!!)
+            //itemView.flAdContainer.visibility = View.VISIBLE
+        } catch (ex: Exception) {
             Ampl.errorNative(ex.toString())
         }
     }
