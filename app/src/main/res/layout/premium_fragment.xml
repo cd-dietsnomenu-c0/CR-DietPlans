@@ -184,6 +184,7 @@
                     android:layout_height="wrap_content"
                     android:layout_gravity="center_vertical"
                     android:layout_marginStart="8dp"
+                    android:visibility="invisible"
                     android:src="@drawable/ic_sale_white_prem" />
 
             </LinearLayout>
@@ -235,6 +236,7 @@
                     android:gravity="end"
                     android:letterSpacing="0.07"
                     android:text="$7"
+                    android:visibility="invisible"
                     android:textColor="#f7413b"
                     android:textSize="14sp"
                     android:textStyle="normal" />
@@ -243,6 +245,7 @@
                     android:id="@+id/divider4"
                     android:layout_width="40dp"
                     android:layout_height="1dp"
+                    android:visibility="invisible"
                     android:layout_gravity="center_vertical"
                     android:background="#f7413b" />
 
