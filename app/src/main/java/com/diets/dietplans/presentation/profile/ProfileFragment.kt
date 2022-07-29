@@ -77,7 +77,7 @@ class ProfileFragment : Fragment(R.layout.profile_fragment), LanguageWarningDial
     private fun setClickListeners() {
 
         btnPremium.setOnClickListener {
-            startActivity(PremiumHostActivity.getIntentProfile(requireActivity()))
+            //startActivity(PremiumHostActivity.getIntentProfile(requireActivity()))
         }
 
         btnFavorites.setOnClickListener {

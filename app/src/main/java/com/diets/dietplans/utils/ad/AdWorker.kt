@@ -1,6 +1,7 @@
 package com.diets.dietplans.utils.ad
 
 import android.content.Context
+import android.util.Log
 import com.diets.dietplans.App
 import com.diets.dietplans.Config
 import com.diets.dietplans.R
@@ -57,6 +58,7 @@ object AdWorker {
             }
 
             override fun onAdShown() {
+                Ampl.adShow()
             }
 
             override fun onAdDismissed() {
@@ -77,6 +79,8 @@ object AdWorker {
 
 
             override fun onAdLoaded() {
+                Log.e("LOL", "onAdLoaded")
+                Ampl.adLoaded()
                 if (isNeedShowNow && needShow()) {
                     isNeedShowNow = false
                     inter?.show()
@@ -91,14 +95,17 @@ object AdWorker {
             adLoader = NativeBulkAdLoader(App.getContext())
             adLoader!!.setNativeBulkAdLoadListener(object : NativeBulkAdLoadListener {
                 override fun onAdsLoaded(p0: MutableList<NativeAd>) {
-                    if (p0.size > 0){
+                    if (p0.size >= Config.NATIVE_ITEMS_MAX){
+                        Ampl.loadedNative()
                         bufferAdsList = ArrayList(p0)
                         endLoading()
                     }else{
                         nativeAdRequestCounter ++
                         if (nativeAdRequestCounter > MAX_REQUEST_NATIVE_AD){
+                            Ampl.lessNativeAdEnd()
                             endLoading()
                         }else{
+                            Ampl.lessNativeAd()
                             loadNative()
                         }
                     }
@@ -107,8 +114,10 @@ object AdWorker {
                 override fun onAdsFailedToLoad(p0: AdRequestError) {
                     nativeAdRequestCounter ++
                     if (nativeAdRequestCounter > MAX_REQUEST_NATIVE_AD){
+                        Ampl.failLoadNativeEnd()
                         endLoading()
                     }else{
+                        Ampl.failLoadNative()
                         loadNative()
                     }
                 }
@@ -143,6 +152,7 @@ object AdWorker {
     }
 
     private fun reload() {
+        Ampl.reload()
         inter?.loadAd(AdRequest.Builder().build())
     }
 
@@ -155,13 +165,17 @@ object AdWorker {
     }
 
     fun showInter() {
+        Ampl.attemptShowInter()
         if (needShow() && !PreferenceProvider.isHasPremium) {
+            Ampl.attemptNeed()
             if (Counter.getInstance().getCounter() % MAX_REQUEST_AD == 0) {
+                Ampl.attemptCounter()
                 if (inter?.isLoaded == true) {
                     inter?.show()
                     Ampl.showAd()
                     Counter.getInstance().adToCounter()
                 } else if (isFailedLoad) {
+                    Ampl.attemptNotLoaded()
                     counterFailed = 0
                     isFailedLoad = false
                     reload()
@@ -183,7 +197,8 @@ object AdWorker {
     }
 
     private fun needShow(): Boolean {
-        return Random().nextInt() <= PreferenceProvider.frequencyPercent
+        var isNeed = Random().nextInt(100) <= PreferenceProvider.frequencyPercent
+        return isNeed
     }
 
     fun showInterWithoutCounter() {

@@ -50,10 +50,11 @@ class SplashActivity : AppCompatActivity(R.layout.splash_activity) {
     fun post() {
         goCounter += 1
         if (goCounter >= maxGoCounter) {
-            var intent = if (isFirstTime && PreferenceProvider.isNeedPrem == ABConfig.PREM_NEED) {
+            var intent = if (isFirstTime && PreferenceProvider.isNeedPrem == ABConfig.PREM_NEED && false) {
                 Intent(this, PremiumHostActivity::class.java)
             } else {
                 Intent(this, MainActivity::class.java).putExtra(Config.PUSH_TAG, openFrom)
+                //Intent(this, YaTest::class.java).putExtra(Config.PUSH_TAG, openFrom)
             }
             startActivity(intent)
             finish()
@@ -62,6 +63,7 @@ class SplashActivity : AppCompatActivity(R.layout.splash_activity) {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+        init(this@SplashActivity)
         bindLocale()
         bindFCM()
         bindTest()
@@ -176,7 +178,7 @@ class SplashActivity : AppCompatActivity(R.layout.splash_activity) {
                 tvText.startAnimation(alphaText)
                 tvText.visibility = View.VISIBLE
                 ivLogo.visibility = View.VISIBLE
-                init(this@SplashActivity)
+
             }
 
             override fun onAnimationStart(animation: Animation?) {

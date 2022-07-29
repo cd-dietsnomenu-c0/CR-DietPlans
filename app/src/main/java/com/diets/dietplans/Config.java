@@ -10,7 +10,7 @@ public class Config {
     public static final String NEW_DIET = "NEW_DIET";
     public static int INDEX_ADMOB = 0;
     public static int NEW_MAX = 6;
-    public static int NATIVE_ITEMS_MAX = 3;
+    public static int NATIVE_ITEMS_MAX = 4;
     public static int WHICH_AD_NEW_DIETS = 3;
 
     public static String PUSH_TAG = "PUSH_TAG";

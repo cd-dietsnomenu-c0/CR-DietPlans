@@ -52,13 +52,18 @@ class FragmentTypes : Fragment(R.layout.fr_types) {
         })
         rvTypes.layoutManager = LinearLayoutManager(view.context)
         rvTypes.adapter = adapter
+    }
+
+
+
+    override fun onResume() {
+        super.onResume()
         AdWorker.observeOnNativeList(object : NativeSpeaker {
             override fun loadFin(nativeList: ArrayList<NativeAd>) {
+                adapter.insertAds(arrayListOf())
                 adapter.insertAds(nativeList)
             }
         })
-
-
     }
 
     private fun openList(position: Int) {
