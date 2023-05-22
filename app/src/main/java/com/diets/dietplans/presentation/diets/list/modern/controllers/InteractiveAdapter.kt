@@ -7,8 +7,9 @@ import com.google.android.gms.ads.formats.UnifiedNativeAd
 import com.diets.dietplans.Config
 import com.diets.dietplans.model.interactive.AllDiets
 import com.diets.dietplans.presentation.diets.list.ItemClick
+import com.google.android.gms.ads.nativead.NativeAd
 
-class InteractiveAdapter(val allDiets: AllDiets, var itemClick: ItemClick, var nativeList: ArrayList<UnifiedNativeAd>, val typeName: String, val isHasHead: Boolean) : RecyclerView.Adapter<RecyclerView.ViewHolder>() {
+class InteractiveAdapter(val allDiets: AllDiets, var itemClick: ItemClick, var nativeList: ArrayList<NativeAd>, val typeName: String, val isHasHead: Boolean) : RecyclerView.Adapter<RecyclerView.ViewHolder>() {
     val ITEM_TYPE = 0
     val AD_TYPE = 1
     val HEAD_TYPE = 2
@@ -76,7 +77,7 @@ class InteractiveAdapter(val allDiets: AllDiets, var itemClick: ItemClick, var n
         }
     }
 
-    fun insertAds(listAds: ArrayList<UnifiedNativeAd>) {
+    fun insertAds(listAds: ArrayList<NativeAd>) {
         nativeList = listAds
         notifyDataSetChanged()
     }

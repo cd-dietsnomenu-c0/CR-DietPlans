@@ -5,9 +5,10 @@ import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.google.android.gms.ads.formats.UnifiedNativeAd
 import com.diets.dietplans.model.interactive.Diet
+import com.google.android.gms.ads.nativead.NativeAd
 
 class DietAdapter(var diet : Diet, val iContents: IContents,
-                  var nativeList : ArrayList<UnifiedNativeAd>) : RecyclerView.Adapter<RecyclerView.ViewHolder>()  {
+                  var nativeList : ArrayList<NativeAd>) : RecyclerView.Adapter<RecyclerView.ViewHolder>()  {
 
     val HEAD_TYPE = 0
     val CONTENTS_TYPE = 1
@@ -62,7 +63,7 @@ class DietAdapter(var diet : Diet, val iContents: IContents,
         }
     }
 
-    fun insertAds(listAds: ArrayList<UnifiedNativeAd>) {
+    fun insertAds(listAds: ArrayList<NativeAd>) {
         nativeList = listAds
         notifyDataSetChanged()
     }

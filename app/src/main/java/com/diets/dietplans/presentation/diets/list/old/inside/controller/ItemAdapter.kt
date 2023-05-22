@@ -8,11 +8,12 @@ import com.diets.dietplans.Config
 import com.diets.dietplans.model.Subsection
 import com.diets.dietplans.presentation.diets.list.modern.controllers.NativeVH
 import com.diets.dietplans.presentation.diets.list.ItemClick
+import com.google.android.gms.ads.nativead.NativeAd
 
 class ItemAdapter(val list: ArrayList<Subsection>,
                   var drawables: Array<String>,
                   var itemClick: ItemClick,
-                  var nativeList : ArrayList<UnifiedNativeAd>)
+                  var nativeList : ArrayList<NativeAd>)
     : RecyclerView.Adapter<RecyclerView.ViewHolder>() {
 
     val ITEM_TYPE = 0
@@ -66,7 +67,7 @@ class ItemAdapter(val list: ArrayList<Subsection>,
         }
     }
 
-    fun insertAds(listAds: ArrayList<UnifiedNativeAd>) {
+    fun insertAds(listAds: ArrayList<NativeAd>) {
         nativeList = listAds
         notifyDataSetChanged()
     }

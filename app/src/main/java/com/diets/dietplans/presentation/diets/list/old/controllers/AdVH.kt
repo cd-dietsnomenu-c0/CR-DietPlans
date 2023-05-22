@@ -9,6 +9,7 @@ import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.google.android.gms.ads.formats.UnifiedNativeAd
 import com.diets.dietplans.R
+import com.google.android.gms.ads.nativead.NativeAd
 import kotlinx.android.synthetic.main.vh_native.view.*
 
 class AdVH(layoutInflater: LayoutInflater, viewGroup: ViewGroup)
@@ -22,11 +23,11 @@ class AdVH(layoutInflater: LayoutInflater, viewGroup: ViewGroup)
         itemView.ad_view.iconView = itemView.ad_icon
     }
 
-    fun bind(unifiedNativeAd: UnifiedNativeAd) {
+    fun bind(unifiedNativeAd: NativeAd) {
         bindAdView(unifiedNativeAd)
     }
 
-    private fun bindAdView(nativeAd: UnifiedNativeAd){
+    private fun bindAdView(nativeAd: NativeAd){
         (itemView.ad_view.headlineView as TextView).text = nativeAd.headline
         (itemView.ad_view.bodyView as TextView).text = nativeAd.body
         (itemView.ad_view.callToActionView as Button).text = nativeAd.callToAction
@@ -34,10 +35,10 @@ class AdVH(layoutInflater: LayoutInflater, viewGroup: ViewGroup)
         val icon = nativeAd.icon
 
         if (icon == null) {
-            itemView.ad_view.iconView.visibility = View.INVISIBLE
+            itemView.ad_view.iconView!!.visibility = View.INVISIBLE
         } else {
             (itemView.ad_view.iconView as ImageView).setImageDrawable(icon.drawable)
-            itemView.ad_view.iconView.visibility = View.VISIBLE
+            itemView.ad_view.iconView!!.visibility = View.VISIBLE
         }
         itemView.ad_view.setNativeAd(nativeAd)
     }

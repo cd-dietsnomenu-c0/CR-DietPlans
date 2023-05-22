@@ -6,10 +6,10 @@ import com.google.firebase.database.DataSnapshot
 import com.google.firebase.database.DatabaseError
 import com.google.firebase.database.FirebaseDatabase
 import com.google.firebase.database.ValueEventListener
-import com.google.firebase.iid.FirebaseInstanceId
 import com.diets.dietplans.model.Global
 import com.diets.dietplans.model.interactive.*
 import com.diets.dietplans.model.schema.Schema
+import com.google.firebase.messaging.FirebaseMessaging
 import java.util.*
 
 class FBWork {
@@ -33,13 +33,13 @@ class FBWork {
 
 
         fun getFCMToken() {
-            FirebaseInstanceId.getInstance().instanceId
+            FirebaseMessaging.getInstance().token
                     .addOnCompleteListener(OnCompleteListener { task ->
                         if (!task.isSuccessful) {
                             Log.w("LOL", "getInstanceId failed", task.exception)
                             return@OnCompleteListener
                         }
-                        Log.e("LOL", "FCM token -- ${task.result?.token}")
+                        Log.e("LOL", "FCM token -- ${task.result.toString()}")
                     })
         }
 

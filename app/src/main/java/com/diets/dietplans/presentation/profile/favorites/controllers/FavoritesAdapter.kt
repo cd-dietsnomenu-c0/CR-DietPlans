@@ -9,8 +9,9 @@ import com.diets.dietplans.model.interactive.Diet
 import com.diets.dietplans.presentation.diets.list.ItemClick
 import com.diets.dietplans.presentation.diets.list.modern.controllers.InteractiveVH
 import com.diets.dietplans.presentation.diets.list.modern.controllers.NativeVH
+import com.google.android.gms.ads.nativead.NativeAd
 
-class FavoritesAdapter(val allDiets: MutableList<Diet>, var itemClick: ItemClick, var nativeList : ArrayList<UnifiedNativeAd>) : RecyclerView.Adapter<RecyclerView.ViewHolder>() {
+class FavoritesAdapter(val allDiets: MutableList<Diet>, var itemClick: ItemClick, var nativeList : ArrayList<NativeAd>) : RecyclerView.Adapter<RecyclerView.ViewHolder>() {
     val ITEM_TYPE = 0
     val AD_TYPE = 1
     var counter = 0
@@ -63,7 +64,7 @@ class FavoritesAdapter(val allDiets: MutableList<Diet>, var itemClick: ItemClick
         }
     }
 
-    fun insertAds(listAds: ArrayList<UnifiedNativeAd>) {
+    fun insertAds(listAds: ArrayList<NativeAd>) {
         nativeList = listAds
         notifyDataSetChanged()
     }

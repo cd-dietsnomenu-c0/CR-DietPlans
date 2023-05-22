@@ -16,6 +16,7 @@ import com.diets.dietplans.presentation.diets.list.ItemClick
 import com.diets.dietplans.presentation.diets.list.old.inside.ActivityListItems
 import com.diets.dietplans.presentation.diets.list.old.inside.article.ActivityArticle
 import com.diets.dietplans.presentation.diets.list.old.controllers.SectionAdapter
+import com.google.android.gms.ads.nativead.NativeAd
 import kotlinx.android.synthetic.main.old_diets_activity.*
 import kotlin.collections.ArrayList
 
@@ -43,7 +44,7 @@ class OldDietsActivity : AppCompatActivity(R.layout.old_diets_activity) {
             }
         }, arrayListOf())
         AdWorker.observeOnNativeList(object : NativeSpeaker{
-            override fun loadFin(nativeList: ArrayList<UnifiedNativeAd>) {
+            override fun loadFin(nativeList: ArrayList<NativeAd>) {
                 adapter.insertAds(nativeList)
             }
         })

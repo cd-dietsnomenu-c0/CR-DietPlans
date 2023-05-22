@@ -4,12 +4,13 @@ import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.google.android.gms.ads.formats.UnifiedNativeAd
+import com.google.android.gms.ads.nativead.NativeAd
 import java.util.ArrayList
 
 class CalculatingAdapter(val titles: Array<String>,
                          val descriptions: Array<String>,
                          val gradients: Array<Int>,
-                         var nativeList: ArrayList<UnifiedNativeAd>,
+                         var nativeList: ArrayList<NativeAd>,
                          var itemClick: ClickItem) : RecyclerView.Adapter<RecyclerView.ViewHolder>() {
 
     var ITEM_TYPE = 0
@@ -74,7 +75,7 @@ class CalculatingAdapter(val titles: Array<String>,
         }
     }
 
-    fun insertAds(listAds: ArrayList<UnifiedNativeAd>) {
+    fun insertAds(listAds: ArrayList<NativeAd>) {
         nativeList = listAds
         notifyDataSetChanged()
     }

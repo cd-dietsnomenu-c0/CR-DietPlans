@@ -17,6 +17,7 @@ import com.diets.dietplans.R
 import com.diets.dietplans.utils.ad.AdWorker
 import com.diets.dietplans.utils.ad.NativeSpeaker
 import com.diets.dietplans.utils.analytics.Ampl
+import com.google.android.gms.ads.nativead.NativeAd
 import kotlinx.android.synthetic.main.load_ad_include.*
 import kotlinx.android.synthetic.main.loading_activity.*
 
@@ -29,7 +30,7 @@ class LoadingActivity : AppCompatActivity(R.layout.loading_activity) {
         super.onCreate(savedInstanceState)
         Ampl.startLoading()
         AdWorker.observeOnNativeList(object : NativeSpeaker{
-            override fun loadFin(nativeList: ArrayList<UnifiedNativeAd>) {
+            override fun loadFin(nativeList: ArrayList<NativeAd>) {
                 if (nativeList.size > 0) {
                     loadNative(nativeList[0])
                 }
@@ -93,7 +94,7 @@ class LoadingActivity : AppCompatActivity(R.layout.loading_activity) {
         })
     }
 
-    private fun loadNative(nativeAd: UnifiedNativeAd) {
+    private fun loadNative(nativeAd: NativeAd) {
         ad_view.mediaView = ad_media
         ad_view.headlineView = ad_headline
         ad_view.bodyView = ad_body
@@ -104,10 +105,10 @@ class LoadingActivity : AppCompatActivity(R.layout.loading_activity) {
         (ad_view.callToActionView as Button).text = nativeAd.callToAction
         val icon = nativeAd.icon
         if (icon == null) {
-            ad_view.iconView.visibility = View.INVISIBLE
+            ad_view.iconView!!.visibility = View.INVISIBLE
         } else {
             (ad_view.iconView as ImageView).setImageDrawable(icon.drawable)
-            ad_view.iconView.visibility = View.VISIBLE
+            ad_view.iconView!!.visibility = View.VISIBLE
         }
         ad_view.setNativeAd(nativeAd)
         flAdContainer.visibility = View.VISIBLE

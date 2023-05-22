@@ -5,7 +5,7 @@
     android:layout_height="wrap_content"
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
-    <com.google.android.gms.ads.formats.UnifiedNativeAdView
+    <com.google.android.gms.ads.nativead.NativeAdView
         android:id="@+id/ad_view"
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
@@ -16,7 +16,7 @@
             android:layout_height="wrap_content"
             android:layout_gravity="center">
 
-            <com.google.android.gms.ads.formats.MediaView
+            <com.google.android.gms.ads.nativead.MediaView
                 android:id="@+id/ad_media"
                 android:layout_width="0dp"
                 android:layout_height="175dp"
@@ -97,5 +97,5 @@
         </androidx.constraintlayout.widget.ConstraintLayout>
 
 
-    </com.google.android.gms.ads.formats.UnifiedNativeAdView>
+    </com.google.android.gms.ads.nativead.NativeAdView>
 </FrameLayout>
