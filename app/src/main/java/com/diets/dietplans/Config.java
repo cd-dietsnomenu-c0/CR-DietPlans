@@ -32,4 +32,7 @@ public class Config {
     public static final String REACT_TYPE = "react_notif";
 
     public static final String EAT_TOPIC = "eat";
+
+
+    public static final boolean FOR_TEST = false;
 }

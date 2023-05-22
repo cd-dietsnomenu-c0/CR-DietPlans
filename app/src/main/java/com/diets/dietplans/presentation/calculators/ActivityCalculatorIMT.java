@@ -32,7 +32,7 @@ public class ActivityCalculatorIMT extends AppCompatActivity {
 
     @Override
     public void onBackPressed() {
-        AdWorker.INSTANCE.showInter();
+        AdWorker.INSTANCE.showInter(this);
         super.onBackPressed();
     }
 

@@ -41,7 +41,7 @@ class DietAct : AppCompatActivity(R.layout.diet_act) {
     lateinit var hideAnim : Animation
 
     override fun onBackPressed() {
-        AdWorker.showInter()
+        AdWorker.showInter(this)
         super.onBackPressed()
     }
 

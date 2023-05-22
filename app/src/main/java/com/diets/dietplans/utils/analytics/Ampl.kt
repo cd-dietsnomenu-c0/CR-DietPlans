@@ -142,12 +142,24 @@ class Ampl {
             Amplitude.getInstance().logEvent(open_from_push)
         }
 
-        fun failedAllLoads() {
-            Amplitude.getInstance().logEvent(failed_all_loads)
+        fun failedAllLoads(code : String) {
+            val eventProperties = JSONObject()
+            try {
+                eventProperties.put("code", code)
+            } catch (exception: JSONException) {
+                exception.printStackTrace()
+            }
+            Amplitude.getInstance().logEvent(failed_all_loads, eventProperties)
         }
 
-        fun failedOneLoads() {
-            Amplitude.getInstance().logEvent(failed_one_loads)
+        fun failedOneLoads(code : String) {
+            val eventProperties = JSONObject()
+            try {
+                eventProperties.put("code", code)
+            } catch (exception: JSONException) {
+                exception.printStackTrace()
+            }
+            Amplitude.getInstance().logEvent(failed_one_loads, eventProperties)
         }
 
         fun run() {

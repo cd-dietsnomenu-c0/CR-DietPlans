@@ -201,7 +201,7 @@ class FragmentTracker : Fragment(R.layout.fragment_tracker) {
             override fun checkEat(type: Int) {
                 DBHolder.checkEat(type)
                 refreshEats(type)
-                ActionAd.action()
+                ActionAd.action(requireActivity())
             }
         })
         rvEats.adapter = eatsAdapter

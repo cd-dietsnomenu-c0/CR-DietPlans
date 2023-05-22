@@ -7,7 +7,7 @@
     android:id="@+id/flNative"
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
-    <com.google.android.gms.ads.formats.UnifiedNativeAdView
+    <com.google.android.gms.ads.nativead.NativeAdView
         android:id="@+id/ad_view"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -125,5 +125,5 @@
                     card_view:layout_constraintTop_toBottomOf="@+id/ad_headline" />
 
             </androidx.constraintlayout.widget.ConstraintLayout>
-    </com.google.android.gms.ads.formats.UnifiedNativeAdView>
+    </com.google.android.gms.ads.nativead.NativeAdView>
 </FrameLayout>

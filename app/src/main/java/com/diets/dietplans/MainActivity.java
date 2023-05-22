@@ -80,7 +80,7 @@ public class MainActivity extends AppCompatActivity {
 
     @Override
     public void onBackPressed() {
-        AdWorker.INSTANCE.showInter();
+        AdWorker.INSTANCE.showInter(this);
         if (getSupportFragmentManager().findFragmentById(R.id.fragmentContainer) instanceof ProfileFragment) {
             if (((ProfileFragment) getSupportFragmentManager().findFragmentById(R.id.fragmentContainer)).bsBehavior.getState() == BottomSheetBehavior.STATE_COLLAPSED) {
                 super.onBackPressed();
@@ -122,7 +122,7 @@ public class MainActivity extends AppCompatActivity {
     private void checkIntent() {
         if (getIntent().getStringExtra(Config.PUSH_TAG) != null
                 && getIntent().getStringExtra(Config.PUSH_TAG).equals(Config.OPEN_FROM_PUSH)){
-            AdWorker.INSTANCE.getShow();
+            AdWorker.INSTANCE.getShow(this);
         }
     }
 

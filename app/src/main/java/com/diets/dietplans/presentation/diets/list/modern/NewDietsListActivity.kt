@@ -20,7 +20,7 @@ import kotlinx.android.synthetic.main.new_diets_list_activity.*
 class NewDietsListActivity : AppCompatActivity(R.layout.new_diets_list_activity) {
 
     override fun onBackPressed() {
-        AdWorker.showInter()
+        AdWorker.showInter(this)
         super.onBackPressed()
     }
 

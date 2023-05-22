@@ -22,7 +22,7 @@ class ActivityListItems : AppCompatActivity(R.layout.activity_list_items) {
     private var subsectionArrayList: ArrayList<Subsection>? = null
 
     override fun onBackPressed() {
-        AdWorker.showInter()
+        AdWorker.showInter(this)
         super.onBackPressed()
     }
 
