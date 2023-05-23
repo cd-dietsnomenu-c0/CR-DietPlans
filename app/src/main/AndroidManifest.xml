@@ -5,17 +5,9 @@
 
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
     <uses-permission android:name="android.permission.INTERNET" />
-    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" /> <!--optional-->
-    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" /> <!--optional-->
-    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" /> <!--optional-->
-    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" /> <!--optional-->
     <uses-permission android:name="android.permission.VIBRATE" /><!--optional-->
-    <uses-permission android:name="android.permission.REQUEST_INSTALL_PACKAGES" /> <!--optional-->
     <uses-permission android:name="com.android.vending.BILLING" />
     <uses-permission android:name="android.permission.CAMERA" />
-    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
-    <uses-permission android:name="android.permission.QUICKBOOT_POWERON" />
-    <uses-permission android:name="android.permission.WAKE_LOCK" />
 
     <uses-permission android:name="com.sec.android.provider.badge.permission.READ" />
     <uses-permission android:name="com.sec.android.provider.badge.permission.WRITE" />
@@ -34,7 +26,7 @@
     <uses-permission android:name="me.everything.badger.permission.BADGE_COUNT_READ" />
     <uses-permission android:name="me.everything.badger.permission.BADGE_COUNT_WRITE" />
 
-    <uses-permission android:name="com.google.android.gms.permission.AD_ID" tools:node="remove"/>
+    <uses-permission android:name="com.google.android.gms.permission.AD_ID"/>
 
     <application
         android:name="com.diets.dietplans.App"

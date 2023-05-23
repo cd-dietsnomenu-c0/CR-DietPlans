@@ -360,7 +360,7 @@
     <string name="description_month">Monthly subscription prolonged automatically for %s</string>
     <string name="white_year">1 year</string>
     <string name="description_year">Annual subscription prolonged automatically for %s</string>
-    <string name="try_7_days_for_free_new">Try 7 days for free</string>
+    <string name="try_7_days_for_free_new">Buy</string>
     <string name="month_terms">7 days trial period. Next %s per month. You can manage your subscriptions in the dashboard on Google Play</string>
     <string name="year_terms">7 days trial period. Then %s per year. You can manage your subscriptions in the dashboard on Google Play</string>
     <string name="remove_ads_white_text">We don\'t like ads, but without them we cannot maintain and support the app. Buying a subscription is your invaluable help and the least we can do for you in return is disable ads</string>

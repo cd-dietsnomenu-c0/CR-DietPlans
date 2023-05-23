@@ -7,13 +7,13 @@ apply plugin: 'com.google.firebase.crashlytics'
 
 
 android {
-    compileSdkVersion 31
+    compileSdkVersion 32
     defaultConfig {
         applicationId "com.diets.dietplans"
         minSdkVersion 21
-        targetSdkVersion 31
-        versionCode 31
-        versionName "1.5.7r"
+        targetSdkVersion 32
+        versionCode 35
+        versionName "1.5.7.1r"
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
         multiDexEnabled true
     }

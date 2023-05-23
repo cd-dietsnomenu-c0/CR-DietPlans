@@ -50,7 +50,7 @@ class SplashActivity : AppCompatActivity(R.layout.splash_activity) {
     fun post() {
         goCounter += 1
         if (goCounter >= maxGoCounter) {
-            var intent = if (isFirstTime && PreferenceProvider.isNeedPrem == ABConfig.PREM_NEED && false) {
+            var intent = if (isFirstTime && PreferenceProvider.isNeedPrem == ABConfig.PREM_NEED) {
                 Intent(this, PremiumHostActivity::class.java)
             } else {
                 Intent(this, MainActivity::class.java).putExtra(Config.PUSH_TAG, openFrom)
